@@ -1,0 +1,218 @@
+:: StoryTitle
+The Storm Grows Stronger
+
+
+:: StoryData
+{
+  "ifid": "1682A661-F8D2-4A45-A7B1-C58B06E42923",
+  "format": "Harlowe",
+  "format-version": "3.3.7",
+  "start": "Splash",
+  "tag-colors": {
+    "startup": "yellow"
+  },
+  "zoom": 1
+}
+
+
+:: Conferindo o jardim {"position":"5750,500","size":"100,100"}
+Você decide abrir a porta da frente e verificar a parte de fora da casa. As folhas que se desprenderam das árvores com os fortes ventos cobriam todo o quintal, sem nenhum rastro de que alguém havia passado por ali.
+
+(link: "Vasculhar pelo quintal por sinais do invasor")
+(link: "Voltar pra dentro de casa")
+
+
+:: Continuar leitura {"position":"2300,700","size":"100,100"}
+Você senta na poltrona desgastada que já pertenceu ao seu avô e começa a ler O Retrato de Dylan Black, uma edição antiga e empoeirada que atiçava a sua curiosidade há muito tempo, mas não havia tido tempo de ler. Conforme o tempo ia passando, a chuva ficava mais forte e os trovões eram incessantes.
+
+Parecia que a tempestade só piorava. O vento sibilava entre as frestas da madeira da casa, tirando a concentração da leitura. Dentre todos estes sons, a chuva, os trovões, o vento, o farfalhar das árvores e o balançar das janelas, você ouve este último com mais clareza. Parecia que alguma janela estava tentando ser aberta.
+
+
+:: De volta ao hall {"position":"3500,700","size":"100,100"}
+De volta ao hall de entrada, algo capta a sua atenção no canto do olho. Parece que algo escapava novamente pela lateral da janela, assim como na cozinha anteriormente. Assustado, você decide subir e desistir de brincar de detetive pela casa, decidindo que vai descer novamente apenas se algum barulho for realmente significativo.
+
+
+:: Depois de conferir os andares {"position":"5600,500","size":"100,100"}
+Após verificar todo o andar, você verifica o outro e também não encontra nada. Será que você imaginou a situação toda? A tempestade com certeza aconteceu, pois trovões ainda eram ouvidos à distância, algumas nuvens ainda pesavam sobre o local, e tudo ao redor estava molhado e coberto por folhas.
+
+
+:: Descer e tentar conversar {"position":"3950,700","size":"100,100"}
+Você decide descer e tentar conversar com o homem, mesmo com o barulho ensurdecedor da tempestade e você mal poderá ouví-lo. Porém, quando você está no meio das escadas, ouve o homem lhe chamar pela porta.
+
+(link: "Deve ser algum conhecido ou vizinho que foi verificar se você estava bem")
+(link: "Hesitar")
+
+<!-- audio cursed -->
+
+
+:: Desceu para sala {"position":"2150,800","size":"100,100"}
+Você senta na poltrona desgastada que já pertenceu ao seu avô e começa a ler O Retrato de Dylan Black, uma edição antiga e empoeirada que atiçava a sua curiosidade há muito tempo, mas não havia tido tempo de ler. Conforme o tempo ia passando, a chuva ficava mais forte e os trovões eram incessantes.
+
+
+:: Desceu para sala II {"position":"2450,700","size":"100,100"}
+Parecia que a tempestade só piorava. O vento entrava pelas frestas da madeira da casa, tirando a concentração da leitura. Dentre todos estes sons, a chuva, os trovões, o vento, o farfalhar das árvores e o balançar das janelas, você ouve este último com mais clareza. Parecia que alguma janela estava tentando ser aberta.
+
+(link: "Levantar para checar")
+(link: "Ignorar")
+
+
+:: Deve ser aquele homem estranho {"position":"3800,700","size":"100,100"}
+A tempestade não parece nem perto de se dissipar. Os trovões ainda são ouvidos mais à distância e a chuva não dá trégua. Quando você está voltando a se concentrar no livro, uma batida conhecida e arrastada toca na porta da frente. Deve ser aquele homem estranho novamente.
+
+
+:: Entrou no quarto dos pais {"position":"5000,600","size":"100,100"}
+Você pega a única coisa que é proibido tocar na casa toda, a espingarda calibre 12, e senta no chão de frente à porta do quarto. Não consegue desviar o olhar da soleira da porta, que ainda possui um resquício de luz. De repente, uma sombra cobre quase totalmente a parte iluminada, bem na frente da sua porta. O invasor está ali.
+
+
+:: Escolher pegar o chapéu {"position":"3050,700","size":"100,100"}
+Com medo mas sem opções, você desce para checar se está tudo bem com a porta da frente. Ela continua lá, trancada como deveria. O homem estranho não está mais lá, mas há algo no chão. O chapéu dele ficou para trás.
+
+(link: "Pegar o chapéu")
+(link: "Ignorar")
+
+
+:: Escolher qual andar conferir {"position":"5300,500","size":"100,100"}
+Após um tempo, já à noite, a tempestade começou a baixar. A chuva já não caía com tanta intensidade, não havia mais o vento sibilando pelas frestas da madeira da casa e os outros barulhos de quem quer que havia entrado - ou escalado - a casa cessaram completamente. Quando a chuva parou, você decide sair do quarto.
+
+(link: "Conferir o andar de cima primeiro")
+(link: "Conferir o andar de baixo primeiro")
+
+
+:: Escolher trancar a garagem {"position":"3200,700","size":"100,100"}
+Você decide dar uma volta pela casa para checar todos os cômodos, já que a chuva não parece dar trégua. Chegando na garagem, percebe que o portão não foi trancado propriamente, ao mesmo tempo que ouve um barulho alto vindo de alguma janela da casa.
+
+(link: "Você entra na garagem para trancar o portão")
+(link: "Você ignora o portão e volta para a casa para verificar as janelas")
+
+
+:: Escolheu a garagem {"position":"3350,600","size":"100,100"}
+O barulho da janela lhe perturba profundamente. Você não entende como uma tempestade pode causar tanto estrago, e culpa algum galho de árvore que possa ter batido em algum lugar. Talvez tudo estivesse sendo mais intenso devido ao fato de você estar sozinho pela primeira vez, pensa, enquanto verifica o cadeado do portão.
+
+
+:: Escolheu andar de baixo {"position":"5450,600","size":"100,100"}
+O andar de baixo não parecia ter sido perturbado. Até o telefone, que parecia ter sido a motivação daquela invasão, encontrava-se no mesmo lugar - e seco. Não havia como uma pessoa que estava naquela chuva não deixar um rastro por onde passasse. E ainda assim, a casa parecia intocada.
+
+
+:: Escolheu andar de cima {"position":"5450,400","size":"100,100"}
+A primeira coisa que você nota é o alçapão que leva ao ático aberto. Você sobe e, além da janela quebrada, não há nada de errado. Nada foi movido de lugar. Desce e vasculha o outro quarto, que não aparenta ter sido mexido, a não ser por um pequeno detalhe: a forma de alguém sentado na cama arrumada.
+
+
+:: Escolheu as janelas {"position":"3350,800","size":"100,100"}
+O barulho da janela lhe perturba profundamente. Você não entende como uma tempestade pode causar tanto estrago, e culpa algum galho de árvore que possa ter batido em algum lugar. Você sai em busca de alguma janela que possa ter sido afetada, pensando se não pode ser apenas sua imaginação impressionada por estar sozinho nessa situação.
+
+
+:: Garagem aberta {"position":"4550,900","size":"100,100"}
+Você tenta se concentrar no livro apesar de todas as coisas perturbadoras que ocorreram nas últimas horas. Seu quarto fica relativamente longe da garagem, mas, de repente, o portão rangeu. Poderia talvez ser o vento, que estava tão forte a ponto de abrir um portão de ferro.
+
+
+:: Garagem fechada {"position":"4550,500","size":"100,100"}
+Você tenta se concentrar no livro apesar de todas as coisas perturbadoras que ocorreram nas últimas horas. Seu quarto fica num dos cantos da casa, relativamente isolado, mas o barulho incessante da chuva traz consigo outros sons perturbadores.
+
+A tempestade está mais forte do que nunca, e todo tipo de barulho aparece ao mesmo tempo. Porém, há algo errado novamente. A madeira da casa está rangendo, em vários pontos diferentes e você não tem a menor ideia do porquê. Se fosse chutar, diria que algum bicho está escalando a casa, mas não fazia ideia de quê conseguiria fazer isso.
+
+(link-goto: "Você decide abrir a janela e olhar os arredores da casa")
+(link-goto: "Você continua onde está")
+
+
+:: Hesitou na porta {"position":"4100,700","size":"100,100"}
+Algo não estava certo com a voz daquele homem. Parecia uma rádio AM quase fora do ar, e ele pronunciava as sílabas tônicas erradas. Você imagina que ele possa estar bêbado e buscando abrigo. No entanto, ele diz “Sou amigo do seu pai. Meu carro estragou e queria saber se posso usar o seu telefone.”
+
+(link: "Abre a porta para ajudar o homem")
+(link: "Não ajudar")
+
+
+:: Intro {"position":"1550,700","size":"100,100"}
+Na tranquila solidão de sua casa isolada no interior da região, você se encontra sozinho pela primeira vez em sua vida. Seus pais partiram para suas antecipadas férias, deixando você encarregado de cuidar da antiga casa da família durante a ausência deles.
+
+À medida que as horas foram se passando, e a noite chegava, um sentimento de solidão começou a pairar sobre você, amplificando os sons do rangido da madeira no antigo casarão. O tique-taque do relógio no corredor ecoa pelo corredor.
+
+
+:: Intro II {"position":"1700,700","size":"100,100"}
+Olhando para fora, você consegue ver várias nuvens escuras se aproximando rapidamente da casa. Uma tempestade está por vir. Sem que você saiba, essa tempestade trará muito mais do que apenas vento e chuva...
+
+Notando que o vento começa a castigar algumas das antigas janelas da casa, você rapidamente corre para a entrada e fecha as janelas que ainda continuavam abertas, aguardando pelo chegar da tempestade.
+
+
+:: Intro III {"position":"1850,700","size":"100,100"}
+A casa é atingida por uma onda de frio, que entra pelas frestas da madeira e te obriga a buscar um agasalho no andar de cima. Trovões começam a rugir à distância, tomando o protagonismo do som ambiente no momento. A casa não está mais silenciosa.
+
+
+:: Levantou para checar a porta {"position":"2600,700","size":"100,100"}
+Você fica incomodado com o barulho e decide verificar as janelas do andar de baixo. Uma por uma, você as vê balançarem, castigadas pelo vento forte. Quando se aproxima da janela da cozinha, parece que algo desaparece rapidamente pelo canto da janela. Você interpreta como folhas carregadas pelo vento.
+
+A leitura está fluindo apesar da interrupção. Você está absorto na descrição dos bailes luxuosos sediados pelo protagonista do livro quando ouve um barulho muito claro vindo da porta da frente. Era uma batida, fora de ritmo. Não era o costumeiro toc-toc-toc que as pessoas fazem, causa uma sensação de desconforto.
+
+
+:: Não abriu a janela para checar {"position":"4700,500","size":"100,100"}
+Definitivamente há algo nas paredes da casa. Você percebe que não está sozinho quando ouve a janela do ático quebrando e passos acima da sua cabeça. O que quer que fosse aquilo havia conseguido entrar na sua casa e era uma ameaça para você.
+
+(link: "Trancar a porta do quarto e se esconder")
+(link: "Ir em busca da arma de seu pai, no quarto dele")
+
+
+:: Não abriu a porta {"position":"2900,700","size":"100,100"}
+Incomodado com a presença de uma pessoa estranha na porta da casa, você decide sair da sala de estar e subir até os quartos para se sentir mais seguro. Porém, aquele homem não sai da sua cabeça. Por uma fração de segundo, pareceu que havia algo de errado com o rosto dele.
+
+Já haviam se passado algumas horas desde o início da tempestade, e parecia não ter fim. Distraído pelo livro e por uma goteira ritimada, você havia se esquecido do homem estranho na soleira da porta. Porém, em meio a um dos trovões você ouve algum som que se assemelha à porta sendo forçada.
+
+<!-- som de trovão -->
+
+
+:: Não ajudou o homem na porta {"position":"4250,700","size":"100,100"}
+Você explica que seus pais lhe orientaram a não deixar nenhum estranho entrar na casa e pede desculpas. Ele argumenta, ainda naquele tom estranho, que era amigo do seu pai e já havia estado na casa antes, mas que você era pequeno demais para lembrar.
+
+Você pede desculpas e nega novamente.
+
+
+:: Olhou pelo olho mágico {"position":"2750,700","size":"100,100"}
+Você vê através do olho mágico molhado uma pessoa encharcada, parecendo um homem alto e esguio com o rosto coberto por um chapéu. Não é possível ver mais detalhes devido ao olho mágico estar coberto de gotas de chuva.
+
+(link: "Você abre a porta para ver quem é")[(go-to: "Morte"))]
+(link: "Você decide seguir o conselho dos seus pais e não abrir a porta para estranhos")
+
+
+:: Primeira escolha {"position":"2000,700","size":"100,100"}
+Seu primeiro instinto é pegar o livro mais próximo para começar a ler. Você está a caminho do ático quando um raio atinge algum local próximo e o trovão que o segue faz a casa tremer com seu eco (inserir audio trovão). Porém, há um som diferente junto ao trovão. Parece que algo ou alguém bateu contra a porta da frente da casa.
+
+Imaginando ser apenas parte do susto com o raio, você segue para o ático em busca do livro. Estando lá, o barulho da chuva era muito mais alto do que dentro da casa, tornando-se desconfortável a permanência no cômodo.
+
+(link: "Ficar no ático mesmo assim para ler")[
+	(set: $desceuParaSala to false)
+]
+(link: "Sair de lá e descer para a sala de estar")[
+	(set: $desceuParaSala to true)
+]
+
+
+:: Procurou a arma {"position":"4850,600","size":"100,100"}
+Você corre em direção ao quarto dos seus pais, sem saber se iria dar de cara com o invasor ou não. Na visão periférica, o enxerga descendo as escadas. É claramente o “homem” estranho que havia tentado entrar na casa mais cedo. Antes que ele perceba a sua presença, você entra no quarto dos seus pais e tranca a porta.
+
+
+:: Se trancou no quarto {"position":"4850,400","size":"100,100"}
+Você ouve aquilo andar pela casa toda, vasculhando os cômodos e repetindo “onde você está?” (inserir áudio do johnny). Sem saber o que fazer, você permanece escondido debaixo da cama, tentando não fazer barulho. Não consegue desviar o olhar da soleira da porta, que ainda possui um resquício de luz. De repente, uma sombra cobre quase totalmente a parte iluminada, bem na frente da sua porta. O invasor está ali.
+
+
+:: Sobe para o quarto para ignorar o homem {"position":"4400,700","size":"100,100"}
+Você sobe para o seu quarto e tenta esquecer a voz perturbadora do seu visitante. Ao observá-lo pela janela, também parecia haver algo de errado com seu rosto, como se fosse uma queimadura, o que deixava a pele esticada em ângulos não-naturais.
+
+(if: $desceuParaSala)[(link: "Continuar", "")]
+(else:)[]
+
+
+:: Sons se repetem {"position":"3650,700","size":"100,100"}
+Algum tempo se passa, com aqueles mesmos barulhos se repetindo com frequência. Cada vez que trovejava, parecia que alguma das janelas estava sendo aberta. Você acredita ter ouvido passos no lado de fora da casa, mas evita verificar.
+
+
+:: Splash {"position":"1400,700","size":"100,100"}
+
+
+
+:: Startup [startup] {"position":"1200,700","size":"100,100"}
+(set: $desceuParaSala to false)
+
+
+:: Trancado no quarto, invasor dentro da casa {"position":"5150,500","size":"100,100"}
+Não há nada que você possa fazer, trancado no quarto. O invasor caminha pela casa enquanto a tempestade ruge lá fora. Não há para onde fugir.
+
+(link: "Sair para enfrentá-lo")
+(link: "Continuar escondido")
