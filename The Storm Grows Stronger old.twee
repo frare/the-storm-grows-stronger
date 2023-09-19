@@ -1,0 +1,456 @@
+:: StoryTitle
+The Storm Grows Stronger (old)
+
+
+:: StoryData
+{
+  "ifid": "43B480F0-42CE-4166-A0FE-5A773022D9E1",
+  "format": "Harlowe",
+  "format-version": "3.3.7",
+  "start": "Intro I",
+  "tag-colors": {
+    "dining": "blue",
+    "kitchen": "blue",
+    "living": "blue",
+    "bathroom": "blue",
+    "garage": "blue",
+    "basement": "blue",
+    "lower-corridor": "blue",
+    "upper-corridor": "blue",
+    "attic": "blue",
+    "parents-room": "blue",
+    "your-room": "blue",
+    "death": "blue",
+    "encounter": "blue",
+    "startup": "yellow",
+    "header": "yellow"
+  },
+  "zoom": 0.6
+}
+
+
+:: Banheiro [bathroom] {"position":"1150,400","size":"100,100"}
+(set: $currentRoom to "bathroom")\
+[No banheiro, as paredes têm um papel de parede antigo com flores desbotadas, enquanto o chão é revestido de azulejos antigos e desgastados.
+
+Você não gosta muito daqui, já que se assustou algumas vezes com seu próprio reflexo no espelho, por conta da posição do espelho ser diretamente apontada para a porta.
+
+A torneira da pia pinga constantemente.]
+(display: "ShowWindow")
+
+
+
+(link-goto: "Voltar para o corredor", "Corredor de baixo")
+
+
+:: Corredor de baixo [lower-corridor] {"position":"1000,400","size":"100,100"}
+(if: $currentRoom is "upper-corridor" or "basement")[<audio autoplay src="https://www.dropbox.com/scl/fi/l6x5oht52nrc14t2p6sg9/Stairs.ogg?rlkey=z4fskx7h6h5x9usygttc7d9p7&dl=1">]\
+(set: $currentRoom to "lower-corridor")
+Na entrada é possível enxergar suas opções de cômodos:
+
+(link-goto: "Sala de jantar", "Sala de jantar")
+(link-goto: "Sala de estar", "Sala de estar")
+(link-goto: "Banheiro", "Banheiro")
+(link-goto: "Garagem", "Garagem")
+(link-goto: "Porão", "Porão")
+
+
+(link-goto: "Subir escadas", "Corredor de cima")
+
+
+:: Corredor de cima [upper-corridor] {"position":"1700,400","size":"100,100"}
+(if: $currentRoom is "lower-corridor")[<audio autoplay src="https://www.dropbox.com/scl/fi/l6x5oht52nrc14t2p6sg9/Stairs.ogg?rlkey=z4fskx7h6h5x9usygttc7d9p7&dl=1">]\
+(set: $currentRoom to "upper-corridor")\
+Escolha um dos cômodos do andar de cima para visitar:
+
+(link-goto:"Ático", "Ático",)
+(link-goto:"Quarto dos seus pais", "Quarto dos pais")
+(link-goto:"Seu próprio quarto", "Seu quarto")
+
+
+(link-goto: "Descer escadas", "Corredor de baixo")
+
+
+:: Cozinha [kitchen] {"position":"1150,100","size":"100,100"}
+(set: $currentRoom to "kitchen")\
+[A pia de ferro fundido e a torneira oxidada te lembram de momentos. Um pouco de comida ainda está no fogão a lenha, deixada pela sua mãe para que coma hoje.
+
+Várias gavetas preenchem a parte de baixo de um dos armarinhos. Como sua mãe nunca deixou você matar sua curiosidade do que tinham dentro deles, talvez agora que eles não estão seja uma boa ideia...]
+\
+(display: "ShowWindow")
+
+
+
+(link-goto: "Voltar para a sala de jantar", "Sala de jantar")
+
+
+:: DisplayMonsterRoom {"position":"800,600","size":"100,100"}
+(if: $monsterEnteredRoom is "dining")[Sala de jantar]\
+(else-if: $monsterEnteredRoom is "kitchen")[Cozinha]\
+(else-if: $monsterEnteredRoom is "living")[Sala de estar]\
+(else-if: $monsterEnteredRoom is "bathroom")[Banheiro]\
+(else-if: $monsterEnteredRoom is "garage")[Garagem]\
+(else-if: $monsterEnteredRoom is "basement")[Porão]\
+(else-if: $monsterEnteredRoom is "attic")[Ático]\
+(else-if: $monsterEnteredRoom is "your-room")[Seu quarto]\
+(else-if: $monsterEnteredRoom is "parents-room")[Quarto de seus pais]
+
+
+:: EncounterMonster [encounter] {"position":"600,700","size":"100,100"}
+(live: 3s)[\
+	(stop:)\
+    (enchant: "FUGIR", (text-color: red) + (text-style:"shudder"))\
+    	[(link: "FUGIR")[(restart:)]]
+]
+<img src="https://i.imgur.com/P9T6ZyS.png" width="960" height="540">\
+<audio autoplay src="https://www.dropbox.com/scl/fi/vffvekmpz6nyshvkht8ar/Jumpscare.ogg?rlkey=lpy426qqbl3oihp8hoc7v213d&dl=1">
+
+
+:: Garagem {"position":"1150,500","size":"100,100"}
+(if: $hasGarageKey)
+	[(display:"Garagem (chave)")]
+(else:)
+	[(display:"Garagem (sem chave)")]
+
+
+:: Garagem (chave) [garage] {"position":"1400,500","size":"100,100"}
+[Você coloca a chave na porta que leva à garagem. Fazendo bastante força, a porta se abre mostrando o interior da garagem, mas não sem causar um estardalhaço.]
+
+
+
+(link-goto: "Continuar", "Garagem I")
+
+
+:: Garagem (sem chave) {"position":"1300,500","size":"100,100"}
+Você tenta abrir e forçar a porta mas não consegue fazer com que ela abra. Talvez procurando pela casa, encontre a chave.
+
+(link-goto: "Voltar", "Corredor de baixo")
+
+
+:: Garagem I {"position":"1500,500","size":"100,100"}
+[Dentro da garagem, o piso bruto com manchas de óleo e algumas marcas deixadas por pneus ao longo dos anos.
+
+Nas prateleiras algumas ferramentas e peças velhas de carro estão cobertas de ferrugem.
+Nos cantos das paredes é possível ver algumas teias de aranha e infiltrações.
+
+Em frente a porta um armário de ferro e madeira guardam algumas caixas com seus brinquedos antigos, e algumas recordações de familia.]
+
+
+:: Intro I {"position":"500,400","size":"100,100"}
+Na tranquila solidão de sua casa isolada no interior da região, você se encontra sozinho pela primeira vez em sua vida. Seus pais partiram para suas antecipadas férias, deixando você encarregado de cuidar da antiga casa da família durante a ausência deles.
+
+À medida que as horas foram se passando, e a noite chegava, um sentimento de solidão começou a pairar sobre você, amplificando os sons do rangido da madeira no antigo casarão. O tique-taque do relógio no corredor ecoa pelo corredor.
+
+(link-goto:"Continuar", "Intro II")
+
+
+:: Intro II {"position":"600,400","size":"100,100"}
+A casa, construída quase inteiramente de madeira, tem um estilo bem rústico e antiquado. 
+No andar de baixo, existe a entrada, que comporta a porta da frente. Na entrada, um corredor extenso corta a casa ao meio, chegando até a porta dos fundos, que dá para a garagem. À direita do corredor, existe uma grande entrada que mostra a sala de estar; já à esquerda, existe uma entrada similar, mas que pertence à sala de jantar. No fundo da sala de jantar, está a cozinha.
+
+Na parede esquerda do corredor, existe a escada que leva para o andar de cima. Subindo as escadas, encontra-se o seu quarto, o quarto de seus pais e um pequeno alçapão no teto que leva ao ático.
+
+(link-goto:"Continuar", "Intro III")
+
+
+:: Intro III {"position":"700,400","size":"100,100"}
+Olhando para fora, você consegue ver várias nuvens escuras se aproximando rapidamente da casa. Uma tempestade está por vir. Sem que você saiba, essa tempestade trará muito mais do que apenas vento e chuva...
+
+Notando que o vento começa a castigar algumas das antigas janelas da casa, você rapidamente corre para a entrada e fecha as janelas que ainda continuavam abertas, aguardando pelo chegar da tempestade.\
+
+(display: "ShowStorm")
+
+(link-goto:"Continuar", "Corredor de baixo")
+
+
+:: IsMonsterHere {"position":"500,700","size":"100,100"}
+(if: $currentRoom is $monsterCurrentRoom)
+	[(if: $firstEncounter is true) [(display: "MonsterEncounter")]
+	(else:) [(display: "PlayerDeath")]]
+
+
+:: MonsterTurn {"position":"700,600","size":"100,100"}
+(set: $turns to $turns + 1)
+
+(set: _random to (either: ...(datanames: $isWindowOpen)))\
+(set: $monsterCurrentRoom to _random)\
+(if: $isWindowOpen's $monsterCurrentRoom is true and not $isMonsterInside)[
+	(set: $isMonsterInside to true)
+	(set: $monsterEnteredRoom to $monsterCurrentRoom)
+    <audio autoplay src="https://www.dropbox.com/scl/fi/dzexyza7igulevrfg49k7/MonsterEnteredHouse.ogg?rlkey=s0kaqw8aw2qa0y9jyzgwtf6xo&dl=1">
+]
+
+
+:: PlayerDeath [death] {"position":"700,700","size":"100,100"}
+(live: 5s)[\
+	(stop:)\
+    (text-color: red)[Você foi pego pela criatura...]
+    [Ela entrou pelo(a)] (text-color: yellow)(display:"DisplayMonsterRoom")
+    
+    
+    (link: "Recomeçar")[(restart:)]
+]\
+<img src="https://i.imgur.com/P9T6ZyS.png" width="960" height="540">\
+<audio autoplay src="https://www.dropbox.com/scl/fi/vffvekmpz6nyshvkht8ar/Jumpscare.ogg?rlkey=lpy426qqbl3oihp8hoc7v213d&dl=1">
+
+
+:: Porão {"position":"1150,600","size":"100,100"}
+(if: $hasBasementKey)
+	[(display:"Porão (chave)")]
+(else:)
+	[(display:"Porão (sem chave)")]
+
+
+:: Porão (chave) [basement] {"position":"1400,600","size":"100,100"}
+<audio autoplay src="https://www.dropbox.com/scl/fi/l6x5oht52nrc14t2p6sg9/Stairs.ogg?rlkey=z4fskx7h6h5x9usygttc7d9p7&dl=1">\
+\
+[Você desce as escadas escuras até o porão. Existem pequenas janelas horizontais no topo da parede do porão, que mostram o jardim da casa.]
+
+
+
+(link-goto: "Continuar", "Porão I")
+
+
+:: Porão (sem chave) {"position":"1300,600","size":"100,100"}
+Você tenta abrir e forçar a porta mas não consegue fazer com que a passagem para o porão seja aberta, talvez em algum lugar da casa você encontre a chave.
+
+(link-goto: "Voltar", "Corredor de baixo")
+
+
+:: Porão I {"position":"1500,600","size":"100,100"}
+[O interruptor ao lado da escada acende as lampadas fracas que iluminam o pequeno porão da casa. É possível ver a fiação exposta sobre o teto de madeira.
+
+Em dois grandes armários de ferro ficam guardadas várias peças e alguns aparelhos eletronicos que não funcionam mais, os armários estão tão cheios de bugigangas que mal nota-se que existe uma parede bege ao fundo.]
+
+
+:: Quarto dos pais [parents-room] {"position":"1850,400","size":"100,100"}
+(set: $currentRoom to "parents-room")
+[A cama de madeira maciça, encontrava-se centralizada no meio do quarto e trazia um aspecto antigo, mas de alguma forma acolhedor.
+
+Ao lado da cama havia duas mesas de cabeceira, e como as demais mobilias do quarto, elas combinam entre-si. 
+
+Na lateral do quarto as duas janelas grandes, com cortinas entreabertas em um tom azul escuro, junto a iluminação amarelada criam sombras nas paredes e no chão.]
+(display: "ShowWindow")
+
+
+
+(link-goto: "Voltar", "Corredor de cima")
+
+
+:: Sala de estar [living] {"position":"1150,300","size":"100,100"}
+(set: $currentRoom to "living")\
+[No centro da sala, um sofá e uma poltrona combinando, com estofamento envelhecido, convidam à tranquilidade. Entre eles, uma pequena mesa de centro mantém livros antigos empoeirados.
+
+Uma estante de madeira, recheada de volumes antigos e objetos de época, enfeita uma das paredes. Você nunca descobriu exatamente que tipo de conteúdo está presente ali nos livros.
+
+É aqui também que fica o rádio do seu pai; aparentemente continua quebrado, como ele deixou.]
+(display: "ShowWindow")
+
+
+
+(link-goto: "Voltar para o corredor", "Corredor de baixo")
+
+
+:: Sala de jantar [dining] {"position":"1150,200","size":"100,100"}
+(set: $currentRoom to "dining")\
+[Uma grande mesa de jantar ocupa o centro da sala, cercada por cadeiras igualmente antigas, todas com estofamento envelhecido. Um lustre pendente, com cristais empoeirados, ilumina a mesa.
+
+Um piano está localizado no fundo da sala, você nunca aprendeu corretamente a tocar, mas por insistência da sua mãe, conhece algumas notas.]
+(display: "ShowWindow")
+
+(link-goto: "Ir para cozinha", "Cozinha")
+
+
+
+(link-goto: "Voltar para o corredor", "Corredor de baixo")
+
+
+:: Seu quarto [your-room] {"position":"1850,500","size":"100,100"}
+(set: $currentRoom to "your-room")
+
+(display: "ShowWindow")
+
+
+
+(link-goto: "Voltar", "Corredor de cima")
+
+
+:: ShowStorm {"position":"500,600","size":"100,100"}
+(if: $stormStrength is 0)\
+	[(enchant: ?storm, (text-color: white))]\
+(else-if: $stormStrength is 1)\
+	[(enchant: ?storm, (text-color: yellow))]\
+(else-if: $stormStrength is 2)\
+	[(enchant: ?storm, (text-color: orange))]\
+(else-if: $stormStrength is 3)\
+	[(enchant: ?storm, (text-color: red) + (text-style: "shudder"))]\
+\
+|storm>[A tempestade fica mais forte.]
+
+
+:: ShowWindow {"position":"600,600","size":"100,100"}
+(set: _windowText to "")\
+(if: $currentRoom of $isWindowOpen)\
+[\
+    (enchant: ?window, (text-color: red))\
+    (set: _windowText to "As janelas estão abertas...")\
+]\
+(else:)\
+[\
+	(enchant: ?window, (text-color: cyan))\
+	(set: _windowText to "As janelas estão fechadas.")\
+]\
+\
+|window>[_windowText]
+
+(event: when $currentRoom of $isWindowOpen is true)\
+[\
+	(link: "Fechar janelas")[\
+		(enchant: ?window, (text-color: cyan))\
+		(set: $currentRoom of $isWindowOpen to false)\
+		(replace: ?window)[As janelas foram fechadas.]\
+    ]\
+]
+
+
+:: Startup [startup] {"position":"300,400","size":"100,100"}
+(set: $stormStrength to 0)\
+(set: $turns to 0)\
+(set: $currentRoom to "lower-corridor")\
+(set: $monsterCurrentRoom to "")\
+(set: $monsterEnteredRoom to "")\
+(set: $isMonsterActive to false)\
+(set: $isMonsterInside to false)\
+(set: $hasAtticKey to false)\
+(set: $hasGarageKey to false)\
+(set: $hasBasementKey to false)\
+(set: $isWindowOpen to (dm:
+	"dining", true, 
+    "kitchen", true, 
+    "living", true, 
+    "bathroom", true, 
+    "garage", true, 
+    "basement", true, 
+    "attic", true, 
+    "your-room", true, 
+	"parents-room", true
+))
+
+
+:: Ático {"position":"1850,300","size":"100,100"}
+(if: $hasAtticKey)
+	[(display:"Ático I")]
+(else:)
+	[(display:"Ático (sem chave)")]
+
+
+:: Ático (chave) {"position":"2100,300","size":"100,100"}
+[Você coloca a chave no alçapão que leva ao ático.]
+
+
+
+(link-goto: "Continuar", "Garagem I")
+
+
+:: Ático (sem chave) {"position":"2000,300","size":"100,100"}
+Você tenta abrir e forçar a porta mas não consegue fazer com que ela abra.
+A chave deve estar em algum lugar da casa...
+
+(link-goto: "Voltar", "Corredor de cima")
+
+
+:: Ático I [attic] {"position":"2200,300","size":"100,100"}
+(set: $currentRoom is "attic")\
+\
+[As vigas inclinadas do teto acompanham a estrutura do telhado da casa. Todo o local está bem empoeirado.
+
+Nas paredes curtas ficam apoiados os moveis quebrados em desuso e algumas caixas de papelão. Uma escrivaninha de carvalho acomoda em cima alguns livros velhos, que talvez nunca tenham sido lidos por ninguém.
+
+O armário de arquivo está com algumas gavetas desalinhadas, podem conter documentos importantes.]
+
+(display: "ShowWindow")
+
+
+
+(link-goto: "Voltar", "Corredor de cima")
+
+
+:: StoryScript [script]
+var audio = document.createElement('audio');
+audio.src = 'https://static.wixstatic.com/mp3/1c7117_53c10ff3624846c0ab3b112634196814.mp3';
+audio.loop = true;
+audio.play();
+
+:: StoryStylesheet [stylesheet]
+tw-story {
+  background-color: #130B1B;
+  background-repeat: no-repeat;
+  background-size: 90% 90%;
+  background-position: center center;
+}
+
+tw-story[tags="lower-corridor"] {
+  background-image: url("https://i.imgur.com/mmnuRt4.png");
+}
+
+tw-story[tags="dining"] {
+  background-image: url("https://i.imgur.com/M9lzok3.png");
+}
+
+tw-story[tags="living"] {
+  background-image: url("https://i.imgur.com/PaCjZxu.png");
+}
+
+tw-story[tags="kitchen"] {
+  background-image: url("https://i.imgur.com/qJQdfiZ.png");
+}
+
+tw-story[tags="bathroom"] {
+  background-image: url("https://i.imgur.com/G39hsLe.png");
+}
+
+tw-story[tags="attic"] {
+  background-image: url("");
+}
+
+tw-story[tags="basement"] {
+  background-image: url("https://i.imgur.com/YXszrkq.png");
+}
+
+tw-story[tags="parents-room"] {
+  background-image: url("https://i.imgur.com/RiyCLhh.png");
+}
+
+tw-story[tags="your-room"] {
+  background-image: url("https://i.imgur.com/tHcjgDD.png");
+}
+
+tw-passage {
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+tw-link, .enchantment-link {
+	color: yellow;
+}
+
+tw-link:hover, .enchantment-link:hover {
+	color: orange;
+}
+
+.visited {
+	color: yellow;
+}
+
+.visited:hover {
+	color: orange;
+}
+
+tw-sidebar {
+	display: none;
+}
