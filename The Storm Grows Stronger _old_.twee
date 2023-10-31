@@ -67,7 +67,8 @@ A casa estava absolutamente silenciosa. Não havia nenhum sinal de que algo ou a
 
 Ao olhar com mais atenção, você vê que ali dentro, próximo do portão de metal, está um chapéu, idêntico ao que o homem estranho usava na cabeça. Você tranca o portão devidamente e volta para a casa.
 
-(link-goto: )
+(link-goto: "Ir até a cozinha", "???")
+(link-goto: "Ir em direção às escadas", "???")
 
 
 :: Continuar no ático {"position":"1000,300","size":"100,100"}
