@@ -1,0 +1,655 @@
+:: StoryTitle
+The Storm Grows Stronger (old)
+
+
+:: StoryData
+{
+  "ifid": "43B480F0-42CE-4166-A0FE-5A773022D9E1",
+  "format": "Harlowe",
+  "format-version": "3.3.7",
+  "start": "Intro",
+  "tag-colors": {
+    "dining": "blue",
+    "kitchen": "blue",
+    "living": "blue",
+    "bathroom": "blue",
+    "garage": "blue",
+    "basement": "blue",
+    "lower-corridor": "blue",
+    "upper-corridor": "blue",
+    "attic": "blue",
+    "parents-room": "blue",
+    "your-room": "blue",
+    "death": "blue",
+    "encounter": "blue",
+    "startup": "yellow",
+    "header": "yellow"
+  },
+  "zoom": 1
+}
+
+
+:: Abrir a porta {"position":"1600,300","size":"100,100"}
+<!-- variável porta-->
+
+
+:: Ato 2 Intro {"position":"1500,400","size":"100,100"}
+A leitura está fluindo apesar da intempérie. Você está absorto na descrição dos bailes luxuosos sediados pelo protagonista do livro quando ouve um barulho muito claro vindo da porta da frente. Era uma batida, fora de ritmo. Não era o costumeiro //toc-toc-toc// que normalmente as pessoas fazem, te causando uma sensação de estranhamento.
+
+(link-goto: "Abrir a porta", "Abrir a porta")
+(link-goto: "Olhar pelo olho mágico", "Olhar pelo olho mágico")
+
+
+:: Banheiro [bathroom] {"position":"825,1750","size":"100,100"}
+(set: $currentRoom to "bathroom")\
+[No banheiro, as paredes têm um papel de parede antigo com flores desbotadas, enquanto o chão é revestido de azulejos antigos e desgastados.
+
+Você não gosta muito daqui, já que se assustou algumas vezes com seu próprio reflexo no espelho, por conta da posição do espelho ser diretamente apontada para a porta.
+
+A torneira da pia pinga constantemente.]
+(display: "ShowWindow")
+
+
+
+(link-goto: "Voltar para o corredor", "Corredor de baixo")
+
+
+:: Checar a cozinha {"position":"1200,500","size":"100,100"}
+Correndo até a cozinha pelo susto do barulho repentino, você vê o que parece um vulto se movendo do outro lado da janela central. Provavelmente algum grande galho levado pela chuva, também responsável por quebrar parte do vidro. 
+
+Olhando melhor, a janela quebrada era repartida no centro, em forma de cruz, com quatro vidros menores ali. Um deles foi quebrado e seus cacos estão pelo chão. Você confere melhor, e pelo menos a janela continua firme e bem trancada.
+
+(link-goto: "Continuar", "Ato 2 Intro")
+
+
+:: Checar portão da garagem {"position":"2700,700","size":"100,100"}
+A casa estava absolutamente silenciosa. Não havia nenhum sinal de que algo ou alguém tivesse entrado, nem rastros molhados na garagem ou algo que sinalizasse que aquele portão foi aberto por alguém.
+
+Ao olhar com mais atenção, você vê que ali dentro, próximo do portão de metal, está um chapéu, idêntico ao que o homem estranho usava na cabeça. Você tranca o portão devidamente e volta para a casa.
+
+(link-goto: )
+
+
+:: Continuar no ático {"position":"1000,300","size":"100,100"}
+Você senta na poltrona desgastada que já pertenceu ao seu avô e começa a ler "O Retrato de Dylan Black", uma edição antiga e empoeirada que atiçava sua curiosidade há muito tempo, mas não havia tido tempo de ler. Conforme o tempo ia passando, a chuva ficava mais forte e os trovões eram incessantes.
+
+(link-goto: "Continuar", "Continuar no ático II")
+
+
+:: Continuar no ático II {"position":"1100,300","size":"100,100"}
+O livro funciona como uma boa distração, fazendo com que a forte torrente que cai do lado de fora da casa seja esquecida enquanto você fica imerso na narrativa. Uma história de suspense, onde um monstro com aparência de homem comete diversos assassinatos. Em alguns trechos da história, você sente calafrios em sua espinha pelo medo transmitido pelas páginas do livro. Felizmente, é apenas uma história.
+
+(link-goto: "Continuar", "Ato 2")
+
+
+:: Continuar sua leitura {"position":"1100,500","size":"100,100"}
+Você continua sua leitura, mais interessado na narrativa que nos barulhos da chuva. A casa é velha, é natural que faça barulho quando venta tão forte. Você faz uma nota mental de que deveria conversar com seus pais sobre reforçar as janelas, para não baterem tanto quando chove. Nessa hora o barulho de vidro quebrado é escutado vindo da cozinha.
+
+(link-goto: "Checar a cozinha", "Checar a cozinha")
+(link-goto: "Continuar a leitura", "Ato 2 Intro")
+
+
+:: Corredor de baixo [lower-corridor] {"position":"675,1750","size":"100,100"}
+(if: $currentRoom is "upper-corridor" or "basement")[<audio autoplay src="https://www.dropbox.com/scl/fi/l6x5oht52nrc14t2p6sg9/Stairs.ogg?rlkey=z4fskx7h6h5x9usygttc7d9p7&dl=1">]\
+(set: $currentRoom to "lower-corridor")
+Na entrada é possível enxergar suas opções de cômodos:
+
+(link-goto: "Sala de jantar", "Sala de jantar")
+(link-goto: "Sala de estar", "Sala de estar")
+(link-goto: "Banheiro", "Banheiro")
+(link-goto: "Garagem", "Garagem")
+(link-goto: "Porão", "Porão")
+
+
+(link-goto: "Subir escadas", "Corredor de cima")
+
+
+:: Corredor de cima [upper-corridor] {"position":"1375,1750","size":"100,100"}
+(if: $currentRoom is "lower-corridor")[<audio autoplay src="https://www.dropbox.com/scl/fi/l6x5oht52nrc14t2p6sg9/Stairs.ogg?rlkey=z4fskx7h6h5x9usygttc7d9p7&dl=1">]\
+(set: $currentRoom to "upper-corridor")\
+Escolha um dos cômodos do andar de cima para visitar:
+
+(link-goto:"Ático", "Ático",)
+(link-goto:"Quarto dos seus pais", "Quarto dos pais")
+(link-goto:"Seu próprio quarto", "Seu quarto")
+
+
+(link-goto: "Descer escadas", "Corredor de baixo")
+
+
+:: Cozinha [kitchen] {"position":"825,1450","size":"100,100"}
+(set: $currentRoom to "kitchen")\
+[A pia de ferro fundido e a torneira oxidada te lembram de momentos. Um pouco de comida ainda está no fogão a lenha, deixada pela sua mãe para que coma hoje.
+
+Várias gavetas preenchem a parte de baixo de um dos armarinhos. Como sua mãe nunca deixou você matar sua curiosidade do que tinham dentro deles, talvez agora que eles não estão seja uma boa ideia...]
+\
+(display: "ShowWindow")
+
+
+
+(link-goto: "Voltar para a sala de jantar", "Sala de jantar")
+
+
+:: Dar uma volta pela casa {"position":"1850,600","size":"100,100"}
+Você decide dar uma volta pela casa para checar todos os cômodos, já que a chuva não parece dar trégua. Enquanto caminha pela casa, o vento assobia e faz as janelas tremerem. Parece que a tempestade está ficando mais forte.
+
+Chegando na garagem, percebe que o portão não foi devidamente trancado, ao mesmo tempo que ouve um barulho alto vindo de alguma das janelas da casa.
+
+(link-goto: "Verificar o portão", "Verificar o portão"
+(link-goto: "Verificar as janelas", "Verificar as janelas")
+
+
+:: Descer para sala {"position":"1000,500","size":"100,100"}
+Você senta na poltrona desgastada que já pertenceu ao seu avô e começa a ler "O Retrato de Dylan Black", uma edição antiga e empoeirada que atiçava sua curiosidade há muito tempo, mas não havia tido tempo de ler. Conforme o tempo ia passando, a chuva ficava mais forte e os trovões eram incessantes.
+
+Parecia que a tempestade só piorava. O vento sibilava entre as frestas da madeira da casa, tirando a concentração da leitura. Dentre todos estes sons, a chuva, os trovões, o vento, o farfalhar das árvores e o balançar das janelas, você ouve este último com mais clareza. Parecia que alguma janela estava tentando ficar aberta.
+
+(link-goto: "Continuar sua leitura", "Continuar sua leitura")
+(link-goto: "Levantar para checar", "Levantar para checar")
+
+
+:: DisplayMonsterRoom {"position":"500,2100","size":"100,100"}
+(if: $monsterEnteredRoom is "dining")[Sala de jantar]\
+(else-if: $monsterEnteredRoom is "kitchen")[Cozinha]\
+(else-if: $monsterEnteredRoom is "living")[Sala de estar]\
+(else-if: $monsterEnteredRoom is "bathroom")[Banheiro]\
+(else-if: $monsterEnteredRoom is "garage")[Garagem]\
+(else-if: $monsterEnteredRoom is "basement")[Porão]\
+(else-if: $monsterEnteredRoom is "attic")[Ático]\
+(else-if: $monsterEnteredRoom is "your-room")[Seu quarto]\
+(else-if: $monsterEnteredRoom is "parents-room")[Quarto de seus pais]
+
+
+:: EncounterMonster [encounter] {"position":"300,2200","size":"100,100"}
+(live: 3s)[\
+	(stop:)\
+    (enchant: "FUGIR", (text-color: red) + (text-style:"shudder"))\
+    	[(link: "FUGIR")[(restart:)]]
+]
+<img src="https://i.imgur.com/P9T6ZyS.png" width="960" height="540">\
+<audio autoplay src="https://www.dropbox.com/scl/fi/vffvekmpz6nyshvkht8ar/Jumpscare.ogg?rlkey=lpy426qqbl3oihp8hoc7v213d&dl=1">
+
+
+:: Evitar o homem novamente {"position":"2300,600","size":"100,100"}
+Algo não estava certo com a voz daquele homem. Parecia um rádio AM quase fora do ar, e ele pronunciava as sílabas tônicas de um jeito estranho e errado. Você imagina que possa estar bêbado e buscando abrigo. 
+
+No entanto, ele diz: "Sou amigo do seu pai. Estava passando pela região quando a tempestade derrubou um galho no meu carro. Vim andando até aqui para saber se eu poderia usar seu telefone."
+
+(link-goto: "Ajudar o homem", "Abrir a porta")
+(link-goto: "Ignorar e observar", "Ignorar e observar")
+
+
+:: Garagem {"position":"825,1850","size":"100,100"}
+(if: $hasGarageKey)
+	[(display:"Garagem (chave)")]
+(else:)
+	[(display:"Garagem (sem chave)")]
+
+
+:: Garagem (chave) [garage] {"position":"1075,1850","size":"100,100"}
+Você coloca a chave na porta que leva à garagem. Fazendo bastante força, a porta se abre mostrando o interior da garagem, mas não sem causar um estardalhaço.
+
+
+
+(link-goto: "Continuar", "Garagem I")
+
+
+:: Garagem (sem chave) {"position":"975,1850","size":"100,100"}
+Você tenta abrir e forçar a porta mas não consegue fazer com que ela abra. Talvez procurando pela casa, encontre a chave.
+
+(link-goto: "Voltar", "Corredor de baixo")
+
+
+:: Garagem I {"position":"1175,1850","size":"100,100"}
+[Dentro da garagem, o piso bruto com manchas de óleo e algumas marcas deixadas por pneus ao longo dos anos.
+
+Nas prateleiras algumas ferramentas e peças velhas de carro estão cobertas de ferrugem.
+Nos cantos das paredes é possível ver algumas teias de aranha e infiltrações.
+
+Em frente a porta um armário de ferro e madeira guardam algumas caixas com seus brinquedos antigos, e algumas recordações de familia.]
+
+
+:: Ignorar e observar {"position":"2400,600","size":"100,100"}
+Você explica que seus pais lhe orientaram a não deixar nenhum estranho entrar na casa e pede desculpas. Ele argumenta, ainda naquele tom de voz estranho, que era amigo do seu pai e já havia estado na casa antes várias vezes, mas que você era pequeno demais para lembrar.
+
+(link-goto: "Abrir a porta para ajudar", "Abrir a porta")
+(link-goto: "Negar novamente", "Negar novamente")
+
+
+:: Intro {"position":"500,400","size":"100,100"}
+Na tranquila solidão de sua casa isolada no interior da região, você se encontra sozinho pela primeira vez em sua vida. Seus pais partiram para suas antecipadas férias, deixando você encarregado de cuidar da antiga casa da família durante a ausência deles.
+
+À medida que as horas foram se passando, e a noite chegava, um sentimento de solidão começou a pairar sobre você, amplificando os sons do rangido da madeira no antigo casarão. O tique-taque do relógio no corredor ecoa pelo corredor.
+
+(link-goto:"Continuar", "Intro II")
+
+
+:: Intro II {"position":"600,400","size":"100,100"}
+A casa, construída quase inteiramente de madeira, tem um estilo bem rústico e antiquado. 
+No andar de baixo, existe a entrada, que comporta a porta da frente. Na entrada, um corredor extenso corta a casa ao meio, chegando até a porta dos fundos, que dá para a garagem. À direita do corredor, existe uma grande entrada que mostra a sala de estar; já à esquerda, existe uma entrada similar, mas que pertence à sala de jantar. No fundo da sala de jantar, está a cozinha.
+
+Na parede esquerda do corredor, existe a escada que leva para o andar de cima. Subindo as escadas, encontra-se o seu quarto, o quarto de seus pais e um pequeno alçapão no teto que leva ao ático.
+
+(link-goto:"Continuar", "Intro III")
+
+
+:: Intro III {"position":"700,400","size":"100,100"}
+Olhando para fora, você consegue ver várias nuvens escuras se aproximando rapidamente da casa. Uma tempestade está por vir. Sem que você saiba, essa tempestade trará muito mais do que apenas vento e chuva...
+
+Notando que o vento começa a castigar algumas das antigas janelas da casa, você rapidamente corre para a entrada e fecha as janelas que ainda continuavam abertas, aguardando pelo chegar da tempestade.\
+
+(display: "ShowStorm")
+
+(link-goto:"Continuar", "Intro IV")
+
+
+:: Intro IV {"position":"800,400","size":"100,100"}
+Notando que o vento começa a castigar algumas das antigas janelas da casa, você rapidamente corre para a entrada e fecha as janelas que ainda continuavam abertas, aguardando pelo chegar da tempestade.
+
+A casa é atingida por uma onde de frio, que entra pelas frestas da madeira e te obriga a buscar um agasalho no andar de  cima. Trovões começam a rugiar à distância, tomando o protagonismo do som ambiente no momento. A casa não está mais silenciosa.
+
+(link-goto: "Continuar", "Intro V")
+
+
+:: Intro V {"position":"900,400","size":"100,100"}
+Seu primeiro instinto é pegar o livro mais próximo para começar a ler. Você está a caminho do ático quando um raio atinge algum local próximo e o trovão que o segue faz a casa tremer com seu eco. Porém, há um som diferente junto ao trovão. Parece que algo ou alguém bateu contra a parta da frente da casa.
+
+Imaginando ser apenas parte do susto com o raio, você segue para o ático em busca do livro. Estando lá, o barulho da chuva era muito mis alto do que dentro da casa, tornando-se desconfortável a permanência no cômodo.
+
+<!-- delay e audio de trovão -->
+
+(link-goto: "Continuar no ático para ler", "Continuar no ático")
+(link-goto: "Descer para a sala de estar", "Descer para sala")
+
+
+:: IsMonsterHere {"position":"200,2200","size":"100,100"}
+(if: $currentRoom is $monsterCurrentRoom)
+	[(if: $firstEncounter is true) [(display: "MonsterEncounter")]
+	(else:) [(display: "PlayerDeath")]]
+
+
+:: Levantar para checar {"position":"1100,600","size":"100,100"}
+Você fica incomodado com o barulho e decide verificar as janelas do andar de baixo. Uma por uma, você as vê balançarem, castigadas pelo vento forte. Quando se aproxima da janela da cozinha, parece que algo desaparece rapidamente pelo canto da janela. Você interpreta como folhas carregadas pelo vento.
+
+<!-- minigame sem a ameaça do monstro, acaba automaticamente depois de alguns turnos e vai para o começo do Ato 2-->
+(link-goto: "Conferir as janelas da casa", "StartMinigame")
+
+
+:: MonsterTurn {"position":"400,2100","size":"100,100"}
+(set: $turns to $turns + 1)\
+\
+(set: _random to (either: ...(datanames: $isWindowOpen)))\
+(set: $monsterCurrentRoom to _random)\
+(if: $isWindowOpen's $monsterCurrentRoom is true and not $isMonsterInside)[
+	(set: $isMonsterInside to true)
+	(set: $monsterEnteredRoom to $monsterCurrentRoom)
+    <audio autoplay src="https://www.dropbox.com/scl/fi/dzexyza7igulevrfg49k7/MonsterEnteredHouse.ogg?rlkey=s0kaqw8aw2qa0y9jyzgwtf6xo&dl=1">
+]
+
+
+:: Monstro entra pela garagem {"position":"2600,700","size":"100,100"}
+Você tenta se concentrar no livro apesar de todas as coisas perturbadoras que ocorreram nas últimas horas. A intensa chuva dificulta sua concentração, com as gotas castigando a casa. Parece que a tempestade ficou ainda mais forte.
+
+Seu quarto fica relativamente longe da garagem, mas, de repente, é possível escutar o portão rangendo.
+
+(link-goto: "Conferir o portão", "Checar portão da garagem")
+(link-goto: "Pegar a arma no quarto de seus pais", "Pegar a arma")
+
+
+:: Negar novamente {"position":"2500,600","size":"100,100"}
+Pedindo desculpas, o nega novamente.
+
+Você sabe para o quarto e tenta esquecer a voz esquisita do seu visitante. Ao observá-lo pela janela, também parece haver algo de errado com seu rosto, como se fosse uma queimadura, esticando a pele em ângulos não-naturais.
+
+<!-- mostrar link baseado na garagem ter sido trancada ou nao -->
+(link-goto: "Continuar", "Monstro não entra pela garagem")
+(link-goto: "Continuar", "Monstro entra pela garagem")
+
+
+:: Não abrir a porta {"position":"1700,500","size":"100,100"}
+Incomodado com a presença de uma pessoa estranha na porta da casa, você decide sair da sala de estar e subir até os quartos para se sentir mais seguro. Porém, aquele homem não sai da sua cabeça. Por uma fração de segundo, você lembra que parecia haver algo de errado com o rosto dele.
+
+Já haviam se passado algumas horas desde o início da tempestade, e parecia não ter fim. Distraído pelo livro e por uma goteira ritimada, você havia se esquecido do homem estranho na soleira da porta. Porém, em meio aos trovões, escuta algum som que assemelhaça à maçaneta da porta sendo forçada.
+
+Com medo mas sem opções, você desce para checar se está tudo bem com a porta da frente. Ela continua lá, bem trancada como deveria. O homem estranho não está mais lá, mas há algo no chão. O chapéu do homem ficou para trás.
+
+(link-goto: "Pegar o chapéu", "Pegar o chapéu")
+(link-goto: "Não pegar o chapéu", "Dar uma volta pela casa")
+
+
+:: Olhar pelo olho mágico {"position":"1600,500","size":"100,100"}
+Você vê através do olho mágico molhado uma pessoa encharcada, parecendo um homem alto e esguio com o rosto coberto por um chapéu. Não é possível ver mais detalhes devido ao olho mágico estar coberto de gotas de chuva.
+
+(link-goto: "Abrir a porta", "Abrir a porta")
+(link-goto: "Não abrir a porta para estranhos", "Não abrir a porta")
+
+
+:: Pegar a arma {"position":"2700,800","size":"100,100"}
+
+
+
+:: Pegar o chapéu {"position":"1800,500","size":"100,100"}
+Você abre a porta para pegar o chapéu.
+
+Ao retornar para dentro da casa, pode jurar que ouviu passos apressados do lado de fora, se aproximando e enfim parando quando você fecha a porta. O mais estranho ainda assim, é o chapéu. Quando viu o sujeito anteriormente, ele estava molhado pela chuva, mas o chapéu está totalmente seco. Mais que isso, a textura dele é estranha; muito macia e suave.
+
+Não conseguindo ver mais nada chamativo nele, você o coloca no cabide da entrada, para que seus pais devolvam ao dono no futuro.
+
+(link-goto: "Continuar", "Dar uma volta pela casa")
+
+
+:: PlayerDeath [death] {"position":"400,2200","size":"100,100"}
+(live: 5s)[\
+	(stop:)\
+    (text-color: red)[Você foi pego pela criatura...]
+    [Ela entrou pelo(a)] (text-color: yellow)(display:"DisplayMonsterRoom")
+    
+    
+    (link: "Recomeçar")[(restart:)]
+]\
+<img src="https://i.imgur.com/P9T6ZyS.png" width="960" height="540">\
+<audio autoplay src="https://www.dropbox.com/scl/fi/vffvekmpz6nyshvkht8ar/Jumpscare.ogg?rlkey=lpy426qqbl3oihp8hoc7v213d&dl=1">
+
+
+:: Porão {"position":"825,1950","size":"100,100"}
+(if: $hasBasementKey)
+	[(display:"Porão (chave)")]
+(else:)
+	[(display:"Porão (sem chave)")]
+
+
+:: Porão (chave) [basement] {"position":"1075,1950","size":"100,100"}
+<audio autoplay src="https://www.dropbox.com/scl/fi/l6x5oht52nrc14t2p6sg9/Stairs.ogg?rlkey=z4fskx7h6h5x9usygttc7d9p7&dl=1">\
+\
+[Você desce as escadas escuras até o porão. Existem pequenas janelas horizontais no topo da parede do porão, que mostram o jardim da casa.]
+
+
+
+(link-goto: "Continuar", "Porão I")
+
+
+:: Porão (sem chave) {"position":"975,1950","size":"100,100"}
+Você tenta abrir e forçar a porta mas não consegue fazer com que a passagem para o porão seja aberta, talvez em algum lugar da casa você encontre a chave.
+
+(link-goto: "Voltar", "Corredor de baixo")
+
+
+:: Porão I {"position":"1175,1950","size":"100,100"}
+[O interruptor ao lado da escada acende as lampadas fracas que iluminam o pequeno porão da casa. É possível ver a fiação exposta sobre o teto de madeira.
+
+Em dois grandes armários de ferro ficam guardadas várias peças e alguns aparelhos eletronicos que não funcionam mais, os armários estão tão cheios de bugigangas que mal nota-se que existe uma parede bege ao fundo.]
+
+
+:: Quarto dos pais [parents-room] {"position":"1525,1750","size":"100,100"}
+(set: $currentRoom to "parents-room")
+[A cama de madeira maciça, encontrava-se centralizada no meio do quarto e trazia um aspecto antigo, mas de alguma forma acolhedor.
+
+Ao lado da cama havia duas mesas de cabeceira, e como as demais mobilias do quarto, elas combinam entre-si. 
+
+Na lateral do quarto as duas janelas grandes, com cortinas entreabertas em um tom azul escuro, junto a iluminação amarelada criam sombras nas paredes e no chão.]
+(display: "ShowWindow")
+
+
+
+(link-goto: "Voltar", "Corredor de cima")
+
+
+:: Sala de estar [living] {"position":"825,1650","size":"100,100"}
+(set: $currentRoom to "living")\
+[No centro da sala, um sofá e uma poltrona combinando, com estofamento envelhecido, convidam à tranquilidade. Entre eles, uma pequena mesa de centro mantém livros antigos empoeirados.
+
+Uma estante de madeira, recheada de volumes antigos e objetos de época, enfeita uma das paredes. Você nunca descobriu exatamente que tipo de conteúdo está presente ali nos livros.
+
+É aqui também que fica o rádio do seu pai; aparentemente continua quebrado, como ele deixou.]
+(display: "ShowWindow")
+
+
+
+(link-goto: "Voltar para o corredor", "Corredor de baixo")
+
+
+:: Sala de jantar [dining] {"position":"825,1550","size":"100,100"}
+(set: $currentRoom to "dining")\
+[Uma grande mesa de jantar ocupa o centro da sala, cercada por cadeiras igualmente antigas, todas com estofamento envelhecido. Um lustre pendente, com cristais empoeirados, ilumina a mesa.
+
+Um piano está localizado no fundo da sala, você nunca aprendeu corretamente a tocar, mas por insistência da sua mãe, conhece algumas notas.]
+(display: "ShowWindow")
+
+(link-goto: "Ir para cozinha", "Cozinha")
+
+
+
+(link-goto: "Voltar para o corredor", "Corredor de baixo")
+
+
+:: Seu quarto [your-room] {"position":"1525,1850","size":"100,100"}
+(set: $currentRoom to "your-room")
+
+(display: "ShowWindow")
+
+
+
+(link-goto: "Voltar", "Corredor de cima")
+
+
+:: ShowStorm {"position":"200,2100","size":"100,100"}
+(if: $stormStrength is 0)\
+	[(enchant: ?storm, (text-color: white))]\
+(else-if: $stormStrength is 1)\
+	[(enchant: ?storm, (text-color: yellow))]\
+(else-if: $stormStrength is 2)\
+	[(enchant: ?storm, (text-color: orange))]\
+(else-if: $stormStrength is 3)\
+	[(enchant: ?storm, (text-color: red) + (text-style: "shudder"))]\
+\
+|storm>[A tempestade fica mais forte.]
+
+
+:: ShowWindow {"position":"300,2100","size":"100,100"}
+(set: _windowText to "")\
+(if: $currentRoom of $isWindowOpen)\
+[\
+    (enchant: ?window, (text-color: red))\
+    (set: _windowText to "As janelas estão abertas...")\
+]\
+(else:)\
+[\
+	(enchant: ?window, (text-color: cyan))\
+	(set: _windowText to "As janelas estão fechadas.")\
+]\
+\
+|window>[_windowText]
+
+(event: when $currentRoom of $isWindowOpen is true)\
+[\
+	(link: "Fechar janelas")[\
+		(enchant: ?window, (text-color: cyan))\
+		(set: $currentRoom of $isWindowOpen to false)\
+		(replace: ?window)[As janelas foram fechadas.]\
+    ]\
+]
+
+
+:: StartMinigame {"position":"425,1750","size":"100,100"}
+
+
+
+:: Startup [startup] {"position":"300,400","size":"100,100"}
+(set: $stormStrength to 0)\
+(set: $turns to 0)\
+(set: $currentRoom to "lower-corridor")\
+(set: $monsterCurrentRoom to "")\
+(set: $monsterEnteredRoom to "")\
+(set: $isMonsterActive to false)\
+(set: $isMonsterInside to false)\
+(set: $hasAtticKey to false)\
+(set: $hasGarageKey to false)\
+(set: $hasBasementKey to false)\
+(set: $isWindowOpen to (dm:
+	"dining", true, 
+    "kitchen", true, 
+    "living", true, 
+    "bathroom", true, 
+    "garage", true, 
+    "basement", true, 
+    "attic", true, 
+    "your-room", true, 
+	"parents-room", true
+))
+
+
+:: Verificar as janelas {"position":"2000,700","size":"100,100"}
+O barulho da janela lhe perturba profundamente. Você não entende como uma tempestade pode causar tanto estrago, e culpa algum galho de árvore que possa ter batido contra alguma janela.
+
+Você sai em busca da janela de onde o barulho possa ter vindo, pensando se não poderia ser apenas sua imaginação impressionada por estar sozinho pela primeira vez nessa situação.
+<!-- setar que o monstro pode entrar pela garagem -->
+
+(link-goto: "Continuar", "Monstro entra pela garagem")
+
+
+:: Verificar o portão {"position":"2000,600","size":"100,100"}
+O som da janela lhe perturba profundamente. Você não entende como uma tempestade pode causar tanto barulho e estragos, ainda mais por culpa de um galho de árvore que possa ter batido em algum lugar.
+
+Talvez tudo estivesse sendo mais intenso devido ao fato de você estar sozinho na casa pela primeira vez, pensa, enquanto verifica o cadeado do portão.
+<!-- setar que monstro não vai entrar pela garagem -->
+
+(link-goto: "Continuar", "Verificar o portão II")
+
+
+:: Verificar o portão II {"position":"2100,600","size":"100,100"}
+De volta ao hall de entrada, algo capta a sua atenção no canto do olho. Parece que algo escapava novamente pela lateral da janela, assim como na cozinha anteriormente. Assustado, você decide subir e desistir de brincar de detetive pela casa, decidindo que vai descer novamente apenas se algum barulho for realmente significativo.
+
+Algum tempo se passa, com aqueles mesmos barulhos se repetindo com frequência. Cada vez que trovejava, parecia que alguma das janelas estava sendo empurrada. Você acredita ter ouvido passos no lado de fora da casa, mas evita verificar.
+
+(link-goto: "Continuar", "Verificar o portão III")
+
+
+:: Verificar o portão III {"position":"2200,600","size":"100,100"}
+A tempestade não parece estar nem perto de se dissipar. Os trovões ainda são ouvidos mais à distância e a chuva não dá trégua. Quando você está voltando a se concentrar no livro, uma batida conhecida e arrastada toca na porta da frente.
+
+Você decide descer e tentar conversar com o homem, mesmo com o barulho ensurdecedor da tempestade e você provavelmente mal poderia escutá-lo. Porém, quando está no meio das escadas, escuta o homem lhe chamar pelo nome.
+<!-- audio cursed do where are you -->
+
+Deve ser algum conhecido ou vizinho que foi verificar se você estava bem. 
+
+(link-goto: "Abrir a porta", "Abrir a porta")
+(link-goto: "Evitar o homem novamente", "Evitar o homem novamente")
+
+
+:: Ático {"position":"1525,1650","size":"100,100"}
+(if: $hasAtticKey)
+	[(display:"Ático I")]
+(else:)
+	[(display:"Ático (sem chave)")]
+
+
+:: Ático (chave) {"position":"1775,1650","size":"100,100"}
+[Você coloca a chave no alçapão que leva ao ático.]
+
+
+
+(link-goto: "Continuar", "Garagem I")
+
+
+:: Ático (sem chave) {"position":"1675,1650","size":"100,100"}
+Você tenta abrir e forçar a porta mas não consegue fazer com que ela abra.
+A chave deve estar em algum lugar da casa...
+
+(link-goto: "Voltar", "Corredor de cima")
+
+
+:: Ático I [attic] {"position":"1875,1650","size":"100,100"}
+(set: $currentRoom is "attic")\
+\
+[As vigas inclinadas do teto acompanham a estrutura do telhado da casa. Todo o local está bem empoeirado.
+
+Nas paredes curtas ficam apoiados os moveis quebrados em desuso e algumas caixas de papelão. Uma escrivaninha de carvalho acomoda em cima alguns livros velhos, que talvez nunca tenham sido lidos por ninguém.
+
+O armário de arquivo está com algumas gavetas desalinhadas, podem conter documentos importantes.]
+
+(display: "ShowWindow")
+
+
+
+(link-goto: "Voltar", "Corredor de cima")
+
+
+:: StoryScript [script]
+var audio = document.createElement('audio');
+audio.src = 'https://static.wixstatic.com/mp3/1c7117_53c10ff3624846c0ab3b112634196814.mp3';
+audio.loop = true;
+audio.play();
+
+:: StoryStylesheet [stylesheet]
+tw-story {
+  background-color: #130B1B;
+  background-repeat: no-repeat;
+  background-size: 90% 90%;
+  background-position: center center;
+}
+
+tw-story[tags="lower-corridor"] {
+  background-image: url("https://i.imgur.com/mmnuRt4.png");
+}
+
+tw-story[tags="dining"] {
+  background-image: url("https://i.imgur.com/M9lzok3.png");
+}
+
+tw-story[tags="living"] {
+  background-image: url("https://i.imgur.com/PaCjZxu.png");
+}
+
+tw-story[tags="kitchen"] {
+  background-image: url("https://i.imgur.com/qJQdfiZ.png");
+}
+
+tw-story[tags="bathroom"] {
+  background-image: url("https://i.imgur.com/G39hsLe.png");
+}
+
+tw-story[tags="attic"] {
+  background-image: url("");
+}
+
+tw-story[tags="basement"] {
+  background-image: url("https://i.imgur.com/YXszrkq.png");
+}
+
+tw-story[tags="parents-room"] {
+  background-image: url("https://i.imgur.com/RiyCLhh.png");
+}
+
+tw-story[tags="your-room"] {
+  background-image: url("https://i.imgur.com/tHcjgDD.png");
+}
+
+tw-passage {
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+tw-link, .enchantment-link {
+	color: yellow;
+}
+
+tw-link:hover, .enchantment-link:hover {
+	color: orange;
+}
+
+.visited {
+	color: yellow;
+}
+
+.visited:hover {
+	color: orange;
+}
+
+tw-sidebar {
+	display: none;
+}
