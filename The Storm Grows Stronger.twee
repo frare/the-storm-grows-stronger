@@ -6,13 +6,17 @@ The Storm Grows Stronger
 {
   "ifid": "1682A661-F8D2-4A45-A7B1-C58B06E42923",
   "format": "Harlowe",
-  "format-version": "3.3.7",
+  "format-version": "3.3.8",
   "start": "Splash",
   "tag-colors": {
     "startup": "yellow"
   },
-  "zoom": 1
+  "zoom": 0.6
 }
+
+
+:: Ato II {"position":"2450,700","size":"100,100"}
+A leitura está fluindo apesar da imtepérie. Você está absorto na descrição dos bailes luxuosos sediados pelo protagonista do livro quando ouveu m barulho muito claro vindo da porta da frente. Era uma batida, fora de ritmo. Não era o costumeiro toc-toc-toc que as pessoas fazem, causando uma senseção de estranhamento.
 
 
 :: Conferindo o jardim {"position":"5750,500","size":"100,100"}
@@ -22,10 +26,13 @@ Você decide abrir a porta da frente e verificar a parte de fora da casa. As fol
 (link: "Voltar pra dentro de casa")
 
 
-:: Continuar leitura {"position":"2300,700","size":"100,100"}
+:: Continuar leitura {"position":"1800,700","size":"100,100"}
 Você senta na poltrona desgastada que já pertenceu ao seu avô e começa a ler O Retrato de Dylan Black, uma edição antiga e empoeirada que atiçava a sua curiosidade há muito tempo, mas não havia tido tempo de ler. Conforme o tempo ia passando, a chuva ficava mais forte e os trovões eram incessantes.
 
 Parecia que a tempestade só piorava. O vento sibilava entre as frestas da madeira da casa, tirando a concentração da leitura. Dentre todos estes sons, a chuva, os trovões, o vento, o farfalhar das árvores e o balançar das janelas, você ouve este último com mais clareza. Parecia que alguma janela estava tentando ser aberta.
+
+(if: $desceuParaSala) [[[Continuar->Descer para a sala]]]
+(else:) [[[Continuar->Ficou no ático]]]
 
 
 :: De volta ao hall {"position":"3500,700","size":"100,100"}
@@ -45,15 +52,11 @@ Você decide descer e tentar conversar com o homem, mesmo com o barulho ensurdec
 <!-- audio cursed -->
 
 
-:: Desceu para sala {"position":"2150,800","size":"100,100"}
-Você senta na poltrona desgastada que já pertenceu ao seu avô e começa a ler O Retrato de Dylan Black, uma edição antiga e empoeirada que atiçava a sua curiosidade há muito tempo, mas não havia tido tempo de ler. Conforme o tempo ia passando, a chuva ficava mais forte e os trovões eram incessantes.
+:: Descer para a sala {"position":"1950,850","size":"100,100"}
+Parecia que a tempestade só piorava. O vento sibilava entre as frestas da madeira da casa, tirando a concentração da leitura. Dentro todos estes sons, a chuva, os trovões, o vento, o farfalhar das árvores e o balançar das janelas, você ouve este último com mais clareza. Parecia que alguma janela estava tentando se abrir.
 
-
-:: Desceu para sala II {"position":"2450,700","size":"100,100"}
-Parecia que a tempestade só piorava. O vento entrava pelas frestas da madeira da casa, tirando a concentração da leitura. Dentre todos estes sons, a chuva, os trovões, o vento, o farfalhar das árvores e o balançar das janelas, você ouve este último com mais clareza. Parecia que alguma janela estava tentando ser aberta.
-
-(link: "Levantar para checar")
-(link: "Ignorar")
+[[Ignorar]]
+[[Levantar para checar]]
 
 
 :: Deve ser aquele homem estranho {"position":"3800,700","size":"100,100"}
@@ -101,6 +104,14 @@ A primeira coisa que você nota é o alçapão que leva ao ático aberto. Você 
 O barulho da janela lhe perturba profundamente. Você não entende como uma tempestade pode causar tanto estrago, e culpa algum galho de árvore que possa ter batido em algum lugar. Você sai em busca de alguma janela que possa ter sido afetada, pensando se não pode ser apenas sua imaginação impressionada por estar sozinho nessa situação.
 
 
+:: Ficou no ático {"position":"1950,700","size":"100,100"}
+O livro funciona como uma boa distração, fazendo com que a forte torrente que aci do lado de fora da casa seja esquecida enquanto você fica imerso na narrativa. Uma história de suspense, onde um monstro com aparância de homem comete diversos assassinatos. Em alguns trechos da história, você sente calafrios na espinha pelo medo transmitido pelas páginas do livro.
+
+Felizmente era só uma história.
+
+[[Continuar->Ato II]]
+
+
 :: Garagem aberta {"position":"4550,900","size":"100,100"}
 Você tenta se concentrar no livro apesar de todas as coisas perturbadoras que ocorreram nas últimas horas. Seu quarto fica relativamente longe da garagem, mas, de repente, o portão rangeu. Poderia talvez ser o vento, que estava tão forte a ponto de abrir um portão de ferro.
 
@@ -121,20 +132,60 @@ Algo não estava certo com a voz daquele homem. Parecia uma rádio AM quase fora
 (link: "Não ajudar")
 
 
-:: Intro {"position":"1550,700","size":"100,100"}
+:: Ignorar {"position":"2100,1000","size":"100,100"}
+Você continua sua leitura, mais interessado na narrativa do que nos barulhos da chuva. A casa pe vekha, é atural que faça barulho quando venta tão forte. Você faz uma nota mental de que quando seus pais voltassem, deveria conversar com eles sobre reforçar as janelas para que não batessem tanto quando chove.
+
+Nesse mesmo momento, um barulho de vidro sendo quebrado é ouvido vindo da cozinha.
+
+[[Continuar->Ir até a cozinha]]
+
+
+:: Intro {"position":"1050,700","size":"100,100"}
 Na tranquila solidão de sua casa isolada no interior da região, você se encontra sozinho pela primeira vez em sua vida. Seus pais partiram para suas antecipadas férias, deixando você encarregado de cuidar da antiga casa da família durante a ausência deles.
 
-À medida que as horas foram se passando, e a noite chegava, um sentimento de solidão começou a pairar sobre você, amplificando os sons do rangido da madeira no antigo casarão. O tique-taque do relógio no corredor ecoa pelo corredor.
+À medida que as horas foram se passando, e a noite chegava, um sentimento de solidão começou a pairar sobre você, amplificando os sons do rangido da madeira no antigo casarão. O tique-taque do relógio no corredor ecoa pelo corredor
+
+[[Continuar->Intro II]]
 
 
-:: Intro II {"position":"1700,700","size":"100,100"}
-Olhando para fora, você consegue ver várias nuvens escuras se aproximando rapidamente da casa. Uma tempestade está por vir. Sem que você saiba, essa tempestade trará muito mais do que apenas vento e chuva...
+:: Intro II {"position":"1200,700","size":"100,100"}
+A casa, construída quase inteiramente de madeira, tem um estilo bem rústico e antiquado. No andar de baixo, existe a entrada, que comporta a porta da frente. Na entrada, um corredor extenso corta a casa ao meio, chegando até a poarta dos fundos, que dá para a garagem. À direita do corredor existe uma grande entrada que mostra a sala de estar; já à esquerda existe uma entrada similar, mas que pertence a sala de jantar. No fundo da sala de jantar, está a cozinha.
 
+Na parede esquerda do corredor, existe a escada que leva para o andar de cima. Subindo as escadas, encontra-se o seu quarto, o quarto de seus pais e um pequeno alçapão no teto que leva ao ático.
+
+[[Continuar->Intro III]]
+
+
+:: Intro III {"position":"1350,700","size":"100,100"}
+Olhando para fora, você consegue ver várias nuvens escuras se aproximando rapidamente da casa. Uma tempestade está por vir.
+
+[[Continuar->Intro IV]]
+
+
+:: Intro IV {"position":"1500,700","size":"100,100"}
 Notando que o vento começa a castigar algumas das antigas janelas da casa, você rapidamente corre para a entrada e fecha as janelas que ainda continuavam abertas, aguardando pelo chegar da tempestade.
 
+A casa é atingida por uma onda de frio, que entra pelas frestas da madeira e te obriga a buscar um agasalho no andar de cima. Trovões começam a rugir na distância, tomando o protagonismo do som ambiente no momento. A casa não está mais silenciosa.
 
-:: Intro III {"position":"1850,700","size":"100,100"}
-A casa é atingida por uma onda de frio, que entra pelas frestas da madeira e te obriga a buscar um agasalho no andar de cima. Trovões começam a rugir à distância, tomando o protagonismo do som ambiente no momento. A casa não está mais silenciosa.
+[[Continuar->Primeira escolha]]
+
+
+:: Ir até a cozinha {"position":"2250,1000","size":"100,100"}
+Correndo até a cozinha pelo susto do barulho repentino, você vê o que parece um vulto se movendo do outro lado da janela central. 
+
+Provavelmente algum grande galho levado pela chuva, também responsável por quebrar parte do vidro.
+
+Olhando melhor, a janela quebrada era repartida no centro, em forma de cruz, com 4 vidros menores ali. Um deles foi quebrado em muitos cacos menores.
+
+Você checa a janela com cuidado e confere que ela ainda permanece trancada. Então retorna para a sala.
+
+[[Continuar->Ato II]]
+
+
+:: Levantar para checar {"position":"2100,850","size":"100,100"}
+Você fica incomodado com o barulho e decide verificar as janelas do andar de baixo. Uma por uma, você as vê balançarem, castigadas pelo vento forte. Quando se aproxima da janela da cozinha, parece que algo desaparece rapidamente pelo canto da janela. Você interpreta como folhas carregadas pelo vento.
+
+[[Continuar->Ato II]]
 
 
 :: Levantou para checar a porta {"position":"2600,700","size":"100,100"}
@@ -171,17 +222,13 @@ Você vê através do olho mágico molhado uma pessoa encharcada, parecendo um h
 (link: "Você decide seguir o conselho dos seus pais e não abrir a porta para estranhos")
 
 
-:: Primeira escolha {"position":"2000,700","size":"100,100"}
-Seu primeiro instinto é pegar o livro mais próximo para começar a ler. Você está a caminho do ático quando um raio atinge algum local próximo e o trovão que o segue faz a casa tremer com seu eco (inserir audio trovão). Porém, há um som diferente junto ao trovão. Parece que algo ou alguém bateu contra a porta da frente da casa.
+:: Primeira escolha {"position":"1650,700","size":"100,100"}
+Seu primeiro instinto é pegar o livro mais próximo para começar a ler. Você está a caminho do ático quando um raio atinge algum local próximo e o trovão que o segue faz a casa tremer com seu eco. Porém, há um som diferente junto ao trovão: foi possível escutar uma batida contra a porta da frente da casa.
 
-Imaginando ser apenas parte do susto com o raio, você segue para o ático em busca do livro. Estando lá, o barulho da chuva era muito mais alto do que dentro da casa, tornando-se desconfortável a permanência no cômodo.
+Você segue em busca do livro no ático. Nele o barulho da chuva é muito mais alto do que do restante dos cômodos da casa, o som tornando-se até desconfortável.
 
-(link: "Ficar no ático mesmo assim para ler")[
-	(set: $desceuParaSala to false)
-]
-(link: "Sair de lá e descer para a sala de estar")[
-	(set: $desceuParaSala to true)
-]
+(link-reveal-goto: "Continuar no ático", "Continuar leitura")[(set: $desceuParaSala to false)]
+(link-reveal-goto: "Descer para a sala de estar", "Continuar leitura")[(set: $desceuParaSala to true)]
 
 
 :: Procurou a arma {"position":"4850,600","size":"100,100"}
@@ -203,11 +250,11 @@ Você sobe para o seu quarto e tenta esquecer a voz perturbadora do seu visitant
 Algum tempo se passa, com aqueles mesmos barulhos se repetindo com frequência. Cada vez que trovejava, parecia que alguma das janelas estava sendo aberta. Você acredita ter ouvido passos no lado de fora da casa, mas evita verificar.
 
 
-:: Splash {"position":"1400,700","size":"100,100"}
+:: Splash {"position":"900,700","size":"100,100"}
 
 
 
-:: Startup [startup] {"position":"1200,700","size":"100,100"}
+:: Startup [startup] {"position":"700,700","size":"100,100"}
 (set: $desceuParaSala to false)
 
 
