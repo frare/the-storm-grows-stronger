@@ -3,238 +3,409 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
-<title>The Storm Grows Stronger</title>
+<title>The Storm Grows Stronger (old)</title>
 <style title="Twine CSS">@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes rumble{25%{top:-0.1em}75%{top:.1em}0%,to{top:0px}}@keyframes shudder{25%{left:.1em}75%{left:-0.1em}0%,to{left:0px}}@keyframes buoy{25%{top:.25em}75%{top:-0.25em}0%,to{top:0px}}@keyframes sway{25%{left:.25em}75%{left:-0.25em}0%,to{left:0px}}@keyframes pulse{0%{transform:scale(0, 0)}20%{transform:scale(1.2, 1.2)}40%{transform:scale(0.9, 0.9)}60%{transform:scale(1.05, 1.05)}80%{transform:scale(0.925, 0.925)}to{transform:scale(1, 1)}}@keyframes zoom-in{0%{transform:scale(0, 0)}to{transform:scale(1, 1)}}@keyframes shudder-in{0%,to{transform:translateX(0em)}5%,25%,45%{transform:translateX(-1em)}15%,35%,55%{transform:translateX(1em)}65%{transform:translateX(-0.6em)}75%{transform:translateX(0.6em)}85%{transform:translateX(-0.2em)}95%{transform:translateX(0.2em)}}@keyframes rumble-in{0%,to{transform:translateY(0em)}5%,25%,45%{transform:translateY(-1em)}15%,35%,55%{transform:translateY(1em)}65%{transform:translateY(-0.6em)}75%{transform:translateY(0.6em)}85%{transform:translateY(-0.2em)}95%{transform:translateY(0.2em)}}@keyframes fidget{0%,8.1%,82.1%,31.1%,38.1%,44.1%,40.1%,47.1%,74.1%,16.1%,27.1%,72.1%,24.1%,95.1%,6.1%,36.1%,20.1%,4.1%,91.1%,14.1%,87.1%,to{left:0px;top:0px}8%,82%,31%,38%,44%{left:-1px}40%,47%,74%,16%,27%{left:1px}72%,24%,95%,6%,36%{top:-1px}20%,4%,91%,14%,87%{top:1px}}@keyframes slide-right{0%{transform:translateX(-100vw)}}@keyframes slide-left{0%{transform:translateX(100vw)}}@keyframes slide-up{0%{transform:translateY(100vh)}}@keyframes slide-down{0%{transform:translateY(-100vh)}}@keyframes fade-right{0%{opacity:0;transform:translateX(-1em)}to{opacity:1}}@keyframes fade-left{0%{opacity:0;transform:translateX(1em)}to{opacity:1}}@keyframes fade-up{0%{opacity:0;transform:translateY(1em)}to{opacity:1}}@keyframes fade-down{0%{opacity:0;transform:translateY(-1em)}to{opacity:1}}@keyframes flicker{0%,29%,31%,63%,65%,77%,79%,86%,88%,91%,93%{opacity:0}30%{opacity:.2}64%{opacity:.4}78%{opacity:.6}87%{opacity:.8}92%,to{opacity:1}}@keyframes blur{0%{filter:blur(2rem);opacity:0}25%{opacity:1}to{filter:blur(0rem);opacity:1}}.dom-debug-mode tw-story,.dom-debug-mode tw-passage,.dom-debug-mode tw-sidebar,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{outline:1px solid #f5a3da;min-height:32px;display:block !important}.dom-debug-mode tw-story::before,.dom-debug-mode tw-passage::before,.dom-debug-mode tw-sidebar::before,.dom-debug-mode tw-include::before,.dom-debug-mode tw-hook::before,.dom-debug-mode tw-expression::before,.dom-debug-mode tw-link::before,.dom-debug-mode tw-dialog::before,.dom-debug-mode tw-columns::before,.dom-debug-mode tw-column::before,.dom-debug-mode tw-align::before{position:absolute;top:0;left:0;height:16px;background-color:#f5a3da;color:#000;font-size:16px;font-weight:normal;font-style:normal;font-family:monospace;display:inline-block;line-height:100%;white-space:pre;z-index:999997}.dom-debug-mode tw-story:hover,.dom-debug-mode tw-passage:hover,.dom-debug-mode tw-sidebar:hover,.dom-debug-mode tw-include:hover,.dom-debug-mode tw-hook:hover,.dom-debug-mode tw-expression:hover,.dom-debug-mode tw-link:hover,.dom-debug-mode tw-dialog:hover,.dom-debug-mode tw-columns:hover,.dom-debug-mode tw-column:hover,.dom-debug-mode tw-align:hover{outline:1px solid #fc9}.dom-debug-mode tw-story:hover::before,.dom-debug-mode tw-passage:hover::before,.dom-debug-mode tw-sidebar:hover::before,.dom-debug-mode tw-include:hover::before,.dom-debug-mode tw-hook:hover::before,.dom-debug-mode tw-expression:hover::before,.dom-debug-mode tw-link:hover::before,.dom-debug-mode tw-dialog:hover::before,.dom-debug-mode tw-columns:hover::before,.dom-debug-mode tw-column:hover::before,.dom-debug-mode tw-align:hover::before{background-color:#fc9;transition:background-color 1s}.dom-debug-mode tw-passage,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{padding:1em;margin:0}.dom-debug-mode tw-story::before{content:'<tw-story tags="' attr(tags) '">'}.dom-debug-mode tw-passage::before{top:-16px;content:'<tw-passage tags="' attr(tags) '">'}.dom-debug-mode tw-sidebar::before{top:-16px;content:"<tw-sidebar>"}.dom-debug-mode tw-hook::before{content:'<tw-hook name="' attr(name) '">'}.dom-debug-mode tw-expression::before{content:'<tw-expression name="' attr(name) '">'}.dom-debug-mode tw-link::before{content:'<tw-link name="' attr(name) '">'}.dom-debug-mode tw-dialog::before{content:"<tw-dialog>"}.dom-debug-mode tw-columns::before{content:"<tw-columns>"}.dom-debug-mode tw-column::before{content:"<tw-column>"}.dom-debug-mode tw-align::before{content:"<tw-align>"}.dom-debug-mode tw-include::before{content:'<tw-include type="' attr(type) '" name="' attr(name) '">'}tw-open-button[goto]{display:none}.debug-mode tw-open-button[replay],.debug-mode tw-open-button[goto]{display:inline}.debug-mode tw-expression{display:inline-block !important}.debug-mode tw-expression[type=variable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"$" attr(name)}.debug-mode tw-expression[type=tempVariable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"_" attr(name)}.debug-mode tw-expression[return=boolean]{background-color:rgba(179,179,179,.2)}.debug-mode tw-expression[return=array]{background-color:rgba(255,102,102,.2)}.debug-mode tw-expression[return=dataset]{background-color:rgba(255,128,0,.2)}.debug-mode tw-expression[return=number]{background-color:rgba(255,179,102,.2)}.debug-mode tw-expression[return=datamap]{background-color:rgba(255,255,102,.2)}.debug-mode tw-expression[return=changer]{background-color:rgba(179,255,102,.2)}.debug-mode tw-expression[return=lambda]{background-color:rgba(102,255,102,.2)}.debug-mode tw-expression[return=hookname]{background-color:rgba(102,255,204,.2)}.debug-mode tw-expression[return=string]{background-color:rgba(102,255,255,.2)}.debug-mode tw-expression[return=datatype]{background-color:rgba(102,153,255,.2)}.debug-mode tw-expression[return=gradient],.debug-mode tw-expression[return=colour]{background-color:rgba(204,102,255,.2)}.debug-mode tw-expression[return=instant],.debug-mode tw-expression[return=macro]{background-color:rgba(240,117,199,.2)}.debug-mode tw-expression[return=command]{background-color:rgba(153,153,255,.2)}.debug-mode tw-expression.false{background-color:rgba(255,0,0,.2) !important}.debug-mode tw-expression[type=macro]::before{content:"(" attr(name) ":)";padding:0 .5rem;font-size:1rem;vertical-align:middle;line-height:normal;background-color:inherit;border:1px solid rgba(255,255,255,.5)}.debug-mode tw-expression[title]:not([title=""]){cursor:help}.debug-mode tw-hook{background-color:rgba(0,85,255,.1) !important}.debug-mode tw-hook::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"["}.debug-mode tw-hook::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]"}.debug-mode tw-hook[name]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]<" attr(name) "|"}.debug-mode tw-pseudo-hook{background-color:rgba(255,170,0,.1) !important}.debug-mode tw-collapsed::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"{"}.debug-mode tw-collapsed::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"}"}.debug-mode tw-verbatim::before,.debug-mode tw-verbatim::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"`"}.debug-mode tw-align[style*="text-align: center"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0) 0%, hsla(14deg, 100%, 87%, 0.25) 50%, hsla(14deg, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: left"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0.25) 0%, hsla(14deg, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: right"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0) 0%, hsla(14deg, 100%, 87%, 0.25) 100%)}.debug-mode tw-column{background-color:rgba(189,228,255,.2)}.debug-mode tw-enchantment{animation:enchantment .5s infinite;border:1px solid}.debug-mode tw-link::after,.debug-mode tw-broken-link::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(passage-name)}.debug-mode tw-include{background-color:rgba(204,128,51,.1)}.debug-mode tw-include::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(type) ' "' attr(name) '"'}.debug-dialogs tw-backdrop:not(.eval-replay):not(.harlowe-crash){pointer-events:none;opacity:.1}tw-eval-replay tw-eval-code,tw-eval-replay tw-eval-explanation{max-height:20vh;overflow:auto;margin:10px auto}tw-eval-replay tw-eval-code{display:block;font-family:monospace;padding-bottom:1ex;border-bottom:2px solid gray}tw-eval-replay tw-eval-explanation{display:block;text-align:center}tw-eval-replay tw-eval-explanation>code{white-space:pre-wrap}tw-eval-replay tw-eval-explanation>code.from-block{width:40%;display:inline-block;text-align:left;max-height:4em;overflow-wrap:anywhere;overflow-y:scroll}tw-eval-replay tw-eval-explanation>code.from-block~.to-desc{width:calc(40% - 2em);margin-left:2em;display:inline-block}tw-eval-replay tw-eval-explanation>code.from-block+span::after{content:"..."}tw-eval-replay tw-eval-explanation>code.from-inline{text-align:right}tw-eval-replay tw-eval-explanation>:nth-child(2){white-space:pre}tw-eval-replay tw-eval-explanation>.to-desc{text-align:left}tw-eval-replay tw-eval-explanation>table{width:100%;margin-top:1em}tw-eval-replay tw-eval-explanation>table td{white-space:pre-wrap !important;word-wrap:anywhere}tw-eval-replay tw-eval-reason{text-align:center;font-size:80%;font-style:italic;display:block}tw-eval-replay tw-eval-it{text-align:center;font-size:80%;display:block}tw-eval-replay tw-dialog-links{display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}@keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}tw-debugger{position:fixed;box-sizing:border-box;bottom:0;right:0;z-index:999999;min-width:14em;min-height:1em;padding:0em .5em .5em 1em;font-size:1.25em;font-family:sans-serif;color:#262626;background-color:#fff;border-left:solid #262626 2px;border-top:solid #262626 2px;border-top-left-radius:.5em;opacity:1}tw-debugger.fade-panel:not(:hover){opacity:.33}tw-debugger.theme-dark{color:#d9d9d9;background-color:#000}tw-debugger.theme-dark{border-color:#d9d9d9 rgba(0,0,0,0) rgba(0,0,0,0) #d9d9d9}tw-debugger select{margin-right:1em;width:12em}tw-debugger button,tw-debugger tw-link{border-radius:3px;border:solid #999 1px;margin:auto 4px;color:#262626;background-color:#fff;cursor:pointer}tw-debugger button.enabled,tw-debugger tw-link.enabled{color:#000;background-color:#d9d9d9;box-shadow:inset #999 3px 5px .5em}tw-debugger.theme-dark button,tw-debugger.theme-dark tw-link{color:#d9d9d9;background-color:#000;border-color:#666}tw-debugger.theme-dark button.enabled,tw-debugger.theme-dark tw-link.enabled{color:#e6e6e6;background-color:#424242;box-shadow:inset #666 3px 5px .5em}tw-debugger button{font-size:1em;overflow-x:hidden;text-overflow:ellipsis;white-space:pre}tw-debugger tw-link{font-size:1.25em;border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}tw-debugger tw-link:hover{border-color:#262626;color:#262626}tw-debugger.theme-dark tw-link:hover{border-color:#d9d9d9;color:#d9d9d9}tw-debugger tw-dialog{background-color:#fff;color:#000;font-size:1.25em}tw-debugger.theme-dark tw-dialog{background-color:#000;color:#e6e6e6}tw-debugger .panel{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;position:absolute;bottom:100%;left:-2px;right:0;padding:1em;overflow-y:scroll;overflow-x:hidden;border:inherit;box-sizing:content-box;background-color:#fff;border-bottom:solid #999 2px;border-top-left-radius:.5em;border-bottom-left-radius:.5em;font-size:.8em}tw-debugger .panel:empty,tw-debugger .panel[hidden]{display:none}tw-debugger.theme-dark .panel{background-color:#000;border-bottom-color:#666}tw-debugger .panel-source .panel-row-buttons{width:2rem}tw-debugger .panel-source .source-tags{width:20%;font-style:italic}tw-debugger .panel-row-source td{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere;max-height:8rem;padding:1rem}tw-debugger .panel-rows{width:100%;overflow-x:scroll}tw-debugger .panel-rows>*{display:table-row}tw-debugger .panel-rows>div:nth-of-type(2n){background-color:#e6e6e6}tw-debugger .panel-tools .panel-rows>*,tw-debugger .panel-options .panel-rows>*{margin-top:.4rem;display:block}tw-debugger.theme-dark .panel-rows>div:nth-of-type(2n){background-color:#212121}tw-debugger .panel-row-buttons{text-align:right}tw-debugger .panel-variables .panel-rows:empty::before{content:"~ No variables ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-enchantments .panel-rows:empty::before{content:"~ No enchantments ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty::before{content:"~ No errors... for now. ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty+.panel-errors-bottom{display:none}tw-debugger.theme-dark .panel-variables .panel-rows:empty::before,tw-debugger.theme-dark .panel-enchantments .panel-rows:empty::before,tw-debugger.theme-dark .panel-errors .panel-rows:empty::before{color:#a8a8a8}tw-debugger .panel-rows:empty+.panel-variables-bottom{display:none}tw-debugger th[data-col]{text-decoration:underline;cursor:pointer}tw-debugger th[data-col][data-order=asc]::after{content:"↓"}tw-debugger th[data-col][data-order=desc]::after{content:"↑"}tw-debugger .panel-storylets:not(.panel-exclusive) .storylet-exclusive,tw-debugger .panel-storylets:not(.panel-urgent) .storylet-urgent{display:none}tw-debugger .storylet-exclusive,tw-debugger .storylet-urgent,tw-debugger .storylet-open{text-align:center}tw-debugger .panel-variables-bottom{padding-top:5px}tw-debugger .enchantment-row{min-height:1.5em}tw-debugger .variable-path{opacity:.4}tw-debugger .temporary-variable-scope,tw-debugger .enchantment-local{font-family:sans-serif;font-weight:normal;opacity:.8;font-size:.75em}tw-debugger .temporary-variable-scope:not(:empty)::before,tw-debugger .enchantment-local:not(:empty)::before{content:" in "}tw-debugger .variable-name,tw-debugger .enchantment-name{font-family:monospace;font-weight:bold}tw-debugger .variable-type{color:#575757;font-weight:normal;text-overflow:ellipsis;overflow:hidden;max-width:10em}tw-debugger.theme-dark .variable-type{color:#a8a8a8}tw-debugger .error-row{display:table-row;background-color:rgba(230,101,204,.3)}tw-debugger .error-row:nth-of-type(2n){background-color:rgba(237,145,219,.3)}tw-debugger .error-row>*{display:table-cell;padding:.25em .5em}tw-debugger .error-row .error-message[title]:not([title=""]){cursor:help}tw-debugger .error-row .error-passage{color:#575757}tw-debugger.theme-dark .error-row .error-passage{color:#a8a8a8}tw-debugger .storylet-row{background-color:rgba(193,240,225,.3)}tw-debugger .storylet-row:nth-child(2n){background-color:rgba(152,231,204,.3)}tw-debugger .storylet-row.storylet-closed{font-style:italic;background-color:#fff}tw-debugger .storylet-row.storylet-closed:nth-child(2n){background-color:#e6e6e6}tw-debugger .storylet-row.storylet-closed>:not(.storylet-lambda){opacity:.6}.storylet-error tw-debugger .storylet-row{background-color:rgba(230,101,204,.3)}.storylet-error tw-debugger .storylet-row:nth-child(2n){background-color:rgba(237,145,219,.3)}tw-debugger .storylet-row .storylet-name,tw-debugger .storylet-row .storylet-value{display:inline-block;width:50%}tw-debugger .storylet-row .storylet-lambda{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere}tw-debugger.theme-dark .storylet-row.storylet-closed{background-color:#000}tw-debugger.theme-dark .storylet-row.storylet-closed:nth-child(2n){background-color:#212121}tw-debugger .tabs{padding-bottom:.5em}tw-debugger .tab{border-radius:0px 0px .5em .5em;border-top:none;top:-2px}tw-debugger .resizer-h{position:absolute;height:14em;border-left:2px solid #999;border-right:2px solid #999;top:10px;left:4px;width:8px;cursor:ew-resize}tw-debugger.theme-dark .resizer-h{border-color:rgba(0,0,0,0) #666}tw-debugger .resizer-v{position:absolute;height:8px;border-top:2px solid #999;border-bottom:2px solid #999;margin-bottom:4px;top:4px;left:10px;width:95%;cursor:ns-resize;box-sizing:border-box}tw-debugger.theme-dark .resizer-v{border-color:#666 rgba(0,0,0,0)}tw-debugger mark{color:inherit;background-color:rgba(101,230,230,.3) !important}tw-dialog{z-index:999997;border:#fff solid 2px;padding:2em;color:#fff;background-color:#000;display:block}@media(min-width: 576px){tw-dialog{max-width:50vw}}tw-dialog input[type=text]{font-size:inherit;width:100%;border:solid #fff !important}tw-dialog-links{text-align:right;display:-ms-flexbox;display:flex;-ms-flex-pack:end;justify-content:flex-end}tw-backdrop{z-index:999996;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.8);display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}tw-backdrop~tw-backdrop{display:none}tw-link,.enchantment-link{cursor:pointer;color:#4169e1;font-weight:bold;text-decoration:none;transition:color .2s ease-in-out}tw-passage [style^=color] tw-link:not(:hover),tw-passage [style*=" color"] tw-link:not(:hover),tw-passage [style^=color][hover=true] tw-link:hover,tw-passage [style*=" color"][hover=true] tw-link:hover,tw-passage [style^=color] .enchantment-link:not(:hover),tw-passage [style*=" color"] .enchantment-link:not(:hover),tw-passage [style^=color][hover=true] .enchantment-link:hover,tw-passage [style*=" color"][hover=true] .enchantment-link:hover{color:inherit}tw-link:hover,.enchantment-link:hover{color:#00bfff}tw-link:active,.enchantment-link:active{color:#dd4b39}.visited{color:#6941e1}tw-passage [style^=color] .visited:not(:hover),tw-passage [style*=" color"] .visited:not(:hover),tw-passage [style^=color][hover=true] .visited:hover,tw-passage [style*=" color"][hover=true] .visited:hover{color:inherit}.visited:hover{color:#e3e}tw-broken-link{color:#933;border-bottom:2px solid #933;cursor:not-allowed}tw-passage [style^=color] tw-broken-link:not(:hover),tw-passage [style*=" color"] tw-broken-link:not(:hover),tw-passage [style^=color][hover=true] tw-broken-link:hover,tw-passage [style*=" color"][hover=true] tw-broken-link:hover{color:inherit}tw-link.enchantment-mouseover,.link.enchantment-mouseover,tw-expression.enchantment-mouseover>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border-bottom:2px dashed #999}tw-link.enchantment-mouseover:hover,tw-link.enchantment-mouseover:active,.link.enchantment-mouseover:hover,.link.enchantment-mouseover:active,tw-expression.enchantment-mouseover>tw-link:hover,tw-expression.enchantment-mouseover>tw-link:active{color:inherit}tw-link.enchantment-mouseover.enchantment-button,.link.enchantment-mouseover.enchantment-button,tw-expression.enchantment-mouseover>tw-link.enchantment-button{border-style:dashed}tw-link.enchantment-mouseout,.link.enchantment-mouseout,tw-expression.enchantment-mouseout>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border:rgba(64,149,191,.6) 1px solid;border-radius:.2em}tw-link.enchantment-mouseout:hover,tw-link.enchantment-mouseout:active,.link.enchantment-mouseout:hover,.link.enchantment-mouseout:active,tw-expression.enchantment-mouseout>tw-link:hover,tw-expression.enchantment-mouseout>tw-link:active{color:inherit}tw-link.enchantment-mouseout:hover,.link.enchantment-mouseout:hover,tw-expression.enchantment-mouseout>tw-link:hover{background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 1px solid}tw-link.enchantment-dblclick,.link.enchantment-dblclick,tw-expression.enchantment-dblclick>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;cursor:pointer;border:2px solid #999;border-radius:0}tw-link.enchantment-dblclick:hover,tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:hover,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:hover,tw-expression.enchantment-dblclick>tw-link:active{color:inherit}tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:active{background-color:#999}tw-link.enchantment-button,.link.enchantment-button,.enchantment-button:not(.link) tw-link,.enchantment-button:not(.link) .link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}.enchantment-button{display:block}.enchantment-clickblock{cursor:pointer;width:100%;height:100%;display:block}.enchantment-clickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;color:rgba(65,105,225,.5);transition:color .2s ease-in-out}.enchantment-clickblock>:not(tw-enchantment):hover::after{color:rgba(0,191,255,.5)}.enchantment-clickblock>:not(tw-enchantment):active::after{color:rgba(222,78,59,.5)}.enchantment-clickblock>:not(tw-enchantment)::after{box-shadow:inset 0 0 0 .5vmax}.enchantment-clickblock>tw-passage::after,.enchantment-clickblock>tw-sidebar::after{box-shadow:0 0 0 .5vmax}.enchantment-mouseoverblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:2px dashed #999}.enchantment-mouseoutblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:rgba(64,149,191,.6) 2px solid}.enchantment-mouseoutblock:hover>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 2px solid;border-radius:.2em}.enchantment-dblclickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;cursor:pointer;border:2px solid #999}tw-dialog-links{padding-top:1.5em}tw-dialog-links tw-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block;display:inline-block}html{margin:0;height:100%;overflow-x:hidden}*,:before,:after{position:relative;box-sizing:inherit}body{margin:0;height:100%}tw-storydata{display:none}tw-story{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;font:100% Georgia,serif;box-sizing:border-box;width:100%;min-height:100%;font-size:1.5em;line-height:1.5em;padding:5% 5%;overflow:hidden;background-color:#000;color:#fff}tw-story [style*=content-box] *{box-sizing:border-box}@media(min-width: 576px){tw-story{padding:5% 20%}}tw-story tw-consecutive-br{display:block;height:1.6ex;visibility:hidden}tw-story select{background-color:rgba(0,0,0,0);font:inherit;border-style:solid;padding:2px}tw-story select:not([disabled]){color:inherit}tw-story textarea{resize:none;background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none;padding:2px}tw-story input[type=text]{background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none}tw-story input[type=checkbox]{transform:scale(1.5);margin:0 .5em .5em .5em;vertical-align:middle}tw-story tw-noscript{animation:appear .8s}tw-passage{display:block}tw-sidebar{text-align:center;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between}@media(min-width: 576px){tw-sidebar{left:-5em;width:3em;position:absolute;-ms-flex-direction:column;flex-direction:column}tw-enchantment[style*=width]>tw-sidebar{width:inherit}}tw-icon{display:inline-block;margin:.5em 0;font-size:66px;font-family:"Verdana",sans-serif}tw-icon[alt]{opacity:.2;cursor:pointer}tw-icon[alt]:hover{opacity:.4}tw-icon[data-label]::after{font-weight:bold;content:attr(data-label);font-size:20px;bottom:-20px;left:-50%;white-space:nowrap}tw-meter{display:block}tw-hook:empty,tw-expression:empty{display:none}tw-error{display:inline-block;border-radius:.2em;padding:.2em;font-size:1rem;cursor:help;white-space:pre-wrap}tw-error.error{background-color:rgba(223,58,190,.6);color:#fff}tw-error.warning{background-color:rgba(223,140,58,.6);color:#fff;display:none}.debug-mode tw-error.warning{display:inline}tw-error-explanation{display:block;font-size:.8rem;line-height:1rem}tw-open-button,tw-folddown{cursor:pointer;line-height:0em;border-radius:4px;border:1px solid rgba(255,255,255,.5);font-size:.8rem;margin:0 .2rem;padding:3px;white-space:pre}tw-folddown::after{content:"▶"}tw-folddown.open::after{content:"▼"}tw-open-button[replay]{display:none}tw-error tw-open-button,tw-eval-replay tw-open-button{display:inline !important}tw-open-button::after{content:attr(label)}tw-notifier{border-radius:.2em;padding:.2em;font-size:1rem;background-color:rgba(223,182,58,.4);display:none}.debug-mode tw-notifier{display:inline}tw-notifier::before{content:attr(message)}tw-colour{border:1px solid #000;display:inline-block;width:1em;height:1em}tw-enchantment:empty{display:none}h1{font-size:3em}h2{font-size:2.25em}h3{font-size:1.75em}h1,h2,h3,h4,h5,h6{line-height:1em;margin:.3em 0 .6em 0}pre{font-size:1rem;line-height:initial}small{font-size:70%}big{font-size:120%}mark{color:rgba(0,0,0,.6);background-color:#ff9}ins{color:rgba(0,0,0,.6);background-color:rgba(255,242,204,.5);border-radius:.5em;box-shadow:0em 0em .2em #ffe699;text-decoration:none}center{text-align:center;margin:0 auto;width:60%}blink{text-decoration:none;animation:fade-in-out 1s steps(1, end) infinite alternate}tw-align{display:block}tw-columns{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.transition-in{animation:appear 0ms step-start}.transition-out{animation:appear 0ms step-end}[data-t8n^=dissolve].transition-in,[data-t8n=fade].transition-in{animation:appear .8s}[data-t8n^=dissolve].transition-out,[data-t8n=fade].transition-out{animation:appear .8s reverse}[data-t8n^=shudder].transition-in{display:inline-block !important;animation:shudder-in .8s}[data-t8n^=shudder].transition-out{display:inline-block !important;animation:shudder-in .8s reverse}[data-t8n^=rumble].transition-in{display:inline-block !important;animation:rumble-in .8s}[data-t8n^=rumble].transition-out{display:inline-block !important;animation:rumble-in .8s reverse}[data-t8n^=pulse].transition-in{animation:pulse .8s;display:inline-block !important}[data-t8n^=pulse].transition-out{animation:pulse .8s reverse;display:inline-block !important}[data-t8n^=zoom].transition-in{animation:zoom-in .8s;display:inline-block !important}[data-t8n^=zoom].transition-out{animation:zoom-in .8s reverse;display:inline-block !important}[data-t8n^=blur].transition-in{animation:blur .8s;display:inline-block !important}[data-t8n^=blur].transition-out{animation:blur .8s reverse;display:inline-block !important}[data-t8n^=slideleft].transition-in{animation:slide-left .8s;display:inline-block !important}[data-t8n^=slideleft].transition-out{animation:slide-right .8s reverse;display:inline-block !important}[data-t8n^=slideright].transition-in{animation:slide-right .8s;display:inline-block !important}[data-t8n^=slideright].transition-out{animation:slide-left .8s reverse;display:inline-block !important}[data-t8n^=slideup].transition-in{animation:slide-up .8s;display:inline-block !important}[data-t8n^=slideup].transition-out{animation:slide-down .8s reverse;display:inline-block !important}[data-t8n^=slidedown].transition-in{animation:slide-down .8s;display:inline-block !important}[data-t8n^=slidedown].transition-out{animation:slide-up .8s reverse;display:inline-block !important}[data-t8n^=fadeleft].transition-in{animation:fade-left .8s;display:inline-block !important}[data-t8n^=fadeleft].transition-out{animation:fade-right .8s reverse;display:inline-block !important}[data-t8n^=faderight].transition-in{animation:fade-right .8s;display:inline-block !important}[data-t8n^=faderight].transition-out{animation:fade-left .8s reverse;display:inline-block !important}[data-t8n^=fadeup].transition-in{animation:fade-up .8s;display:inline-block !important}[data-t8n^=fadeup].transition-out{animation:fade-down .8s reverse;display:inline-block !important}[data-t8n^=fadedown].transition-in{animation:fade-down .8s;display:inline-block !important}[data-t8n^=fadedown].transition-out{animation:fade-up .8s reverse;display:inline-block !important}[data-t8n^=flicker].transition-in{animation:flicker .8s}[data-t8n^=flicker].transition-out{animation:flicker .8s reverse}
 </style>
 </head>
 <body>
-<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play The Storm Grows Stronger.</tw-noscript></noscript></tw-story>
-<tw-storydata name="The Storm Grows Stronger" startnode="61" creator="Twine" creator-version="2.7.1" format="Harlowe" format-version="3.3.7" ifid="1682A661-F8D2-4A45-A7B1-C58B06E42923" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="startup" color="yellow"></tw-tag><tw-tag name="Intro" color="orange"></tw-tag><tw-tag name="Ático" color="purple"></tw-tag><tw-tag name="Corredor-de-Entrada" color="orange"></tw-tag><tw-tag name="Cozinha" color="green"></tw-tag><tw-tag name="Porta-de-Entrada-(Olho-Mágico)" color="yellow"></tw-tag><tw-tag name="Garagem" color="red"></tw-tag><tw-tag name="Quarto-Proprio" color="blue"></tw-tag><tw-tag name="Quarto-Pais" color="blue"></tw-tag><tw-tag name="Lado-de-Fora" color="orange"></tw-tag><tw-tag name="Variavel" color="red"></tw-tag><tw-passagedata pid="1" name="A Tempestade Fica Forte" tags="Lado-de-Fora" position="4925,1100" size="100,100">A tempestade fica mais forte. A chuva cobre toda a região, intensificada pelos fortes ventos que ameaçam derrubar árvores.
-Um velho caminhoneiro para seu caminhão na estrada, pega seu guarda-chuva e vai em direção a floresta. Ele jura ter ouvido o barulho de um disparo ali, seguido de um grito. Tudo que ele encontra perto da estrada é uma velha espingarda.</tw-passagedata><tw-passagedata pid="2" name="A Tempestade Fica mais Forte" tags="Lado-de-Fora" position="4625,1075" size="100,100">A tempestade fica mais forte. A chuva cobre toda a região, intensificada pelos fortes ventos que ameaçam derrubar árvores. É perigoso sair de casa em dias com tanta chuva, pois aqueles que saem raramente são vistos novamente. Esse foi o seu caso.</tw-passagedata><tw-passagedata pid="3" name="Aguardar Escondido" tags="Quarto-Proprio" position="4200,375" size="100,100">Seu coração parece prester a pular pela boca pelo tempo que você espera escondido. O som da chuva forte não é o bastante para te impedir de escutar sua própria respiração ansiosa.
-Tentando se acalmar para não entregar sua posição, você ouve a madeira do piso ranger conforme passos se aproximam do quarto.
-De repente um clarão toma a casa, seguido de um estrondo que faz as janelas da casa quase se partirem. Um raio cai perto da casa, atingindo em cheio uma das árvores ao redor da propriedade, que agora arde em chamas.
-Você escuta do outro lado da porta o que parece ser um grito proferido pelo homem, mas o som só pode ser descrito como o som de unhas arranhando um quadro negro. Você escuta o barulho dele correr para longe, derrubando objetos no caminho, até que só resta o barulho da chuva.</tw-passagedata><tw-passagedata pid="4" name="Aguardar o Fim" tags="Lado-de-Fora" position="4625,925" size="100,100">&quot;Johnny, venha ficar comigo&quot;
+<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play The Storm Grows Stronger (old).</tw-noscript></noscript></tw-story>
+<tw-storydata name="The Storm Grows Stronger (old)" startnode="8" creator="Twine" creator-version="2.7.1" format="Harlowe" format-version="3.3.7" ifid="43B480F0-42CE-4166-A0FE-5A773022D9E1" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story {
+  background-color: #130B1B;
+  background-repeat: no-repeat;
+  background-size: 90% 90%;
+  background-position: center center;
+}
 
-[[Continuar-&gt;A Tempestade Fica mais Forte]]</tw-passagedata><tw-passagedata pid="5" name="Alcançar a Estrada (Precisa Ferimento 2)" tags="Lado-de-Fora" position="5075,925" size="100,100">Você presta atenção na voz horrenda do homem, e por mais que não veja o ser, nota que não está tão próximo assim. Você rasteja até ver a luz da estrada, torcendo para o homem estar tão lento quanto você.
-Ao chegar no asfalto, você fica sem forças. Dando uma última olhada para a escuridão da floresta, você vê a silhueta do homem ali, lhe encarando. Talvez os embates com ele mais cedo o tenham cansado tanto quanto você, mas você não sabe para onde fugir agora.
-Seus olhos se fecham pelo cansaço e sua consciencia se esvai.
+tw-story[tags="lower-corridor"] {
+  background-image: url("https://i.imgur.com/mmnuRt4.png");
+}
 
-[[Continuar-&gt;Você Acorda]]</tw-passagedata><tw-passagedata pid="6" name="Atirar Nele" tags="Cozinha" position="3850,750" size="100,100">Você ergue a arma e mira com dificuldade, o homem continua parado observando.
-Um relâmpago lá cai muito próximo da casa, fazendo as janelas tremerem e tirando a sua concentração por um instante. O homem cobre a distância entre vocês em um rápido salto e já está próximo demais. Você vê fileiras de dentes pontiagudos quando ele abre a boca, e dispara sua arma. O Coice do tiro te tira o equilíbrio, mas você vê a figura se afastar para as sombras, sem certeza se foi atingida ou se foi apenas o barulho da arma que fez isso.</tw-passagedata><tw-passagedata pid="7" name="Ato II" tags="Intro" position="1350,600" size="100,100">A leitura está fluindo apesar da imtepérie. Você está absorto na descrição dos bailes luxuosos sediados pelo protagonista do livro quando ouveu m barulho muito claro vindo da porta da frente. Era uma batida, fora de ritmo. Não era o costumeiro toc-toc-toc que as pessoas fazem, causando uma sensação de estranhamento.
+tw-story[tags="dining"] {
+  background-image: url("https://i.imgur.com/M9lzok3.png");
+}
 
-[[Continuar-&gt;Levantou para checar a porta]]</tw-passagedata><tw-passagedata pid="8" name="Continuar leitura" tags="Ático" position="800,500" size="100,100">Você senta na poltrona desgastada que já pertenceu ao seu avô e começa a ler O Retrato de Dylan Black, uma edição antiga e empoeirada que atiçava a sua curiosidade há muito tempo, mas não havia tido tempo de ler. Conforme o tempo ia passando, a chuva ficava mais forte e os trovões eram incessantes.
+tw-story[tags="living"] {
+  background-image: url("https://i.imgur.com/PaCjZxu.png");
+}
 
-Parecia que a tempestade só piorava. O vento sibilava entre as frestas da madeira da casa, tirando a concentração da leitura. Dentre todos estes sons, a chuva, os trovões, o vento, o farfalhar das árvores e o balançar das janelas, você ouve este último com mais clareza. Parecia que alguma janela estava tentando ser aberta.
+tw-story[tags="kitchen"] {
+  background-image: url("https://i.imgur.com/qJQdfiZ.png");
+}
 
-(if: $desceuParaSala) [[[Continuar-&gt;Descer para a sala]]]
-(else:) [[[Continuar-&gt;Ficou no ático]]]</tw-passagedata><tw-passagedata pid="9" name="Correndo" tags="Lado-de-Fora" position="4775,1225" size="100,100">Você não sabe a quanto tempo está correndo. Talvez sejam poucos minutos, mas a dor no seu corpo faz parecer que se passou uma hora. Você tinha certeza que estava correndo na direção da estrada, mas mal consegue ver um palmo a sua frente, tanto pela escuridão quanto pela intensa chuva que castiga suas costas.
-Cada parte de seu corpo pede para que você pare, e quanto mais você corre, mais difícil fica a sua respiração
+tw-story[tags="bathroom"] {
+  background-image: url("https://i.imgur.com/G39hsLe.png");
+}
 
-[[Continuar-&gt;Minutos ou Horas]]</tw-passagedata><tw-passagedata pid="10" name="Correr de Volta ao Quarto" tags="Quarto-Proprio" position="4350,325" size="100,100">Você volta a seu quarto e tenta fechar a porta, mas o homem é rápido. Um de seus braços se coloca em posição para impedir que você feche a porta ao mesmo tempo que tenta lhe alcançar.
-Você empurra com toda a sua força, sabendo que sua vida depende disso.
+tw-story[tags="attic"] {
+  background-image: url("");
+}
 
-[[Continuar-&gt;O Clarão]]</tw-passagedata><tw-passagedata pid="11" name="Correr de Volta pro Quarto" tags="Quarto-Proprio" position="4150,725" size="100,100">Você corre escada a cima, batendo o corpo nos móveis no caminho, o coração disparado da adrenalina, mas consegue ouvir o barulho do homem no andar de baixo. Você adentra o quarto de seus pais e tranca a porta.</tw-passagedata><tw-passagedata pid="12" name="Criar uma Distração e Fugir na chuva" tags="Lado-de-Fora" position="4775,925" size="100,100">O que quer que esse homem queira está dentro da casa, e você torce que não seja você mesmo. O único lugar seguro é bem longe daqui. Você sabe o caminho para a cidade, e se conseguir encontrar alguem na estrada para lhe dar carona, melhor ainda.
-Você respira fundo antecipando o que está por vir, mas sabe que é o único jeito.
-Você pega [qualquer item do seu inventário menos a arma] e arremessa contra a janela, do corredor de cima, fazendo um audível barulho de vidro se quebrando. Escuta os passos apressados do homem no andar de baixo, correndo até a fonte do barulho, enquanto você tenta ser o mais discreto possível em abrir a janela do seu quarto e sair para a calha.
+tw-story[tags="basement"] {
+  background-image: url("https://i.imgur.com/YXszrkq.png");
+}
 
-[[Continuar-&gt;O Lado de Fora]]</tw-passagedata><tw-passagedata pid="13" name="De volta ao hall" tags="Quarto-Proprio" position="2400,600" size="100,100">De volta ao hall de entrada, algo capta a sua atenção no canto do olho. Parece que algo escapava novamente pela lateral da janela, assim como na cozinha anteriormente. Assustado, você decide subir e desistir de brincar de detetive pela casa, decidindo que vai descer novamente apenas se algum barulho for realmente significativo.
+tw-story[tags="parents-room"] {
+  background-image: url("https://i.imgur.com/RiyCLhh.png");
+}
 
-[[Continuar-&gt;Sons se repetem]]</tw-passagedata><tw-passagedata pid="14" name="Descer e tentar conversar" tags="Porta-de-Entrada-(Olho-Mágico)" position="2850,600" size="100,100">Você decide descer e tentar conversar com o homem, mesmo com o barulho ensurdecedor da tempestade e você mal poderá ouví-lo. Porém, quando você está no meio das escadas, ouve o homem lhe chamar pela porta.
+tw-story[tags="your-room"] {
+  background-image: url("https://i.imgur.com/tHcjgDD.png");
+}
 
-[[&quot;Abrir a porta para verificar&quot;-&gt;Morte]]
-[[&quot;Hesitar&quot;-&gt;Hesitou na porta]]
+tw-passage {
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
 
-&lt;!-- audio cursed --&gt;</tw-passagedata><tw-passagedata pid="15" name="Descer para Checar" tags="Garagem" position="3550,750" size="100,100">A casa estava absolutamente silenciosa. Não havia nenhum sinal de que algo ou alguém tivesse entrado, não havia rastros molhados na garagem ou nada que sinalizasse que aquele portão não abriu sozinho. Ao olhar com maior atenção, você vê que ali dentro, próximo do portão de metal está um chápeu, igual ao que o homem estranho usava na cabeça. Você tranca o portão devidamente e volta para a casa.
+tw-link, .enchantment-link {
+	color: yellow;
+}
 
-[[Checar a cozinha-&gt;Vai até a cozinha com a arma (senão ele morre)]]
-[[Checar o andar de baixo-&gt;Vai em direção as escadas]]</tw-passagedata><tw-passagedata pid="16" name="Descer para a sala" tags="Corredor-de-Entrada" position="950,650" size="100,100">Parecia que a tempestade só piorava. O vento sibilava entre as frestas da madeira da casa, tirando a concentração da leitura. Dentro todos estes sons, a chuva, os trovões, o vento, o farfalhar das árvores e o balançar das janelas, você ouve este último com mais clareza. Parecia que alguma janela estava tentando se abrir.
+tw-link:hover, .enchantment-link:hover {
+	color: orange;
+}
 
-[[Ignorar]]
-[[Levantar para checar]]</tw-passagedata><tw-passagedata pid="17" name="Deve ser aquele homem estranho" tags="Corredor-de-Entrada" position="2700,600" size="100,100">A tempestade não parece nem perto de se dissipar. Os trovões ainda são ouvidos mais à distância e a chuva não dá trégua. Quando você está voltando a se concentrar no livro, uma batida conhecida e arrastada toca na porta da frente. Deve ser aquele homem estranho novamente.
+.visited {
+	color: yellow;
+}
 
-[[&quot;Continuar&quot;-&gt;Descer e tentar conversar]]</tw-passagedata><tw-passagedata pid="18" name="Entrou no quarto dos pais" tags="Quarto-Pais" position="3900,375" size="100,100">Você pega a única coisa que é proibido tocar na casa toda, a espingarda calibre 12, e senta no chão de frente à porta do quarto. Não consegue desviar o olhar da soleira da porta, que ainda possui um resquício de luz. De repente, uma sombra cobre quase totalmente a parte iluminada, bem na frente da sua porta. O invasor está ali.
+.visited:hover {
+	color: orange;
+}
 
-[[Continuar-&gt;Trancado no quarto, invasor dentro da casa]]</tw-passagedata><tw-passagedata pid="19" name="Escolher pegar o chapéu" tags="Porta-de-Entrada-(Olho-Mágico)" position="1950,600" size="100,100">Com medo mas sem opções, você desce para checar se está tudo bem com a porta da frente. Ela continua lá, trancada como deveria. O homem estranho não está mais lá, mas há algo no chão. O chapéu dele ficou para trás.
+tw-sidebar {
+	display: none;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">var audio = document.createElement('audio');
+audio.src = 'https://static.wixstatic.com/mp3/1c7117_53c10ff3624846c0ab3b112634196814.mp3';
+audio.loop = true;
+audio.play();</script><tw-tag name="dining" color="blue"></tw-tag><tw-tag name="kitchen" color="blue"></tw-tag><tw-tag name="living" color="blue"></tw-tag><tw-tag name="bathroom" color="blue"></tw-tag><tw-tag name="garage" color="blue"></tw-tag><tw-tag name="basement" color="blue"></tw-tag><tw-tag name="lower-corridor" color="blue"></tw-tag><tw-tag name="upper-corridor" color="blue"></tw-tag><tw-tag name="attic" color="blue"></tw-tag><tw-tag name="parents-room" color="blue"></tw-tag><tw-tag name="your-room" color="blue"></tw-tag><tw-tag name="death" color="blue"></tw-tag><tw-tag name="encounter" color="blue"></tw-tag><tw-tag name="startup" color="yellow"></tw-tag><tw-tag name="header" color="yellow"></tw-tag><tw-passagedata pid="1" name="Banheiro" tags="bathroom" position="825,1750" size="100,100">(set: $currentRoom to &quot;bathroom&quot;)\
+[No banheiro, as paredes têm um papel de parede antigo com flores desbotadas, enquanto o chão é revestido de azulejos antigos e desgastados.
 
-[[Pegar o chapéu-&gt;Morte]]
-[[Ignorar-&gt;Escolher qual cômodo trancar]]</tw-passagedata><tw-passagedata pid="20" name="Escolher qual cômodo trancar" tags="Garagem" position="2100,600" size="100,100">Você decide dar uma volta pela casa para checar todos os cômodos, já que a chuva não parece dar trégua. Chegando na garagem, percebe que o portão não foi trancado propriamente, ao mesmo tempo que ouve um barulho alto vindo de alguma janela da casa.
+Você não gosta muito daqui, já que se assustou algumas vezes com seu próprio reflexo no espelho, por conta da posição do espelho ser diretamente apontada para a porta.
 
-[[Trancar o portão-&gt;Escolheu a garagem]]
-[[Verificar as janelas-&gt;Escolheu as janelas]]</tw-passagedata><tw-passagedata pid="21" name="Escolheu a garagem" tags="Garagem" position="2250,500" size="100,100">O barulho da janela lhe perturba profundamente. Você não entende como uma tempestade pode causar tanto estrago, e culpa algum galho de árvore que possa ter batido em algum lugar. Talvez tudo estivesse sendo mais intenso devido ao fato de você estar sozinho pela primeira vez, pensa, enquanto verifica o cadeado do portão.
+A torneira da pia pinga constantemente.]
+(display: &quot;ShowWindow&quot;)
 
-[[Continuar-&gt;De volta ao hall]]</tw-passagedata><tw-passagedata pid="22" name="Escolheu as janelas" tags="Cozinha" position="2250,700" size="100,100">O barulho da janela lhe perturba profundamente. Você não entende como uma tempestade pode causar tanto estrago, e culpa algum galho de árvore que possa ter batido em algum lugar. Você sai em busca de alguma janela que possa ter sido afetada, pensando se não pode ser apenas sua imaginação impressionada por estar sozinho nessa situação.
 
-[[Continuar-&gt;De volta ao hall]]</tw-passagedata><tw-passagedata pid="23" name="Ficar no Quarto" tags="Quarto-Pais" position="3850,1100" size="100,100">As cortinas do quarto dos seus pais eram longas e opacas, e conforme o anoitecer chegava com as pesadas nuvens o quarto já estava bem escuro. Temendo chamar a atenção de quem havia entrado na casa, você decide não acender a luz. Relâmpagos iluminavam tudo de minutos em minutos, e você começa a pegar no sono.
 
-Um relâmpago atinge novamente a região (inserir som de trovão). No entanto, neste estado semi-sonolento, a janela não tinha o mesmo formato quadrado de antes. Havia algo bloqueando a metade direita da janela, algo humanoide. Você se levanta rápido e vai até a janela, escura novamente, e abre as cortinas para ver o que era. Não havia nada lá.</tw-passagedata><tw-passagedata pid="24" name="Ficou no ático" tags="Ático" position="950,500" size="100,100">O livro funciona como uma boa distração, fazendo com que a forte torrente que aci do lado de fora da casa seja esquecida enquanto você fica imerso na narrativa. Uma história de suspense, onde um monstro com aparância de homem comete diversos assassinatos. Em alguns trechos da história, você sente calafrios na espinha pelo medo transmitido pelas páginas do livro.
+(link-goto: &quot;Voltar para o corredor&quot;, &quot;Corredor de baixo&quot;)</tw-passagedata><tw-passagedata pid="2" name="Corredor de baixo" tags="lower-corridor" position="675,1750" size="100,100">(if: $currentRoom is &quot;upper-corridor&quot; or &quot;basement&quot;)[&lt;audio autoplay src=&quot;https://www.dropbox.com/scl/fi/l6x5oht52nrc14t2p6sg9/Stairs.ogg?rlkey=z4fskx7h6h5x9usygttc7d9p7&amp;dl=1&quot;&gt;]\
+(set: $currentRoom to &quot;lower-corridor&quot;)
+Na entrada é possível enxergar suas opções de cômodos:
 
-Felizmente era só uma história.
+(link-goto: &quot;Sala de jantar&quot;, &quot;Sala de jantar&quot;)
+(link-goto: &quot;Sala de estar&quot;, &quot;Sala de estar&quot;)
+(link-goto: &quot;Banheiro&quot;, &quot;Banheiro&quot;)
+(link-goto: &quot;Garagem&quot;, &quot;Garagem&quot;)
+(link-goto: &quot;Porão&quot;, &quot;Porão&quot;)
 
-[[Continuar-&gt;Ato II]]</tw-passagedata><tw-passagedata pid="25" name="Garagem aberta" tags="Quarto-Proprio" position="3400,800" size="100,100">Você tenta se concentrar no livro apesar de todas as coisas perturbadoras que ocorreram nas últimas horas. Seu quarto fica longe da garagem, mas, de repente, o portão rangeu. Poderia talvez ser o vento, que estava tão forte a ponto de abrir um portão de ferro.
 
-[[Descer para checar-&gt;Descer para Checar]]</tw-passagedata><tw-passagedata pid="26" name="Garagem fechada" tags="Quarto-Proprio" position="3400,300" size="100,100">Você tenta se concentrar no livro apesar de todas as coisas perturbadoras que ocorreram nas últimas horas. Seu quarto fica num dos cantos da casa, relativamente isolado, mas o barulho incessante da chuva traz consigo outros sons perturbadores.
+(link-goto: &quot;Subir escadas&quot;, &quot;Corredor de cima&quot;)</tw-passagedata><tw-passagedata pid="3" name="Corredor de cima" tags="upper-corridor" position="1375,1750" size="100,100">(if: $currentRoom is &quot;lower-corridor&quot;)[&lt;audio autoplay src=&quot;https://www.dropbox.com/scl/fi/l6x5oht52nrc14t2p6sg9/Stairs.ogg?rlkey=z4fskx7h6h5x9usygttc7d9p7&amp;dl=1&quot;&gt;]\
+(set: $currentRoom to &quot;upper-corridor&quot;)\
+Escolha um dos cômodos do andar de cima para visitar:
 
-A tempestade está mais forte do que nunca, e todo tipo de barulho aparece ao mesmo tempo. Porém, há algo errado novamente. A madeira da casa está rangendo, em vários pontos diferentes e você não tem a menor ideia do porquê. Se fosse chutar, diria que algum bicho está escalando a casa, mas não fazia ideia de quê conseguiria fazer isso.
+(link-goto:&quot;Ático&quot;, &quot;Ático&quot;,)
+(link-goto:&quot;Quarto dos seus pais&quot;, &quot;Quarto dos pais&quot;)
+(link-goto:&quot;Seu próprio quarto&quot;, &quot;Seu quarto&quot;)
 
-[[Abrir a janela e olhar os arredores da casa-&gt;Morte]]
-[[Continuar onde está-&gt;Não abriu a janela para checar]]</tw-passagedata><tw-passagedata pid="27" name="Hesitou na porta" tags="Porta-de-Entrada-(Olho-Mágico)" position="3000,600" size="100,100">Algo não estava certo com a voz daquele homem. Parecia uma rádio AM quase fora do ar, e ele pronunciava as sílabas tônicas erradas. Você imagina que ele possa estar bêbado e buscando abrigo. No entanto, ele diz “Sou amigo do seu pai. Meu carro estragou e queria saber se posso usar o seu telefone.”
 
-[[&quot;Abrir a porta para ajudar&quot;-&gt;Morte]]
-[[&quot;Negar novamente&quot;-&gt;Não ajudou o homem na porta]]</tw-passagedata><tw-passagedata pid="28" name="Ignorar" tags="Corredor-de-Entrada" position="1100,800" size="100,100">Você continua sua leitura, mais interessado na narrativa do que nos barulhos da chuva. A casa pe vekha, é atural que faça barulho quando venta tão forte. Você faz uma nota mental de que quando seus pais voltassem, deveria conversar com eles sobre reforçar as janelas para que não batessem tanto quando chove.
+(link-goto: &quot;Descer escadas&quot;, &quot;Corredor de baixo&quot;)</tw-passagedata><tw-passagedata pid="4" name="Cozinha" tags="kitchen" position="825,1450" size="100,100">(set: $currentRoom to &quot;kitchen&quot;)\
+[A pia de ferro fundido e a torneira oxidada te lembram de momentos. Um pouco de comida ainda está no fogão a lenha, deixada pela sua mãe para que coma hoje.
 
-Nesse mesmo momento, um barulho de vidro sendo quebrado é ouvido vindo da cozinha.
+Várias gavetas preenchem a parte de baixo de um dos armarinhos. Como sua mãe nunca deixou você matar sua curiosidade do que tinham dentro deles, talvez agora que eles não estão seja uma boa ideia...]
+\
+(display: &quot;ShowWindow&quot;)
 
-[[Continuar-&gt;Ir até a cozinha]]</tw-passagedata><tw-passagedata pid="29" name="Intro" tags="Intro" position="650,200" size="100,100">Na tranquila solidão de sua casa isolada no interior da região, você se encontra sozinho pela primeira vez em sua vida. Seus pais partiram para suas antecipadas férias, deixando você encarregado de cuidar da antiga casa da família durante a ausência deles.
 
-À medida que as horas foram se passando, e a noite chegava, um sentimento de solidão começou a pairar sobre você, amplificando os sons do rangido da madeira no antigo casarão. O tique-taque do relógio no corredor ecoa pelo corredor
 
-[[Continuar-&gt;Intro II]]</tw-passagedata><tw-passagedata pid="30" name="Intro II" tags="Intro" position="800,200" size="100,100">A casa, construída quase inteiramente de madeira, tem um estilo bem rústico e antiquado. No andar de baixo, existe a entrada, que comporta a porta da frente. Na entrada, um corredor extenso corta a casa ao meio, chegando até a poarta dos fundos, que dá para a garagem. À direita do corredor existe uma grande entrada que mostra a sala de estar; já à esquerda existe uma entrada similar, mas que pertence a sala de jantar. No fundo da sala de jantar, está a cozinha.
+(link-goto: &quot;Voltar para a sala de jantar&quot;, &quot;Sala de jantar&quot;)</tw-passagedata><tw-passagedata pid="5" name="Garagem" tags="" position="825,1850" size="100,100">(if: $hasGarageKey)
+	[(display:&quot;Garagem (chave)&quot;)]
+(else:)
+	[(display:&quot;Garagem (sem chave)&quot;)]</tw-passagedata><tw-passagedata pid="6" name="Garagem (sem chave)" tags="" position="975,1850" size="100,100">Você tenta abrir e forçar a porta mas não consegue fazer com que ela abra. Talvez procurando pela casa, encontre a chave.
+
+(link-goto: &quot;Voltar&quot;, &quot;Corredor de baixo&quot;)</tw-passagedata><tw-passagedata pid="7" name="Garagem (chave)" tags="garage" position="1075,1850" size="100,100">Você coloca a chave na porta que leva à garagem. Fazendo bastante força, a porta se abre mostrando o interior da garagem, mas não sem causar um estardalhaço.
+
+
+
+(link-goto: &quot;Continuar&quot;, &quot;Garagem I&quot;)</tw-passagedata><tw-passagedata pid="8" name="Intro" tags="" position="500,400" size="100,100">Na tranquila solidão de sua casa isolada no interior da região, você se encontra sozinho pela primeira vez em sua vida. Seus pais partiram para suas antecipadas férias, deixando você encarregado de cuidar da antiga casa da família durante a ausência deles.
+
+À medida que as horas foram se passando, e a noite chegava, um sentimento de solidão começou a pairar sobre você, amplificando os sons do rangido da madeira no antigo casarão. O tique-taque do relógio no corredor ecoa pelo corredor.
+
+(link-goto:&quot;Continuar&quot;, &quot;Intro II&quot;)</tw-passagedata><tw-passagedata pid="9" name="Intro II" tags="" position="600,400" size="100,100">A casa, construída quase inteiramente de madeira, tem um estilo bem rústico e antiquado. 
+No andar de baixo, existe a entrada, que comporta a porta da frente. Na entrada, um corredor extenso corta a casa ao meio, chegando até a porta dos fundos, que dá para a garagem. À direita do corredor, existe uma grande entrada que mostra a sala de estar; já à esquerda, existe uma entrada similar, mas que pertence à sala de jantar. No fundo da sala de jantar, está a cozinha.
 
 Na parede esquerda do corredor, existe a escada que leva para o andar de cima. Subindo as escadas, encontra-se o seu quarto, o quarto de seus pais e um pequeno alçapão no teto que leva ao ático.
 
-[[Continuar-&gt;Intro III]]</tw-passagedata><tw-passagedata pid="31" name="Intro III" tags="Intro" position="650,350" size="100,100">Olhando para fora, você consegue ver várias nuvens escuras se aproximando rapidamente da casa. Uma tempestade está por vir.
+(link-goto:&quot;Continuar&quot;, &quot;Intro III&quot;)</tw-passagedata><tw-passagedata pid="10" name="Intro III" tags="" position="700,400" size="100,100">Olhando para fora, você consegue ver várias nuvens escuras se aproximando rapidamente da casa. Uma tempestade está por vir. Sem que você saiba, essa tempestade trará muito mais do que apenas vento e chuva...
 
-[[Continuar-&gt;Intro IV]]</tw-passagedata><tw-passagedata pid="32" name="Intro IV" tags="Intro" position="800,350" size="100,100">Notando que o vento começa a castigar algumas das antigas janelas da casa, você rapidamente corre para a entrada e fecha as janelas que ainda continuavam abertas, aguardando pelo chegar da tempestade.
+Notando que o vento começa a castigar algumas das antigas janelas da casa, você rapidamente corre para a entrada e fecha as janelas que ainda continuavam abertas, aguardando pelo chegar da tempestade.\
 
-A casa é atingida por uma onda de frio, que entra pelas frestas da madeira e te obriga a buscar um agasalho no andar de cima. Trovões começam a rugir na distância, tomando o protagonismo do som ambiente no momento. A casa não está mais silenciosa.
+(display: &quot;ShowStorm&quot;)
 
-[[Continuar-&gt;Primeira escolha]]</tw-passagedata><tw-passagedata pid="33" name="Ir atrás do Homem para que ele não fuja" tags="Cozinha" position="4100,625" size="100,100">Você vê o homem tentando se esconder nas sombras da cozinha, do outro lado de um balcão e corre até ali guiado pela adrenalina. Ao se virar e tentar apontar a arma, vê o movimento rápido abaixo de você e sente dor quando o homem morde a sua perna com uma força assustadora. Sente a parte de dentro da sua calça ficar molhada de sangue quente e no susto, dispara novamente sua arma, mas a bala atinge apenas a janela. Você cai no chão, mas não vê mais sinal do homem.</tw-passagedata><tw-passagedata pid="34" name="Ir até a cozinha" tags="Cozinha" position="1250,875" size="100,100">Correndo até a cozinha pelo susto do barulho repentino, você vê o que parece um vulto se movendo do outro lado da janela central. 
+(link-goto:&quot;Continuar&quot;, &quot;Intro IV&quot;)</tw-passagedata><tw-passagedata pid="11" name="Porão" tags="" position="825,1950" size="100,100">(if: $hasBasementKey)
+	[(display:&quot;Porão (chave)&quot;)]
+(else:)
+	[(display:&quot;Porão (sem chave)&quot;)]</tw-passagedata><tw-passagedata pid="12" name="Porão (sem chave)" tags="" position="975,1950" size="100,100">Você tenta abrir e forçar a porta mas não consegue fazer com que a passagem para o porão seja aberta, talvez em algum lugar da casa você encontre a chave.
 
-Provavelmente algum grande galho levado pela chuva, também responsável por quebrar parte do vidro.
+(link-goto: &quot;Voltar&quot;, &quot;Corredor de baixo&quot;)</tw-passagedata><tw-passagedata pid="13" name="Porão (chave)" tags="basement" position="1075,1950" size="100,100">&lt;audio autoplay src=&quot;https://www.dropbox.com/scl/fi/l6x5oht52nrc14t2p6sg9/Stairs.ogg?rlkey=z4fskx7h6h5x9usygttc7d9p7&amp;dl=1&quot;&gt;\
+\
+[Você desce as escadas escuras até o porão. Existem pequenas janelas horizontais no topo da parede do porão, que mostram o jardim da casa.]
 
-Olhando melhor, a janela quebrada era repartida no centro, em forma de cruz, com 4 vidros menores ali. Um deles foi quebrado em muitos cacos menores.
 
-Você checa a janela com cuidado e confere que ela ainda permanece trancada. Então retorna para a sala.
 
-[[Continuar-&gt;Ato II]]</tw-passagedata><tw-passagedata pid="35" name="Levantar para checar" tags="Cozinha" position="1100,650" size="100,100">Você fica incomodado com o barulho e decide verificar as janelas do andar de baixo. Uma por uma, você as vê balançarem, castigadas pelo vento forte. Quando se aproxima da janela da cozinha, parece que algo desaparece rapidamente pelo canto da janela. Você interpreta como folhas carregadas pelo vento.
+(link-goto: &quot;Continuar&quot;, &quot;Porão I&quot;)</tw-passagedata><tw-passagedata pid="14" name="Quarto dos pais" tags="parents-room" position="1525,1750" size="100,100">(set: $currentRoom to &quot;parents-room&quot;)
+[A cama de madeira maciça, encontrava-se centralizada no meio do quarto e trazia um aspecto antigo, mas de alguma forma acolhedor.
 
-[[Continuar-&gt;Ato II]]</tw-passagedata><tw-passagedata pid="36" name="Levantou para checar a porta" tags="Porta-de-Entrada-(Olho-Mágico)" position="1500,600" size="100,100">Você fica incomodado com o barulho e decide verificar as janelas do andar de baixo. Uma por uma, você as vê balançarem, castigadas pelo vento forte. Quando se aproxima da janela da cozinha, parece que algo desaparece rapidamente pelo canto da janela. Você interpreta como folhas carregadas pelo vento.
+Ao lado da cama havia duas mesas de cabeceira, e como as demais mobilias do quarto, elas combinam entre-si. 
 
-A leitura está fluindo apesar da interrupção. Você está absorto na descrição dos bailes luxuosos sediados pelo protagonista do livro quando ouve um barulho muito claro vindo da porta da frente. Era uma batida, fora de ritmo. Não era o costumeiro toc-toc-toc que as pessoas fazem, causa uma sensação de desconforto.
+Na lateral do quarto as duas janelas grandes, com cortinas entreabertas em um tom azul escuro, junto a iluminação amarelada criam sombras nas paredes e no chão.]
+(display: &quot;ShowWindow&quot;)
 
-[[Continuar-&gt;Olhou pelo olho mágico]]</tw-passagedata><tw-passagedata pid="37" name="Ligar para a Polícia" tags="Corredor-de-Entrada" position="3850,900" size="100,100">Correr até o telefone e chamar a polícia. (Variável da Polícia)</tw-passagedata><tw-passagedata pid="38" name="Minutos ou Horas" tags="Lado-de-Fora" position="4775,1375" size="100,100">Minutos ou horas se passam até você ver um sinal de esperança. Uma luz no meio da escuridão, um poste iluminado que indica a estrada, não tão longe de você. Conforme se apressa para chegar lá, seu pé se prende em um galho de árvore e você tropeça, caindo e machucando o tornozelo.
-De perto de você, uma voz ecoa pela chuva &quot;Johnny, fique comigo.&quot;
-Você não consegue ver a figura, mas a voz parece se aproximar cada vez mais. A luz está tão perto, mas você não sente mais forças para alcança-la. Não existe mais saída.</tw-passagedata><tw-passagedata pid="39" name="Mirar e Disparar a Arma (se tiver ela)" tags="Corredor-de-Entrada" position="4350,150" size="100,100">Você aponta a arma na direção do homem conforme ele começa a caminhar na sua direção. Seus braços tremem e sua respiração está ofegante, o medo tomando conta de seu corpo. Ao puxar a arma, nada. O clique não resulta em nada alem do barulho da trava de segurança da arma.
-Você puxa a trava de volta e aponta novamente, mas parece ser tarde demais, o homem está perto demais.
 
-[[Continuar-&gt;Morte]]</tw-passagedata><tw-passagedata pid="40" name="Nada Tira da Cabeça o Homem" tags="Quarto-Pais" position="4000,1100" size="100,100">Nada tira da sua cabeça que aquela figura era o homem que havia tentado entrar na sua casa antes. Mas como ele teria chegado até ali, até o segundo andar, não fazia sentido. Algum equipamento de escalada, talvez? Mas isso não fazia sentido, sendo que ele já havia conseguido entrar na casa pela garagem.</tw-passagedata><tw-passagedata pid="41" name="Não abriu a janela para checar" tags="Quarto-Proprio" position="3550,300" size="100,100">Definitivamente há algo nas paredes da casa. Você percebe que não está sozinho quando ouve a janela do ático quebrando e passos acima da sua cabeça. O que quer que fosse aquilo havia conseguido entrar na sua casa e era uma ameaça para você.
 
-[[Trancar a porta do quarto e se esconder-&gt;Se trancou no quarto]]
-[[Ir em busca da arma no quarto dos seus pais-&gt;Procurou a arma]]</tw-passagedata><tw-passagedata pid="42" name="Não abriu a porta" tags="Porta-de-Entrada-(Olho-Mágico)" position="1800,600" size="100,100">Incomodado com a presença de uma pessoa estranha na porta da casa, você decide sair da sala de estar e subir até os quartos para se sentir mais seguro. Porém, aquele homem não sai da sua cabeça. Por uma fração de segundo, pareceu que havia algo de errado com o rosto dele.
+(link-goto: &quot;Voltar&quot;, &quot;Corredor de cima&quot;)</tw-passagedata><tw-passagedata pid="15" name="Sala de estar" tags="living" position="825,1650" size="100,100">(set: $currentRoom to &quot;living&quot;)\
+[No centro da sala, um sofá e uma poltrona combinando, com estofamento envelhecido, convidam à tranquilidade. Entre eles, uma pequena mesa de centro mantém livros antigos empoeirados.
 
-Já haviam se passado algumas horas desde o início da tempestade, e parecia não ter fim. Distraído pelo livro e por uma goteira ritimada, você havia se esquecido do homem estranho na soleira da porta. Porém, em meio a um dos trovões você ouve algum som que se assemelha à porta sendo forçada.
+Uma estante de madeira, recheada de volumes antigos e objetos de época, enfeita uma das paredes. Você nunca descobriu exatamente que tipo de conteúdo está presente ali nos livros.
 
-[[Continuar-&gt;Escolher pegar o chapéu]]
-\&lt;!-- som de trovão --&gt;</tw-passagedata><tw-passagedata pid="43" name="Não ajudou o homem na porta" tags="Porta-de-Entrada-(Olho-Mágico)" position="3150,600" size="100,100">Você explica que seus pais lhe orientaram a não deixar nenhum estranho entrar na casa e pede desculpas. Ele argumenta, ainda naquele tom estranho, que era amigo do seu pai e já havia estado na casa antes, mas que você era pequeno demais para lembrar.
+É aqui também que fica o rádio do seu pai; aparentemente continua quebrado, como ele deixou.]
+(display: &quot;ShowWindow&quot;)
 
-Você pede desculpas e nega novamente.
 
-[[&quot;Continuar&quot;-&gt;Sobe para o quarto para ignorar o homem]]</tw-passagedata><tw-passagedata pid="44" name="O Clarão" tags="Quarto-Proprio" position="4500,225" size="100,100">Um clarão toma a casa, seguido de um estrondo que faz as janelas da casa quase se partirem. Um raio caiu perto da casa, atingindo em cheio uma das árvores ao redor da propriedade, que agora arde em chamas.
-O homem vira a cabeça distraído por isso, e o som que sai de sua boca só pode ser descrito como o som de unhas arranhando um quadro negro. Ele grita e corre para longe de você com movimentos caóticos, disparando escadaria abaixo e longe de seu campo de visão.
 
-[[Continuar-&gt;Olhando pela Janela]]</tw-passagedata><tw-passagedata pid="45" name="O Homem Volta" tags="Quarto-Proprio" position="4850,775" size="100,100">Uma voz tenebrosa ecoa pela casa, mais agitada do que antes. Se antes soava como um rádio fora de sintonia, agora soa como a estática de uma televisão sem sinal, mas suas palavras já não são mais compreensíveis para você
-Você já não está mais sozinho, e o suor frio começa a escorrer pela sua testa. Os passos que ecoam pela casa parecem mais agitados, e o barulho de móveis sendo derrubados indica que a paciência do visitante acabou. Ele não parece que está mais interessado no telefone ou um lugar para passar a noite, e o que quer que ele seja, não deixará você descansar.
-Como você tentará sobreviver a noite?
+(link-goto: &quot;Voltar para o corredor&quot;, &quot;Corredor de baixo&quot;)</tw-passagedata><tw-passagedata pid="16" name="Sala de jantar" tags="dining" position="825,1550" size="100,100">(set: $currentRoom to &quot;dining&quot;)\
+[Uma grande mesa de jantar ocupa o centro da sala, cercada por cadeiras igualmente antigas, todas com estofamento envelhecido. Um lustre pendente, com cristais empoeirados, ilumina a mesa.
 
-[[Confrontar com a arma-&gt;Pegar a Arma]]
-[[Criar uma distração-&gt;Criar uma Distração e Fugir na chuva]]
-[[Correr para a estrada-&gt;Alcançar a Estrada (Precisa Ferimento 2)]]
-[[Aguardar-&gt;Aguardar o Fim]]</tw-passagedata><tw-passagedata pid="46" name="O Lado de Fora" tags="Lado-de-Fora" position="4775,1075" size="100,100">A área toda está encharcada, assim como você, que agora está na chuva. Tenta dar alguns passos até a beirada, torcendo que a calha não ceda sob o seu peso, para que você possa se apoiar e descer ali, mas você pisa em falso quando seu pé desliza na área lisa. Você sente suas costas atingirem a calha e depois rolar para o lado, caindo até o chão coberto de lama. Uma série de pontadas de dor cobrem o seu corpo, no peito, nos braços e principalmente nas pernas.
-Você teme que o barulho tenha sido ouvido pelo visitante e ignorando a dor, se levanta e começa a correr.
+Um piano está localizado no fundo da sala, você nunca aprendeu corretamente a tocar, mas por insistência da sua mãe, conhece algumas notas.]
+(display: &quot;ShowWindow&quot;)
 
-[[Continuar-&gt;Correndo]]</tw-passagedata><tw-passagedata pid="47" name="Olhando pela Janela" tags="Intro" position="4625,475" size="100,100">Olhando pela janela é possível ver a forma do homem disparando noite adentro, correndo para longe da árvore em chamas.
-Rápidamente a chuva afoga o fogo que cobria a árvore, e a escuridão volta a cobrir os arredores da casa.
-Você desce as escadas com pressa, pensando que o homem possívelmente fugiu pela porta da frente, e tranca a porta escancarada antes que recebe mais uma visita surpresa.
-Pela primeira vez nessa noite toda, você respira com um pouco mais de calma.
+(link-goto: &quot;Ir para cozinha&quot;, &quot;Cozinha&quot;)
 
-[[Continuar-&gt;Vagar pela Casa]]</tw-passagedata><tw-passagedata pid="48" name="Olhou pelo olho mágico" tags="Porta-de-Entrada-(Olho-Mágico)" position="1650,600" size="100,100">Você vê através do olho mágico molhado uma pessoa encharcada, parecendo um homem alto e esguio com o rosto coberto por um chapéu. Não é possível ver mais detalhes devido ao olho mágico estar coberto de gotas de chuva.
 
-[[Abrir a porta para questionar-&gt;Morte]]
-[[Não abrir a porta para estranhos-&gt;Não abriu a porta]]</tw-passagedata><tw-passagedata pid="49" name="Pegar a Arma" tags="Lado-de-Fora" position="4925,925" size="100,100">Você engatilha a arma e espera o homem aparecer. As gotas de chuva dificultam a sua visão conforme agua entra nos seus olhos. Seu corpo doi e tem dificuldade de manter firme a pesada arma em suas mãos.
-As falas do homem se silenciam e o tempo passa lentamente até que você sente frias mãos em sua nuca. A arma é disparada em direção a escuridão.
 
-[[Continuar-&gt;A Tempestade Fica Forte]]</tw-passagedata><tw-passagedata pid="50" name="Primeira escolha" tags="Ático" position="650,500" size="100,100">Seu primeiro instinto é pegar o livro mais próximo para começar a ler. Você está a caminho do ático quando um raio atinge algum local próximo e o trovão que o segue faz a casa tremer com seu eco. Porém, há um som diferente junto ao trovão: foi possível escutar uma batida contra a porta da frente da casa.
+(link-goto: &quot;Voltar para o corredor&quot;, &quot;Corredor de baixo&quot;)</tw-passagedata><tw-passagedata pid="17" name="Seu quarto" tags="your-room" position="1525,1850" size="100,100">(set: $currentRoom to &quot;your-room&quot;)
 
-Você segue em busca do livro no ático. Nele o barulho da chuva é muito mais alto do que do restante dos cômodos da casa, o som tornando-se até desconfortável.
+(display: &quot;ShowWindow&quot;)
 
-(link-reveal-goto: &quot;Continuar no ático&quot;, &quot;Continuar leitura&quot;)[(set: $desceuParaSala to false)]
-(link-reveal-goto: &quot;Descer para a sala de estar&quot;, &quot;Continuar leitura&quot;)[(set: $desceuParaSala to true)]</tw-passagedata><tw-passagedata pid="51" name="Procurar pelo Homem" tags="Corredor-de-Entrada" position="4200,625" size="100,100">Guiado por pura loucura do medo, você corre pelos comodos da casa com pouca proteção a si mesmo, na esperança de que se você se livrar do homem, tudo ficará bem. Você o encontra o corredor de entrada, próximo da porta onde você o viu pela primeira vez, mas dessa vez ele está do mesmo lado que você. (Variável arma, mas aqui é a opção sem balas garantido).</tw-passagedata><tw-passagedata pid="52" name="Procurou a arma" tags="Quarto-Pais" position="3750,375" size="100,100">Você corre em direção ao quarto dos seus pais, sem saber se iria dar de cara com o invasor ou não. Na visão periférica, o enxerga descendo as escadas. É claramente o “homem” estranho que havia tentado entrar na casa mais cedo. Antes que ele perceba a sua presença, você entra no quarto dos seus pais e tranca a porta.
 
-[[Continuar-&gt;Entrou no quarto dos pais]]</tw-passagedata><tw-passagedata pid="53" name="Quarto dos Pais para Pegar Arma" tags="Quarto-Pais" position="3400,1200" size="100,100">Você procura pela única coisa que está proibido de tocar na casa inteira. Uma espingarda calibre 12mm que pertenceu ao seu avô e agora é de seu pai e possui duas balas que mal sabia colocar.</tw-passagedata><tw-passagedata pid="54" name="Retorno da Tempestade" tags="Corredor-de-Entrada" position="4925,475" size="100,100">Tão rápidamente quanto ela se foi, a chuva retorna com fortes estrondos. O vento sibila e faz as janelas baterem, mas você teme que não seja apenas o vento fazendo isso. &quot;Talvez seja melhor garantir que a casa está fechada o bastante&quot;, você pensa, ao mesmo tempo que escuta o que parece ser o vento forçando uma das janelas.
 
-&lt;!-- Começa o minigame do bicho tentar invadir --&gt;</tw-passagedata><tw-passagedata pid="55" name="Sair do Quarto pra Enfrenta-lo" tags="Corredor-de-Entrada" position="4200,225" size="100,100">Com pavor e dúvidas do que está fazendo, você encara atentamente o corredor em frente até ver uma figura ali.
-O mesmo homem estranho de antes fica ali, em silêncio lhe encarando. A chuva parece se intensificar, forte a ponto de que a casa parece ranger.
+(link-goto: &quot;Voltar&quot;, &quot;Corredor de cima&quot;)</tw-passagedata><tw-passagedata pid="18" name="Startup" tags="startup" position="300,400" size="100,100">(set: $stormStrength to 0)\
+(set: $turns to 0)\
+(set: $currentRoom to &quot;lower-corridor&quot;)\
+(set: $monsterCurrentRoom to &quot;&quot;)\
+(set: $monsterEnteredRoom to &quot;&quot;)\
+(set: $isMonsterActive to false)\
+(set: $isMonsterInside to false)\
+(set: $hasAtticKey to false)\
+(set: $hasGarageKey to false)\
+(set: $hasBasementKey to false)\
+(set: $isWindowOpen to (dm:
+	&quot;dining&quot;, true, 
+    &quot;kitchen&quot;, true, 
+    &quot;living&quot;, true, 
+    &quot;bathroom&quot;, true, 
+    &quot;garage&quot;, true, 
+    &quot;basement&quot;, true, 
+    &quot;attic&quot;, true, 
+    &quot;your-room&quot;, true, 
+	&quot;parents-room&quot;, true
+))</tw-passagedata><tw-passagedata pid="19" name="Ático" tags="" position="1525,1650" size="100,100">(if: $hasAtticKey)
+	[(display:&quot;Ático I&quot;)]
+(else:)
+	[(display:&quot;Ático (sem chave)&quot;)]</tw-passagedata><tw-passagedata pid="20" name="ShowStorm" tags="" position="200,2100" size="100,100">(if: $stormStrength is 0)\
+	[(enchant: ?storm, (text-color: white))]\
+(else-if: $stormStrength is 1)\
+	[(enchant: ?storm, (text-color: yellow))]\
+(else-if: $stormStrength is 2)\
+	[(enchant: ?storm, (text-color: orange))]\
+(else-if: $stormStrength is 3)\
+	[(enchant: ?storm, (text-color: red) + (text-style: &quot;shudder&quot;))]\
+\
+|storm&gt;[A tempestade fica mais forte.]</tw-passagedata><tw-passagedata pid="21" name="ShowWindow" tags="" position="300,2100" size="100,100">(set: _windowText to &quot;&quot;)\
+(if: $currentRoom of $isWindowOpen)\
+[\
+    (enchant: ?window, (text-color: red))\
+    (set: _windowText to &quot;As janelas estão abertas...&quot;)\
+]\
+(else:)\
+[\
+	(enchant: ?window, (text-color: cyan))\
+	(set: _windowText to &quot;As janelas estão fechadas.&quot;)\
+]\
+\
+|window&gt;[_windowText]
 
-(if: $possuiArma)[[Disparar a arma-&gt;Mirar e Disparar a Arma (se tiver ela)]]
-[[Correr para seu quarto-&gt;Correr de Volta ao Quarto]]</tw-passagedata><tw-passagedata pid="56" name="Se Aproximar do Homem" tags="Cozinha" position="3850,600" size="100,100">O homem não parece reagir a sua aproximação, apenas acompanha seus movimentos com os olhos escuros e um sorriso de antecipação. Quando está perto o bastante, ele por fim diz &quot;Obrigado Johnny.&quot;
+(event: when $currentRoom of $isWindowOpen is true)\
+[\
+	(link: &quot;Fechar janelas&quot;)[\
+		(enchant: ?window, (text-color: cyan))\
+		(set: $currentRoom of $isWindowOpen to false)\
+		(replace: ?window)[As janelas foram fechadas.]\
+    ]\
+]</tw-passagedata><tw-passagedata pid="22" name="Ático (sem chave)" tags="" position="1675,1650" size="100,100">Você tenta abrir e forçar a porta mas não consegue fazer com que ela abra.
+A chave deve estar em algum lugar da casa...
 
-[[Continuar-&gt;Morte]]</tw-passagedata><tw-passagedata pid="57" name="Se Trancar no quarto" tags="Quarto-Pais" position="3550,1275" size="100,100">Você se senta num canto do quarto e espera, prestando atenção se escuta algum barulho vindo da casa, com a arma em mãos.</tw-passagedata><tw-passagedata pid="58" name="Se trancou no quarto" tags="Quarto-Proprio" position="3750,225" size="100,100">Você ouve aquilo andar pela casa toda, vasculhando os cômodos e repetindo “onde você está?” (inserir áudio do johnny). Sem saber o que fazer, você permanece escondido debaixo da cama, tentando não fazer barulho. Não consegue desviar o olhar da soleira da porta, que ainda possui um resquício de luz. De repente, uma sombra cobre quase totalmente a parte iluminada, bem na frente da sua porta. O invasor está ali.
+(link-goto: &quot;Voltar&quot;, &quot;Corredor de cima&quot;)</tw-passagedata><tw-passagedata pid="23" name="Ático I" tags="attic" position="1875,1650" size="100,100">(set: $currentRoom is &quot;attic&quot;)\
+\
+[As vigas inclinadas do teto acompanham a estrutura do telhado da casa. Todo o local está bem empoeirado.
 
-[[Continuar-&gt;Trancado no quarto, invasor dentro da casa]]</tw-passagedata><tw-passagedata pid="59" name="Sobe para o quarto para ignorar o homem" tags="Quarto-Proprio" position="3300,600" size="100,100">Você sobe para o seu quarto e tenta esquecer a voz perturbadora do seu visitante. Ao observá-lo pela janela, também parecia haver algo de errado com seu rosto, como se fosse uma queimadura, o que deixava a pele esticada em ângulos não-naturais.
+Nas paredes curtas ficam apoiados os moveis quebrados em desuso e algumas caixas de papelão. Uma escrivaninha de carvalho acomoda em cima alguns livros velhos, que talvez nunca tenham sido lidos por ninguém.
 
-(if: $garagemFechada)[[Continuar-&gt;Garagem fechada]]
-(else:)[[Continuar-&gt;Garagem aberta]]</tw-passagedata><tw-passagedata pid="60" name="Sons se repetem" tags="Corredor-de-Entrada" position="2550,600" size="100,100">Algum tempo se passa, com aqueles mesmos barulhos se repetindo com frequência. Cada vez que trovejava, parecia que alguma das janelas estava sendo aberta. Você acredita ter ouvido passos no lado de fora da casa, mas evita verificar.
+O armário de arquivo está com algumas gavetas desalinhadas, podem conter documentos importantes.]
 
-[[&quot;Continuar&quot;-&gt;Deve ser aquele homem estranho]]</tw-passagedata><tw-passagedata pid="61" name="Splash" tags="" position="475,200" size="100,100"></tw-passagedata><tw-passagedata pid="62" name="Startup" tags="startup" position="300,200" size="100,100">(set: $desceuParaSala to false)</tw-passagedata><tw-passagedata pid="63" name="Tempestade Forte" tags="Quarto-Pais" position="3700,1100" size="100,100">A tempestade está mais forte do que nunca, e todo tipo de barulho aparece ao mesmo tempo. Porém, há algo errado novamente. A madeira da casa está rangendo, em vários pontos diferentes e você não tem a menor ideia do porquê. Se fosse chutar, diria que algum bicho está escalando a casa, mas não fazia ideia de quê conseguiria fazer isso.</tw-passagedata><tw-passagedata pid="64" name="Tempestade Piora" tags="Quarto-Pais" position="3550,1125" size="100,100">A tempestade só parece piorar. O barulho das gotas de chuva caindo contra o vidro da janela impedia que você ouvisse qualquer outra coisa, então você se move para mais perto da porta. Lá, claramente haviam barulhos dentro da casa. Algo havia entrado e estava caminhando, talvez vasculhando a casa em busca de algo de valor. Porém, em meio aos trovões você ouvia um chamado sibilante, que lhe causa um arrepio na espinha.
+(display: &quot;ShowWindow&quot;)
 
-Um raio cai nas proximidades da casa, gerando um barulho ensurdecedor e um flash de luz muito forte. Desorientado, você tenta voltar a prestar atenção nos barulhos da casa, mas de repente não se ouve mais nada. Ou a pessoa parou de se movimentar ou saiu da casa.</tw-passagedata><tw-passagedata pid="65" name="Trancado no quarto, invasor dentro da casa" tags="Quarto-Pais" position="4050,300" size="100,100">Não há nada que você possa fazer, trancado no quarto. O invasor caminha pela casa enquanto a tempestade ruge lá fora. Não há para onde fugir.
 
-[[Sair para enfrentá-lo-&gt;Sair do Quarto pra Enfrenta-lo]]
-[[Continuar escondido-&gt;Aguardar Escondido]]</tw-passagedata><tw-passagedata pid="66" name="Uma parte da Mente" tags="Lado-de-Fora" position="5075,1225" size="100,100">Uma parte de sua mente ainda se lembra bem do homem, de seu sorriso, de seu estranho chápeu, e de toda aquela noite estranha coberta pela tempestade. Você espera que tenha sido só um pesadelo, que nada daquilo tenha sido real. Mas e se tiver sido? E se nunca encontraram um corpo porque o homem ainda está vivo?
-E se ele estiver vivo, onde estará?
-São as perguntas que pairam em sua mente em toda noite de tempestade. Principalmente nessas noites, quando você olha pela janela e pode jurar que vê a silhueta de um homem alto e sorridente lhe encarando de longe.</tw-passagedata><tw-passagedata pid="67" name="Vagar pela Casa" tags="Corredor-de-Entrada" position="4775,475" size="100,100">Você começa a vagar pela casa e percebe que chuva já não cai com tanta intensidade, não havia mais o vento sibilando pelas frestas da madeira da casa. Agora, apenas uma garoa cobre a casa, mas o medo do homem estranho se mantem. Você não tem certeza se ele retornará ou não, mas de toda forma é melhor se preparar. Para garantir a segurança da casa, você começa a vagar pelos cômodos para garantir que está tudo trancado. Enquanto você faz isso, tomando cuidado a cada passo para não ser surpreendido, você começa a ouvir o barulho de água caindo na casa.
 
-[[Continuar-&gt;Retorno da Tempestade]]</tw-passagedata><tw-passagedata pid="68" name="Vai até a cozinha com a arma (senão ele morre)" tags="Cozinha" position="3700,675" size="100,100">Você caminha até a cozinha com passos pesados de medo, reconfortádo apenas pela alongada arma de fogo em suas mãos, mas a falta de experiencia com elas pesa em sua mente tanto quanto o medo do invasor. Quem é ele e o que ele quer aqui?
-Enquanto pensa sobre isso, você escuta um barulho vindo da cozinha, uma cadeira caindo, provavelmente. Ao olhar para dentro dela, você vê a silhueta de um homem de pé olhando de volta para você. Clareado apenas por um relâmpago, o sorriso de orelha a orelha dele e seus olhos que parecem pequenos demais para seu porte te travam por um instante. Ele fica parado te observando, sem falar nada.
+(link-goto: &quot;Voltar&quot;, &quot;Corredor de cima&quot;)</tw-passagedata><tw-passagedata pid="24" name="IsMonsterHere" tags="" position="200,2200" size="100,100">(if: $currentRoom is $monsterCurrentRoom)
+	[(if: $firstEncounter is true) [(display: &quot;MonsterEncounter&quot;)]
+	(else:) [(display: &quot;PlayerDeath&quot;)]]</tw-passagedata><tw-passagedata pid="25" name="EncounterMonster" tags="encounter" position="300,2200" size="100,100">(live: 3s)[\
+	(stop:)\
+    (enchant: &quot;FUGIR&quot;, (text-color: red) + (text-style:&quot;shudder&quot;))\
+    	[(link: &quot;FUGIR&quot;)[(restart:)]]
+]
+&lt;img src=&quot;https://i.imgur.com/P9T6ZyS.png&quot; width=&quot;960&quot; height=&quot;540&quot;&gt;\
+&lt;audio autoplay src=&quot;https://www.dropbox.com/scl/fi/vffvekmpz6nyshvkht8ar/Jumpscare.ogg?rlkey=lpy426qqbl3oihp8hoc7v213d&amp;dl=1&quot;&gt;</tw-passagedata><tw-passagedata pid="26" name="PlayerDeath" tags="death" position="400,2200" size="100,100">(live: 5s)[\
+	(stop:)\
+    (text-color: red)[Você foi pego pela criatura...]
+    [Ela entrou pelo(a)] (text-color: yellow)(display:&quot;DisplayMonsterRoom&quot;)
+    
+    
+    (link: &quot;Recomeçar&quot;)[(restart:)]
+]\
+&lt;img src=&quot;https://i.imgur.com/P9T6ZyS.png&quot; width=&quot;960&quot; height=&quot;540&quot;&gt;\
+&lt;audio autoplay src=&quot;https://www.dropbox.com/scl/fi/vffvekmpz6nyshvkht8ar/Jumpscare.ogg?rlkey=lpy426qqbl3oihp8hoc7v213d&amp;dl=1&quot;&gt;</tw-passagedata><tw-passagedata pid="27" name="MonsterTurn" tags="" position="400,2100" size="100,100">(set: $turns to $turns + 1)\
+\
+(set: _random to (either: ...(datanames: $isWindowOpen)))\
+(set: $monsterCurrentRoom to _random)\
+(if: $isWindowOpen&#39;s $monsterCurrentRoom is true and not $isMonsterInside)[
+	(set: $isMonsterInside to true)
+	(set: $monsterEnteredRoom to $monsterCurrentRoom)
+    &lt;audio autoplay src=&quot;https://www.dropbox.com/scl/fi/dzexyza7igulevrfg49k7/MonsterEnteredHouse.ogg?rlkey=s0kaqw8aw2qa0y9jyzgwtf6xo&amp;dl=1&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="28" name="DisplayMonsterRoom" tags="" position="500,2100" size="100,100">(if: $monsterEnteredRoom is &quot;dining&quot;)[Sala de jantar]\
+(else-if: $monsterEnteredRoom is &quot;kitchen&quot;)[Cozinha]\
+(else-if: $monsterEnteredRoom is &quot;living&quot;)[Sala de estar]\
+(else-if: $monsterEnteredRoom is &quot;bathroom&quot;)[Banheiro]\
+(else-if: $monsterEnteredRoom is &quot;garage&quot;)[Garagem]\
+(else-if: $monsterEnteredRoom is &quot;basement&quot;)[Porão]\
+(else-if: $monsterEnteredRoom is &quot;attic&quot;)[Ático]\
+(else-if: $monsterEnteredRoom is &quot;your-room&quot;)[Seu quarto]\
+(else-if: $monsterEnteredRoom is &quot;parents-room&quot;)[Quarto de seus pais]</tw-passagedata><tw-passagedata pid="29" name="Garagem I" tags="" position="1175,1850" size="100,100">[Dentro da garagem, o piso bruto com manchas de óleo e algumas marcas deixadas por pneus ao longo dos anos.
 
-(if: $possuiArma)[[Atirar com a arma-&gt;Atirar Nele]]
-(if: $possuiArma)[[Se aproximar-&gt;Se Aproximar do Homem]]
-(else:)[[Continuar-&gt;Se Aproximar do Homem]]</tw-passagedata><tw-passagedata pid="69" name="Vai em direção as escadas" tags="Corredor-de-Entrada" position="3700,850" size="100,100">Enquanto começa a subir as escadas, você escuta o barulho de passos apressados vindo atrás de você. Quando se vira rapidamente, vê o homem próximo demais, e dispara sua arma sem poder mirar direito. Você escuta o que parece ser um grito de dor, mas distorcido e que ecoa pela casa, enquanto corre sem olhar para trás de volta a seu quarto.
+Nas prateleiras algumas ferramentas e peças velhas de carro estão cobertas de ferrugem.
+Nos cantos das paredes é possível ver algumas teias de aranha e infiltrações.
 
-[[Continuar-&gt;Ligar para a Polícia]]</tw-passagedata><tw-passagedata pid="70" name="Variavel Arma" tags="Variavel" position="1250,100" size="100,100">A arma na prática vai liberar algumas cenas ou ações que geralmente dariam instakill no boneco, mas tem usos limitados. Digamos que por ser uma espingarda .12, daquelas de cano duplo, tenha dois tiros disponíveis. Quando rolar uma cena que isso seja uma opção, você checa se o boneco tem a arma e se ainda tem munição, se tiver desconta 1 da munição e tá show. Obviamente a arma não é pra matar o monstro, sendo só pra manter ele afugentado.
-Quando tiver balas, vai dar pra seguir o texto quando tiver ele lá.
+Em frente a porta um armário de ferro e madeira guardam algumas caixas com seus brinquedos antigos, e algumas recordações de familia.]</tw-passagedata><tw-passagedata pid="30" name="Porão I" tags="" position="1175,1950" size="100,100">[O interruptor ao lado da escada acende as lampadas fracas que iluminam o pequeno porão da casa. É possível ver a fiação exposta sobre o teto de madeira.
 
-Quando acabarem as balas, dá pra aparecer um texto falando algo tipo:
-&quot;Você aperta o gatilho na esperança de se proteger, mas é em vão. Não existem mais balas dentro da arma, e esperança não será o bastante para te salvar dessa vez.&quot; (Game Over)</tw-passagedata><tw-passagedata pid="71" name="Variável Janela" tags="Variavel" position="1350,100" size="100,100">Mesma ideia da porta, mas com outra cena.
+Em dois grandes armários de ferro ficam guardadas várias peças e alguns aparelhos eletronicos que não funcionam mais, os armários estão tão cheios de bugigangas que mal nota-se que existe uma parede bege ao fundo.]</tw-passagedata><tw-passagedata pid="31" name="Ático (chave)" tags="" position="1775,1650" size="100,100">[Você coloca a chave no alçapão que leva ao ático.]
 
-Caso a janela não tenha sido aberta -&gt; Você abre a janela e as gotas frias de chuva começam a entrar no cômodo, trazidas pelos fortes ventos. É difícil de enxergar alguma coisa nessas condições, mas você tenta se focar.
-Forçando bastante sua vista, você consegue ver o que parecem ser pegadas na lama no chão ao redor da casa, como se alguem tivesse caminhado ali recentemente. Alem disso, consegue ver que tambem existem marcas de lama na calha logo a frente da janela, tão recentes que ainda não foi lavada pela chuva. Antes de pensar no que foi que fez aquilo, você fecha a janela.
 
-Caso a janela já tenha sido aberta -&gt; Você olha pela chuva, tentando enxergar alguma coisa que explique os barulhos que você tem ouvido.
-Com uma velocidade assustadora, você vê o que parece ser um vulto que passa no canto do seu olho, e antes que consiga entender que é, sente algo te puxando para fora da janela.
-Você bate as costas no chão molhado, sentindo apenas dor e confusão.
-Seu mundo gira pela dor, e as frias gotas de chuva não ajudam em nada. Você tenta levantar, mas suas pernas ainda estão fracas pelo impacto.
-De pé ao seu lado, está o mesmo &quot;homem&quot; que você viu na entrada. Seu sorriso largo demais para qualquer pessoa se abre, e ele apenas diz &quot;Obrigado, Johnny&quot;.</tw-passagedata><tw-passagedata pid="72" name="Variável Polícia" tags="Variavel" position="1150,100" size="100,100">Essa é mais simples na prática, é só pra ser mais facil de escrever &quot;variavel polícia&quot; do que botar esse texto em um lugar qualquer no jogo e ficar jogando várias cenas nele.
 
-Você corre até o telefone da entrada e começa a apressadamente digitar os números de emergência. O telefone chama pelo que parece ser uma eternidade enquanto você olha por cima do ombro para não ser surpreendido pelo invasor. Você escuta uma voz feminina do outro lado da linha, perguntando qual a sua emergência. A ligação parece estar com um sinal terrível, provavelmente por causa da tempestade.
-Você rapidamente conta sobre o invasor em sua casa e pede por ajuda. Quando ela pede seu endereço, no meio de muita estática, você escuta o barulho do telefone ficando mudo, como se a ligação caísse.
+(link-goto: &quot;Continuar&quot;, &quot;Garagem I&quot;)</tw-passagedata><tw-passagedata pid="32" name="Intro IV" tags="" position="800,400" size="100,100">Notando que o vento começa a castigar algumas das antigas janelas da casa, você rapidamente corre para a entrada e fecha as janelas que ainda continuavam abertas, aguardando pelo chegar da tempestade.
 
-Opção 1: Tentar ligar novamente -&gt; Você começa a discar os números quando vê de canto de olho o homem estranho de pé, totalmente seco, do outro lado do corredor. (Variável arma)
+A casa é atingida por uma onde de frio, que entra pelas frestas da madeira e te obriga a buscar um agasalho no andar de  cima. Trovões começam a rugiar à distância, tomando o protagonismo do som ambiente no momento. A casa não está mais silenciosa.
 
-Você dispara sua arma nele, mas talvez tenha sido apenas o medo, não parece que havia ninguem naquele lugar. Sem entender mas tambem sem ter tempo de pensar, você volta a ligação. Quando por fim escuta outra voz na linha, ela está coberta de estática, mas você jura que ela é a mesma que você ouviu vinda do homem na porta. &quot;Ninguem virá por você, Johnny.&quot;
-------------------------
+(link-goto: &quot;Continuar&quot;, &quot;Intro V&quot;)</tw-passagedata><tw-passagedata pid="33" name="Intro V" tags="" position="900,400" size="100,100">Seu primeiro instinto é pegar o livro mais próximo para começar a ler. Você está a caminho do ático quando um raio atinge algum local próximo e o trovão que o segue faz a casa tremer com seu eco. Porém, há um som diferente junto ao trovão. Parece que algo ou alguém bateu contra a parta da frente da casa.
 
-Opção 1: Tentar Ligar Novamente -&gt; O Telefone está mudo. Você escuta passos vindo de perto de você. (Váriável Arma)
+Imaginando ser apenas parte do susto com o raio, você segue para o ático em busca do livro. Estando lá, o barulho da chuva era muito mis alto do que dentro da casa, tornando-se desconfortável a permanência no cômodo.
 
-Ao ver o movimento de uma silhueta próxima, você dispara um tiro que afugenta a criatura tempo o bastante para você correr para o andar de cima e se trancar no quarto de seus pais.
----------------------------
-Em ambos os casos:
-Opção 2: Voltar para o quarto -&gt; Volta pra cena mais próxima do quarto, meio que a opção anterior mesmo</tw-passagedata><tw-passagedata pid="73" name="Variável Porta" tags="Variavel" position="1450,100" size="100,100">Para tirar as cenas de &quot;abre a porta e morre&quot; da porta da frente da casa, valia a pena fazer uma variável da porta (e os eventos afetados por isso tão marcados com esse nome tb entre parenteses da opção).
-A variável seria simples, uma parada de checar se o player já abriu a porta antes na gameplay ou não. Se não, toca a cena 1, se sim, toca a cena 2.
+&lt;!-- delay e audio de trovão --&gt;
 
-(Caso não tenha aberto a porta até agora):
-Enquanto você abre a porta para o estranho visitante, um pouco confuso pela interação com ele, você mal nota que a tranca de segurança da porta ainda está ali, permitindo que você abra apenas uma pequena fresta.
-Um relampago cai próximo da casa, bem mais perto que os anteriores, fazendo com que a velha residencia trema e você se assuste. Mas pior do que o barulho é apenas o que é rapidamente revelado com o clarão do raio. Pela fresta você foi capaz de ver o rosto do homem. Os olhos escuros, grandes demais, o sorriso largo que continua onde já deveria ter acabado, a expressão de satisfação e antecipação com a porta sendo aberta.
-Pelo susto momentaneo, você bate a porta novamente e a tranca em seguida. -&gt; Depois disso, retorna a narrativa normal.
+(link-goto: &quot;Continuar no ático para ler&quot;, &quot;Continuar no ático&quot;)
+(link-goto: &quot;Descer para a sala de estar&quot;, &quot;Descer para sala&quot;)</tw-passagedata><tw-passagedata pid="34" name="Continuar no ático" tags="" position="1000,300" size="100,100">Você senta na poltrona desgastada que já pertenceu ao seu avô e começa a ler &quot;O Retrato de Dylan Black&quot;, uma edição antiga e empoeirada que atiçava sua curiosidade há muito tempo, mas não havia tido tempo de ler. Conforme o tempo ia passando, a chuva ficava mais forte e os trovões eram incessantes.
 
-(Caso a porta já tenha sido aberta): -&gt; Aí sim dá game over e toca o jumpscare lá. Se preferir não usar o jumpscare pq isso é truque barato, insira esse texto:
-A curiosidade vence o medo. Talvez tenha sido um engano o que você viu no rosto do homem, e seria errado deixar alguem exposto em uma chuva como essa. Tirando a tranca de segurança, você abre a porta.
-Como alguem que não consegue mais esperar pela antecipação, o homem se aproxima rapidamente, deixando o rosto dele muito próximo ao seu. Não foi só impressão, tem algo de muito errado com o rosto dele.
-Em uma voz estranha e distorcida, as últimas palavras que você escuta são: &quot;Obrigado, Johnny&quot;.</tw-passagedata><tw-passagedata pid="74" name="Você Acorda" tags="Lado-de-Fora" position="5075,1075" size="100,100">Você acorda numa cama hospitalar no dia seguinte. Febril e fragilizado, demora para que recobre totalmente os sentidos. Os médicos lhe explicam que foi salvo por um caminhoneiro que quase lhe atropelou na estrada e trouxe-o até aqui.
-Suas histórias sobre o visitante estranho foram descartados após algumas investigações, afinal, não havia rastro nenhum ali.
-Seus pais lhe levaram a médicos e psiquiatras, que lhe ajudaram a processar melhor tudo que aconteceu. Você teve algum pesadelo que pareceu real demais enquanto estava sozinho em casa, e por algum tipo de sonambulismo ou pânico, fugiu até a estrada. Foram anos de tratamento e remédios, mas pouco a pouco você começou a concordar.
+(link-goto: &quot;Continuar&quot;, &quot;Continuar no ático II&quot;)</tw-passagedata><tw-passagedata pid="35" name="Descer para sala" tags="" position="1000,500" size="100,100">Você senta na poltrona desgastada que já pertenceu ao seu avô e começa a ler &quot;O Retrato de Dylan Black&quot;, uma edição antiga e empoeirada que atiçava sua curiosidade há muito tempo, mas não havia tido tempo de ler. Conforme o tempo ia passando, a chuva ficava mais forte e os trovões eram incessantes.
 
-[[Continuar-&gt;Uma parte da Mente]]</tw-passagedata><tw-passagedata pid="75" name="Morte" tags="" position="2250,100" size="100,100"></tw-passagedata></tw-storydata>
+Parecia que a tempestade só piorava. O vento sibilava entre as frestas da madeira da casa, tirando a concentração da leitura. Dentre todos estes sons, a chuva, os trovões, o vento, o farfalhar das árvores e o balançar das janelas, você ouve este último com mais clareza. Parecia que alguma janela estava tentando ficar aberta.
+
+(link-goto: &quot;Continuar sua leitura&quot;, &quot;Continuar sua leitura&quot;)
+(link-goto: &quot;Levantar para checar&quot;, &quot;Levantar para checar&quot;)</tw-passagedata><tw-passagedata pid="36" name="Continuar no ático II" tags="" position="1100,300" size="100,100">O livro funciona como uma boa distração, fazendo com que a forte torrente que cai do lado de fora da casa seja esquecida enquanto você fica imerso na narrativa. Uma história de suspense, onde um monstro com aparência de homem comete diversos assassinatos. Em alguns trechos da história, você sente calafrios em sua espinha pelo medo transmitido pelas páginas do livro. Felizmente, é apenas uma história.
+
+(link-goto: &quot;Continuar&quot;, &quot;Ato 2&quot;)</tw-passagedata><tw-passagedata pid="37" name="Continuar sua leitura" tags="" position="1100,500" size="100,100">Você continua sua leitura, mais interessado na narrativa que nos barulhos da chuva. A casa é velha, é natural que faça barulho quando venta tão forte. Você faz uma nota mental de que deveria conversar com seus pais sobre reforçar as janelas, para não baterem tanto quando chove. Nessa hora o barulho de vidro quebrado é escutado vindo da cozinha.
+
+(link-goto: &quot;Checar a cozinha&quot;, &quot;Checar a cozinha&quot;)
+(link-goto: &quot;Continuar a leitura&quot;, &quot;Ato 2 Intro&quot;)</tw-passagedata><tw-passagedata pid="38" name="Levantar para checar" tags="" position="1100,600" size="100,100">Você fica incomodado com o barulho e decide verificar as janelas do andar de baixo. Uma por uma, você as vê balançarem, castigadas pelo vento forte. Quando se aproxima da janela da cozinha, parece que algo desaparece rapidamente pelo canto da janela. Você interpreta como folhas carregadas pelo vento.
+
+&lt;!-- minigame sem a ameaça do monstro, acaba automaticamente depois de alguns turnos e vai para o começo do Ato 2--&gt;
+(link-goto: &quot;Conferir as janelas da casa&quot;, &quot;StartMinigame&quot;)</tw-passagedata><tw-passagedata pid="39" name="Ato 2 Intro" tags="" position="1500,400" size="100,100">A leitura está fluindo apesar da intempérie. Você está absorto na descrição dos bailes luxuosos sediados pelo protagonista do livro quando ouve um barulho muito claro vindo da porta da frente. Era uma batida, fora de ritmo. Não era o costumeiro //toc-toc-toc// que normalmente as pessoas fazem, te causando uma sensação de estranhamento.
+
+(link-goto: &quot;Abrir a porta&quot;, &quot;Abrir a porta&quot;)
+(link-goto: &quot;Olhar pelo olho mágico&quot;, &quot;Olhar pelo olho mágico&quot;)</tw-passagedata><tw-passagedata pid="40" name="Checar a cozinha" tags="" position="1200,500" size="100,100">Correndo até a cozinha pelo susto do barulho repentino, você vê o que parece um vulto se movendo do outro lado da janela central. Provavelmente algum grande galho levado pela chuva, também responsável por quebrar parte do vidro. 
+
+Olhando melhor, a janela quebrada era repartida no centro, em forma de cruz, com quatro vidros menores ali. Um deles foi quebrado e seus cacos estão pelo chão. Você confere melhor, e pelo menos a janela continua firme e bem trancada.
+
+(link-goto: &quot;Continuar&quot;, &quot;Ato 2 Intro&quot;)</tw-passagedata><tw-passagedata pid="41" name="StartMinigame" tags="" position="500,1750" size="100,100"></tw-passagedata><tw-passagedata pid="42" name="Abrir a porta" tags="" position="1600,300" size="100,100">&lt;!-- variável porta--&gt;</tw-passagedata><tw-passagedata pid="43" name="Olhar pelo olho mágico" tags="" position="1600,500" size="100,100">Você vê através do olho mágico molhado uma pessoa encharcada, parecendo um homem alto e esguio com o rosto coberto por um chapéu. Não é possível ver mais detalhes devido ao olho mágico estar coberto de gotas de chuva.
+
+(link-goto: &quot;Abrir a porta&quot;, &quot;Abrir a porta&quot;)
+(link-goto: &quot;Não abrir a porta para estranhos&quot;, &quot;Não abrir a porta&quot;)</tw-passagedata><tw-passagedata pid="44" name="Não abrir a porta" tags="" position="1700,500" size="100,100">Incomodado com a presença de uma pessoa estranha na porta da casa, você decide sair da sala de estar e subir até os quartos para se sentir mais seguro. Porém, aquele homem não sai da sua cabeça. Por uma fração de segundo, você lembra que parecia haver algo de errado com o rosto dele.
+
+Já haviam se passado algumas horas desde o início da tempestade, e parecia não ter fim. Distraído pelo livro e por uma goteira ritimada, você havia se esquecido do homem estranho na soleira da porta. Porém, em meio aos trovões, escuta algum som que assemelhaça à maçaneta da porta sendo forçada.
+
+Com medo mas sem opções, você desce para checar se está tudo bem com a porta da frente. Ela continua lá, bem trancada como deveria. O homem estranho não está mais lá, mas há algo no chão. O chapéu do homem ficou para trás.
+
+(link-goto: &quot;Pegar o chapéu&quot;, &quot;Pegar o chapéu&quot;)
+(link-goto: &quot;Não pegar o chapéu&quot;, &quot;Dar uma volta pela casa&quot;)</tw-passagedata><tw-passagedata pid="45" name="Dar uma volta pela casa" tags="" position="1850,600" size="100,100">Você decide dar uma volta pela casa para checar todos os cômodos, já que a chuva não parece dar trégua. Enquanto caminha pela casa, o vento assobia e faz as janelas tremerem. Parece que a tempestade está ficando mais forte.
+
+Chegando na garagem, percebe que o portão não foi devidamente trancado, ao mesmo tempo que ouve um barulho alto vindo de alguma das janelas da casa.
+
+(link-goto: &quot;Verificar o portão&quot;, &quot;Verificar o portão&quot;
+(link-goto: &quot;Verificar as janelas&quot;, &quot;Verificar as janelas&quot;)</tw-passagedata><tw-passagedata pid="46" name="Pegar o chapéu" tags="" position="1800,500" size="100,100">Você abre a porta para pegar o chapéu.
+
+Ao retornar para dentro da casa, pode jurar que ouviu passos apressados do lado de fora, se aproximando e enfim parando quando você fecha a porta. O mais estranho ainda assim, é o chapéu. Quando viu o sujeito anteriormente, ele estava molhado pela chuva, mas o chapéu está totalmente seco. Mais que isso, a textura dele é estranha; muito macia e suave.
+
+Não conseguindo ver mais nada chamativo nele, você o coloca no cabide da entrada, para que seus pais devolvam ao dono no futuro.
+
+(link-goto: &quot;Continuar&quot;, &quot;Dar uma volta pela casa&quot;)</tw-passagedata><tw-passagedata pid="47" name="Verificar o portão" tags="" position="2000,600" size="100,100">O som da janela lhe perturba profundamente. Você não entende como uma tempestade pode causar tanto barulho e estragos, ainda mais por culpa de um galho de árvore que possa ter batido em algum lugar.
+
+Talvez tudo estivesse sendo mais intenso devido ao fato de você estar sozinho na casa pela primeira vez, pensa, enquanto verifica o cadeado do portão.
+&lt;!-- setar que monstro não vai entrar pela garagem --&gt;
+
+(link-goto: &quot;Continuar&quot;, &quot;Verificar o portão II&quot;)</tw-passagedata><tw-passagedata pid="48" name="Verificar as janelas" tags="" position="2000,700" size="100,100">O barulho da janela lhe perturba profundamente. Você não entende como uma tempestade pode causar tanto estrago, e culpa algum galho de árvore que possa ter batido contra alguma janela.
+
+Você sai em busca da janela de onde o barulho possa ter vindo, pensando se não poderia ser apenas sua imaginação impressionada por estar sozinho pela primeira vez nessa situação.
+&lt;!-- setar que o monstro pode entrar pela garagem --&gt;
+
+(link-goto: &quot;Continuar&quot;, &quot;Monstro entra pela garagem&quot;)</tw-passagedata><tw-passagedata pid="49" name="Monstro entra pela garagem" tags="" position="2600,700" size="100,100">Você tenta se concentrar no livro apesar de todas as coisas perturbadoras que ocorreram nas últimas horas. A intensa chuva dificulta sua concentração, com as gotas castigando a casa. Parece que a tempestade ficou ainda mais forte.
+
+Seu quarto fica relativamente longe da garagem, mas, de repente, é possível escutar o portão rangendo.
+
+(link-goto: &quot;Conferir o portão&quot;, &quot;Checar portão da garagem&quot;)
+(link-goto: &quot;Pegar a arma no quarto de seus pais&quot;, &quot;Pegar a arma&quot;)</tw-passagedata><tw-passagedata pid="50" name="Verificar o portão II" tags="" position="2100,600" size="100,100">De volta ao hall de entrada, algo capta a sua atenção no canto do olho. Parece que algo escapava novamente pela lateral da janela, assim como na cozinha anteriormente. Assustado, você decide subir e desistir de brincar de detetive pela casa, decidindo que vai descer novamente apenas se algum barulho for realmente significativo.
+
+Algum tempo se passa, com aqueles mesmos barulhos se repetindo com frequência. Cada vez que trovejava, parecia que alguma das janelas estava sendo empurrada. Você acredita ter ouvido passos no lado de fora da casa, mas evita verificar.
+
+(link-goto: &quot;Continuar&quot;, &quot;Verificar o portão III&quot;)</tw-passagedata><tw-passagedata pid="51" name="Verificar o portão III" tags="" position="2200,600" size="100,100">A tempestade não parece estar nem perto de se dissipar. Os trovões ainda são ouvidos mais à distância e a chuva não dá trégua. Quando você está voltando a se concentrar no livro, uma batida conhecida e arrastada toca na porta da frente.
+
+Você decide descer e tentar conversar com o homem, mesmo com o barulho ensurdecedor da tempestade e você provavelmente mal poderia escutá-lo. Porém, quando está no meio das escadas, escuta o homem lhe chamar pelo nome.
+&lt;!-- audio cursed do where are you --&gt;
+
+Deve ser algum conhecido ou vizinho que foi verificar se você estava bem. 
+
+(link-goto: &quot;Abrir a porta&quot;, &quot;Abrir a porta&quot;)
+(link-goto: &quot;Evitar o homem novamente&quot;, &quot;Evitar o homem novamente&quot;)</tw-passagedata><tw-passagedata pid="52" name="Evitar o homem novamente" tags="" position="2300,600" size="100,100">Algo não estava certo com a voz daquele homem. Parecia um rádio AM quase fora do ar, e ele pronunciava as sílabas tônicas de um jeito estranho e errado. Você imagina que possa estar bêbado e buscando abrigo. 
+
+No entanto, ele diz: &quot;Sou amigo do seu pai. Estava passando pela região quando a tempestade derrubou um galho no meu carro. Vim andando até aqui para saber se eu poderia usar seu telefone.&quot;
+
+(link-goto: &quot;Ajudar o homem&quot;, &quot;Abrir a porta&quot;)
+(link-goto: &quot;Ignorar e observar&quot;, &quot;Ignorar e observar&quot;)</tw-passagedata><tw-passagedata pid="53" name="Ignorar e observar" tags="" position="2400,600" size="100,100">Você explica que seus pais lhe orientaram a não deixar nenhum estranho entrar na casa e pede desculpas. Ele argumenta, ainda naquele tom de voz estranho, que era amigo do seu pai e já havia estado na casa antes várias vezes, mas que você era pequeno demais para lembrar.
+
+(link-goto: &quot;Abrir a porta para ajudar&quot;, &quot;Abrir a porta&quot;)
+(link-goto: &quot;Negar novamente&quot;, &quot;Negar novamente&quot;)</tw-passagedata><tw-passagedata pid="54" name="Negar novamente" tags="" position="2500,600" size="100,100">Pedindo desculpas, o nega novamente.
+
+Você sabe para o quarto e tenta esquecer a voz esquisita do seu visitante. Ao observá-lo pela janela, também parece haver algo de errado com seu rosto, como se fosse uma queimadura, esticando a pele em ângulos não-naturais.
+
+&lt;!-- mostrar link baseado na garagem ter sido trancada ou nao --&gt;
+(link-goto: &quot;Continuar&quot;, &quot;Monstro não entra pela garagem&quot;)
+(link-goto: &quot;Continuar&quot;, &quot;Monstro entra pela garagem&quot;)</tw-passagedata><tw-passagedata pid="55" name="Checar portão da garagem" tags="" position="2700,700" size="100,100">A casa estava absolutamente silenciosa. Não havia nenhum sinal de que algo ou alguém tivesse entrado, nem rastros molhados na garagem ou algo que sinalizasse que aquele portão foi aberto por alguém.
+
+Ao olhar com mais atenção, você vê que ali dentro, próximo do portão de metal, está um chapéu, idêntico ao que o homem estranho usava na cabeça. Você tranca o portão devidamente e volta para a casa.
+
+(link-goto: &quot;Ir até a cozinha&quot;, &quot;???&quot;)
+(link-goto: &quot;Ir em direção às escadas&quot;, &quot;???&quot;)</tw-passagedata><tw-passagedata pid="56" name="Pegar a arma" tags="" position="2700,800" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

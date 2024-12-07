@@ -6,7 +6,7 @@ The Storm Grows Stronger
 {
   "ifid": "1682A661-F8D2-4A45-A7B1-C58B06E42923",
   "format": "Harlowe",
-  "format-version": "3.3.7",
+  "format-version": "3.3.8",
   "start": "Splash",
   "tag-colors": {
     "startup": "yellow",
@@ -25,45 +25,40 @@ The Storm Grows Stronger
 }
 
 
-:: A Tempestade Fica Forte [Lado-de-Fora] {"position":"4925,1100","size":"100,100"}
+:: A Tempestade Fica Forte [Lado-de-Fora] {"position":"4625,1525","size":"100,100"}
 A tempestade fica mais forte. A chuva cobre toda a região, intensificada pelos fortes ventos que ameaçam derrubar árvores.
 Um velho caminhoneiro para seu caminhão na estrada, pega seu guarda-chuva e vai em direção a floresta. Ele jura ter ouvido o barulho de um disparo ali, seguido de um grito. Tudo que ele encontra perto da estrada é uma velha espingarda.
 
 
-:: A Tempestade Fica mais Forte [Lado-de-Fora] {"position":"4625,1075","size":"100,100"}
+:: A Tempestade Fica mais Forte [Lado-de-Fora] {"position":"4450,1475","size":"100,100"}
 A tempestade fica mais forte. A chuva cobre toda a região, intensificada pelos fortes ventos que ameaçam derrubar árvores. É perigoso sair de casa em dias com tanta chuva, pois aqueles que saem raramente são vistos novamente. Esse foi o seu caso.
 
 
-:: Aguardar Escondido [Quarto-Proprio] {"position":"4200,375","size":"100,100"}
+:: Aguardar Escondido [Quarto-Proprio] {"position":"4200,475","size":"100,100"}
 Seu coração parece prester a pular pela boca pelo tempo que você espera escondido. O som da chuva forte não é o bastante para te impedir de escutar sua própria respiração ansiosa.
 Tentando se acalmar para não entregar sua posição, você ouve a madeira do piso ranger conforme passos se aproximam do quarto.
 De repente um clarão toma a casa, seguido de um estrondo que faz as janelas da casa quase se partirem. Um raio cai perto da casa, atingindo em cheio uma das árvores ao redor da propriedade, que agora arde em chamas.
 Você escuta do outro lado da porta o que parece ser um grito proferido pelo homem, mas o som só pode ser descrito como o som de unhas arranhando um quadro negro. Você escuta o barulho dele correr para longe, derrubando objetos no caminho, até que só resta o barulho da chuva.
 
 
-:: Aguardar o Fim [Lado-de-Fora] {"position":"4625,925","size":"100,100"}
+:: Aguardar o Fim [Lado-de-Fora] {"position":"4450,1325","size":"100,100"}
 "Johnny, venha ficar comigo"
 
-[[Continuar->A Tempestade Fica mais Forte]]
 
 
-:: Alcançar a Estrada (Precisa Ferimento 2) [Lado-de-Fora] {"position":"5075,925","size":"100,100"}
+:: Alcançar a Estrada (Precisa Ferimento 2) [Lado-de-Fora] {"position":"4775,1325","size":"100,100"}
 Você presta atenção na voz horrenda do homem, e por mais que não veja o ser, nota que não está tão próximo assim. Você rasteja até ver a luz da estrada, torcendo para o homem estar tão lento quanto você.
 Ao chegar no asfalto, você fica sem forças. Dando uma última olhada para a escuridão da floresta, você vê a silhueta do homem ali, lhe encarando. Talvez os embates com ele mais cedo o tenham cansado tanto quanto você, mas você não sabe para onde fugir agora.
 Seus olhos se fecham pelo cansaço e sua consciencia se esvai.
 
-[[Continuar->Você Acorda]]
 
-
-:: Atirar Nele [Cozinha] {"position":"3850,750","size":"100,100"}
+:: Atirar Nele [Cozinha] {"position":"3875,650","size":"100,100"}
 Você ergue a arma e mira com dificuldade, o homem continua parado observando.
 Um relâmpago lá cai muito próximo da casa, fazendo as janelas tremerem e tirando a sua concentração por um instante. O homem cobre a distância entre vocês em um rápido salto e já está próximo demais. Você vê fileiras de dentes pontiagudos quando ele abre a boca, e dispara sua arma. O Coice do tiro te tira o equilíbrio, mas você vê a figura se afastar para as sombras, sem certeza se foi atingida ou se foi apenas o barulho da arma que fez isso.
 
 
-:: Ato II [Intro] {"position":"1350,600","size":"100,100"}
-A leitura está fluindo apesar da imtepérie. Você está absorto na descrição dos bailes luxuosos sediados pelo protagonista do livro quando ouveu m barulho muito claro vindo da porta da frente. Era uma batida, fora de ritmo. Não era o costumeiro toc-toc-toc que as pessoas fazem, causando uma sensação de estranhamento.
-
-[[Continuar->Levantou para checar a porta]]
+:: Ato II [Intro] {"position":"1350,575","size":"100,100"}
+A leitura está fluindo apesar da imtepérie. Você está absorto na descrição dos bailes luxuosos sediados pelo protagonista do livro quando ouveu m barulho muito claro vindo da porta da frente. Era uma batida, fora de ritmo. Não era o costumeiro toc-toc-toc que as pessoas fazem, causando uma senseção de estranhamento.
 
 
 :: Continuar leitura [Ático] {"position":"800,500","size":"100,100"}
@@ -75,52 +70,41 @@ Parecia que a tempestade só piorava. O vento sibilava entre as frestas da madei
 (else:) [[[Continuar->Ficou no ático]]]
 
 
-:: Correndo [Lado-de-Fora] {"position":"4775,1225","size":"100,100"}
+:: Correndo [Lado-de-Fora] {"position":"4625,1125","size":"100,100"}
 Você não sabe a quanto tempo está correndo. Talvez sejam poucos minutos, mas a dor no seu corpo faz parecer que se passou uma hora. Você tinha certeza que estava correndo na direção da estrada, mas mal consegue ver um palmo a sua frente, tanto pela escuridão quanto pela intensa chuva que castiga suas costas.
-Cada parte de seu corpo pede para que você pare, e quanto mais você corre, mais difícil fica a sua respiração
-
-[[Continuar->Minutos ou Horas]]
+Cada parte de seu corpo pede para que você pare, e quanto mais você corre, mais difícil fica a sua respiração.
 
 
-:: Correr de Volta ao Quarto [Quarto-Proprio] {"position":"4350,325","size":"100,100"}
+:: Correr de Volta ao Quarto [Quarto-Proprio] {"position":"4325,300","size":"100,100"}
 Você volta a seu quarto e tenta fechar a porta, mas o homem é rápido. Um de seus braços se coloca em posição para impedir que você feche a porta ao mesmo tempo que tenta lhe alcançar.
 Você empurra com toda a sua força, sabendo que sua vida depende disso.
 
-[[Continuar->O Clarão]]
 
-
-:: Correr de Volta pro Quarto [Quarto-Proprio] {"position":"4150,725","size":"100,100"}
+:: Correr de Volta pro Quarto [Quarto-Proprio] {"position":"4025,700","size":"100,100"}
 Você corre escada a cima, batendo o corpo nos móveis no caminho, o coração disparado da adrenalina, mas consegue ouvir o barulho do homem no andar de baixo. Você adentra o quarto de seus pais e tranca a porta.
 
 
-:: Criar uma Distração e Fugir na chuva [Lado-de-Fora] {"position":"4775,925","size":"100,100"}
+:: Criar uma Distração e Fugir na chuva [Lado-de-Fora] {"position":"4625,925","size":"100,100"}
 O que quer que esse homem queira está dentro da casa, e você torce que não seja você mesmo. O único lugar seguro é bem longe daqui. Você sabe o caminho para a cidade, e se conseguir encontrar alguem na estrada para lhe dar carona, melhor ainda.
 Você respira fundo antecipando o que está por vir, mas sabe que é o único jeito.
 Você pega [qualquer item do seu inventário menos a arma] e arremessa contra a janela, do corredor de cima, fazendo um audível barulho de vidro se quebrando. Escuta os passos apressados do homem no andar de baixo, correndo até a fonte do barulho, enquanto você tenta ser o mais discreto possível em abrir a janela do seu quarto e sair para a calha.
 
-[[Continuar->O Lado de Fora]]
 
-
-:: De volta ao hall [Quarto-Proprio] {"position":"2400,600","size":"100,100"}
+:: De volta ao hall [Quarto-Proprio] {"position":"2400,575","size":"100,100"}
 De volta ao hall de entrada, algo capta a sua atenção no canto do olho. Parece que algo escapava novamente pela lateral da janela, assim como na cozinha anteriormente. Assustado, você decide subir e desistir de brincar de detetive pela casa, decidindo que vai descer novamente apenas se algum barulho for realmente significativo.
 
-[[Continuar->Sons se repetem]]
 
-
-:: Descer e tentar conversar [Porta-de-Entrada-(Olho-Mágico)] {"position":"2850,600","size":"100,100"}
+:: Descer e tentar conversar [Porta-de-Entrada-(Olho-Mágico)] {"position":"2850,575","size":"100,100"}
 Você decide descer e tentar conversar com o homem, mesmo com o barulho ensurdecedor da tempestade e você mal poderá ouví-lo. Porém, quando você está no meio das escadas, ouve o homem lhe chamar pela porta.
 
-[["Abrir a porta para verificar"->Morte]]
-[["Hesitar"->Hesitou na porta]]
+(link: "Deve ser algum conhecido ou vizinho que foi verificar se você estava bem")
+(link: "Hesitar")
 
 <!-- audio cursed -->
 
 
-:: Descer para Checar [Garagem] {"position":"3550,750","size":"100,100"}
+:: Descer para Checar [Garagem] {"position":"3575,750","size":"100,100"}
 A casa estava absolutamente silenciosa. Não havia nenhum sinal de que algo ou alguém tivesse entrado, não havia rastros molhados na garagem ou nada que sinalizasse que aquele portão não abriu sozinho. Ao olhar com maior atenção, você vê que ali dentro, próximo do portão de metal está um chápeu, igual ao que o homem estranho usava na cabeça. Você tranca o portão devidamente e volta para a casa.
-
-[[Checar a cozinha->Vai até a cozinha com a arma (senão ele morre)]]
-[[Checar o andar de baixo->Vai em direção as escadas]]
 
 
 :: Descer para a sala [Corredor-de-Entrada] {"position":"950,650","size":"100,100"}
@@ -130,45 +114,37 @@ Parecia que a tempestade só piorava. O vento sibilava entre as frestas da madei
 [[Levantar para checar]]
 
 
-:: Deve ser aquele homem estranho [Corredor-de-Entrada] {"position":"2700,600","size":"100,100"}
+:: Deve ser aquele homem estranho [Corredor-de-Entrada] {"position":"2700,575","size":"100,100"}
 A tempestade não parece nem perto de se dissipar. Os trovões ainda são ouvidos mais à distância e a chuva não dá trégua. Quando você está voltando a se concentrar no livro, uma batida conhecida e arrastada toca na porta da frente. Deve ser aquele homem estranho novamente.
 
-[["Continuar"->Descer e tentar conversar]]
 
-
-:: Entrou no quarto dos pais [Quarto-Pais] {"position":"3900,375","size":"100,100"}
+:: Entrou no quarto dos pais [Quarto-Pais] {"position":"3900,475","size":"100,100"}
 Você pega a única coisa que é proibido tocar na casa toda, a espingarda calibre 12, e senta no chão de frente à porta do quarto. Não consegue desviar o olhar da soleira da porta, que ainda possui um resquício de luz. De repente, uma sombra cobre quase totalmente a parte iluminada, bem na frente da sua porta. O invasor está ali.
 
-[[Continuar->Trancado no quarto, invasor dentro da casa]]
 
-
-:: Escolher pegar o chapéu [Porta-de-Entrada-(Olho-Mágico)] {"position":"1950,600","size":"100,100"}
+:: Escolher pegar o chapéu [Porta-de-Entrada-(Olho-Mágico)] {"position":"1950,575","size":"100,100"}
 Com medo mas sem opções, você desce para checar se está tudo bem com a porta da frente. Ela continua lá, trancada como deveria. O homem estranho não está mais lá, mas há algo no chão. O chapéu dele ficou para trás.
 
-[[Pegar o chapéu->Morte]]
-[[Ignorar->Escolher qual cômodo trancar]]
+(link: "Pegar o chapéu")
+(link: "Ignorar")
 
 
-:: Escolher qual cômodo trancar [Garagem] {"position":"2100,600","size":"100,100"}
+:: Escolher trancar a garagem [Garagem] {"position":"2100,575","size":"100,100"}
 Você decide dar uma volta pela casa para checar todos os cômodos, já que a chuva não parece dar trégua. Chegando na garagem, percebe que o portão não foi trancado propriamente, ao mesmo tempo que ouve um barulho alto vindo de alguma janela da casa.
 
-[[Trancar o portão->Escolheu a garagem]]
-[[Verificar as janelas->Escolheu as janelas]]
+(link: "Você entra na garagem para trancar o portão")
+(link: "Você ignora o portão e volta para a casa para verificar as janelas")
 
 
-:: Escolheu a garagem [Garagem] {"position":"2250,500","size":"100,100"}
+:: Escolheu a garagem [Garagem] {"position":"2250,475","size":"100,100"}
 O barulho da janela lhe perturba profundamente. Você não entende como uma tempestade pode causar tanto estrago, e culpa algum galho de árvore que possa ter batido em algum lugar. Talvez tudo estivesse sendo mais intenso devido ao fato de você estar sozinho pela primeira vez, pensa, enquanto verifica o cadeado do portão.
 
-[[Continuar->De volta ao hall]]
 
-
-:: Escolheu as janelas [Cozinha] {"position":"2250,700","size":"100,100"}
+:: Escolheu as janelas [Cozinha] {"position":"2250,675","size":"100,100"}
 O barulho da janela lhe perturba profundamente. Você não entende como uma tempestade pode causar tanto estrago, e culpa algum galho de árvore que possa ter batido em algum lugar. Você sai em busca de alguma janela que possa ter sido afetada, pensando se não pode ser apenas sua imaginação impressionada por estar sozinho nessa situação.
 
-[[Continuar->De volta ao hall]]
 
-
-:: Ficar no Quarto [Quarto-Pais] {"position":"3850,1100","size":"100,100"}
+:: Ficar no Quarto [Quarto-Pais] {"position":"3975,1000","size":"100,100"}
 As cortinas do quarto dos seus pais eram longas e opacas, e conforme o anoitecer chegava com as pesadas nuvens o quarto já estava bem escuro. Temendo chamar a atenção de quem havia entrado na casa, você decide não acender a luz. Relâmpagos iluminavam tudo de minutos em minutos, e você começa a pegar no sono.
 
 Um relâmpago atinge novamente a região (inserir som de trovão). No entanto, neste estado semi-sonolento, a janela não tinha o mesmo formato quadrado de antes. Havia algo bloqueando a metade direita da janela, algo humanoide. Você se levanta rápido e vai até a janela, escura novamente, e abre as cortinas para ver o que era. Não havia nada lá.
@@ -182,26 +158,24 @@ Felizmente era só uma história.
 [[Continuar->Ato II]]
 
 
-:: Garagem aberta [Quarto-Proprio] {"position":"3400,800","size":"100,100"}
-Você tenta se concentrar no livro apesar de todas as coisas perturbadoras que ocorreram nas últimas horas. Seu quarto fica longe da garagem, mas, de repente, o portão rangeu. Poderia talvez ser o vento, que estava tão forte a ponto de abrir um portão de ferro.
-
-[[Descer para checar->Descer para Checar]]
+:: Garagem aberta [Quarto-Proprio] {"position":"3450,850","size":"100,100"}
+Você tenta se concentrar no livro apesar de todas as coisas perturbadoras que ocorreram nas últimas horas. Seu quarto fica relativamente longe da garagem, mas, de repente, o portão rangeu. Poderia talvez ser o vento, que estava tão forte a ponto de abrir um portão de ferro.
 
 
-:: Garagem fechada [Quarto-Proprio] {"position":"3400,300","size":"100,100"}
+:: Garagem fechada [Quarto-Proprio] {"position":"3450,375","size":"100,100"}
 Você tenta se concentrar no livro apesar de todas as coisas perturbadoras que ocorreram nas últimas horas. Seu quarto fica num dos cantos da casa, relativamente isolado, mas o barulho incessante da chuva traz consigo outros sons perturbadores.
 
 A tempestade está mais forte do que nunca, e todo tipo de barulho aparece ao mesmo tempo. Porém, há algo errado novamente. A madeira da casa está rangendo, em vários pontos diferentes e você não tem a menor ideia do porquê. Se fosse chutar, diria que algum bicho está escalando a casa, mas não fazia ideia de quê conseguiria fazer isso.
 
-[[Abrir a janela e olhar os arredores da casa->Morte]]
-[[Continuar onde está->Não abriu a janela para checar]]
+(link-goto: "Você decide abrir a janela e olhar os arredores da casa")
+(link-goto: "Você continua onde está")
 
 
-:: Hesitou na porta [Porta-de-Entrada-(Olho-Mágico)] {"position":"3000,600","size":"100,100"}
+:: Hesitou na porta [Porta-de-Entrada-(Olho-Mágico)] {"position":"3000,575","size":"100,100"}
 Algo não estava certo com a voz daquele homem. Parecia uma rádio AM quase fora do ar, e ele pronunciava as sílabas tônicas erradas. Você imagina que ele possa estar bêbado e buscando abrigo. No entanto, ele diz “Sou amigo do seu pai. Meu carro estragou e queria saber se posso usar o seu telefone.”
 
-[["Abrir a porta para ajudar"->Morte]]
-[["Negar novamente"->Não ajudou o homem na porta]]
+(link: "Abre a porta para ajudar o homem")
+(link: "Não ajudar")
 
 
 :: Ignorar [Corredor-de-Entrada] {"position":"1100,800","size":"100,100"}
@@ -212,7 +186,7 @@ Nesse mesmo momento, um barulho de vidro sendo quebrado é ouvido vindo da cozin
 [[Continuar->Ir até a cozinha]]
 
 
-:: Intro [Intro] {"position":"650,200","size":"100,100"}
+:: Intro [Intro] {"position":"625,200","size":"100,100"}
 Na tranquila solidão de sua casa isolada no interior da região, você se encontra sozinho pela primeira vez em sua vida. Seus pais partiram para suas antecipadas férias, deixando você encarregado de cuidar da antiga casa da família durante a ausência deles.
 
 À medida que as horas foram se passando, e a noite chegava, um sentimento de solidão começou a pairar sobre você, amplificando os sons do rangido da madeira no antigo casarão. O tique-taque do relógio no corredor ecoa pelo corredor
@@ -220,7 +194,7 @@ Na tranquila solidão de sua casa isolada no interior da região, você se encon
 [[Continuar->Intro II]]
 
 
-:: Intro II [Intro] {"position":"800,200","size":"100,100"}
+:: Intro II [Intro] {"position":"825,200","size":"100,100"}
 A casa, construída quase inteiramente de madeira, tem um estilo bem rústico e antiquado. No andar de baixo, existe a entrada, que comporta a porta da frente. Na entrada, um corredor extenso corta a casa ao meio, chegando até a poarta dos fundos, que dá para a garagem. À direita do corredor existe uma grande entrada que mostra a sala de estar; já à esquerda existe uma entrada similar, mas que pertence a sala de jantar. No fundo da sala de jantar, está a cozinha.
 
 Na parede esquerda do corredor, existe a escada que leva para o andar de cima. Subindo as escadas, encontra-se o seu quarto, o quarto de seus pais e um pequeno alçapão no teto que leva ao ático.
@@ -242,7 +216,7 @@ A casa é atingida por uma onda de frio, que entra pelas frestas da madeira e te
 [[Continuar->Primeira escolha]]
 
 
-:: Ir atrás do Homem para que ele não fuja [Cozinha] {"position":"4100,625","size":"100,100"}
+:: Ir atrás do Homem para que ele não fuja [Cozinha] {"position":"3975,600","size":"100,100"}
 Você vê o homem tentando se esconder nas sombras da cozinha, do outro lado de um balcão e corre até ali guiado pela adrenalina. Ao se virar e tentar apontar a arma, vê o movimento rápido abaixo de você e sente dor quando o homem morde a sua perna com uma força assustadora. Sente a parte de dentro da sua calça ficar molhada de sangue quente e no susto, dispara novamente sua arma, mas a bala atinge apenas a janela. Você cai no chão, mas não vê mais sinal do homem.
 
 
@@ -264,109 +238,85 @@ Você fica incomodado com o barulho e decide verificar as janelas do andar de ba
 [[Continuar->Ato II]]
 
 
-:: Levantou para checar a porta [Porta-de-Entrada-(Olho-Mágico)] {"position":"1500,600","size":"100,100"}
+:: Levantou para checar a porta [Porta-de-Entrada-(Olho-Mágico)] {"position":"1500,575","size":"100,100"}
 Você fica incomodado com o barulho e decide verificar as janelas do andar de baixo. Uma por uma, você as vê balançarem, castigadas pelo vento forte. Quando se aproxima da janela da cozinha, parece que algo desaparece rapidamente pelo canto da janela. Você interpreta como folhas carregadas pelo vento.
 
 A leitura está fluindo apesar da interrupção. Você está absorto na descrição dos bailes luxuosos sediados pelo protagonista do livro quando ouve um barulho muito claro vindo da porta da frente. Era uma batida, fora de ritmo. Não era o costumeiro toc-toc-toc que as pessoas fazem, causa uma sensação de desconforto.
 
-[[Continuar->Olhou pelo olho mágico]]
+
+:: Ligar para a Polícia [Corredor-de-Entrada] {"position":"3975,800","size":"100,100"}
+ Correr até o telefone e chamar a polícia. (Variável da Polícia)
 
 
-:: Ligar para a Polícia [Corredor-de-Entrada] {"position":"3850,900","size":"100,100"}
-Correr até o telefone e chamar a polícia. (Variável da Polícia)
-
-
-:: Minutos ou Horas [Lado-de-Fora] {"position":"4775,1375","size":"100,100"}
+:: Minutos ou Horas [Lado-de-Fora] {"position":"4625,1225","size":"100,100"}
 Minutos ou horas se passam até você ver um sinal de esperança. Uma luz no meio da escuridão, um poste iluminado que indica a estrada, não tão longe de você. Conforme se apressa para chegar lá, seu pé se prende em um galho de árvore e você tropeça, caindo e machucando o tornozelo.
 De perto de você, uma voz ecoa pela chuva "Johnny, fique comigo."
 Você não consegue ver a figura, mas a voz parece se aproximar cada vez mais. A luz está tão perto, mas você não sente mais forças para alcança-la. Não existe mais saída.
 
 
-:: Mirar e Disparar a Arma (se tiver ela) [Corredor-de-Entrada] {"position":"4350,150","size":"100,100"}
+:: Mirar e Disparar a Arma (se tiver ela) [Corredor-de-Entrada] {"position":"4325,175","size":"100,100"}
 Você aponta a arma na direção do homem conforme ele começa a caminhar na sua direção. Seus braços tremem e sua respiração está ofegante, o medo tomando conta de seu corpo. Ao puxar a arma, nada. O clique não resulta em nada alem do barulho da trava de segurança da arma.
 Você puxa a trava de volta e aponta novamente, mas parece ser tarde demais, o homem está perto demais.
 
-[[Continuar->Morte]]
 
-
-:: Morte {"position":"2250,100","size":"100,100"}
-
-
-
-:: Nada Tira da Cabeça o Homem [Quarto-Pais] {"position":"4000,1100","size":"100,100"}
+:: Nada Tira da Cabeça o Homem [Quarto-Pais] {"position":"4100,1000","size":"100,100"}
 Nada tira da sua cabeça que aquela figura era o homem que havia tentado entrar na sua casa antes. Mas como ele teria chegado até ali, até o segundo andar, não fazia sentido. Algum equipamento de escalada, talvez? Mas isso não fazia sentido, sendo que ele já havia conseguido entrar na casa pela garagem.
 
 
-:: Não abriu a janela para checar [Quarto-Proprio] {"position":"3550,300","size":"100,100"}
+:: Não abriu a janela para checar [Quarto-Proprio] {"position":"3600,375","size":"100,100"}
 Definitivamente há algo nas paredes da casa. Você percebe que não está sozinho quando ouve a janela do ático quebrando e passos acima da sua cabeça. O que quer que fosse aquilo havia conseguido entrar na sua casa e era uma ameaça para você.
 
-[[Trancar a porta do quarto e se esconder->Se trancou no quarto]]
-[[Ir em busca da arma no quarto dos seus pais->Procurou a arma]]
+(link: "Trancar a porta do quarto e se esconder")
+(link: "Ir em busca da arma de seu pai, no quarto dele")
 
 
-:: Não abriu a porta [Porta-de-Entrada-(Olho-Mágico)] {"position":"1800,600","size":"100,100"}
+:: Não abriu a porta [Porta-de-Entrada-(Olho-Mágico)] {"position":"1800,575","size":"100,100"}
 Incomodado com a presença de uma pessoa estranha na porta da casa, você decide sair da sala de estar e subir até os quartos para se sentir mais seguro. Porém, aquele homem não sai da sua cabeça. Por uma fração de segundo, pareceu que havia algo de errado com o rosto dele.
 
 Já haviam se passado algumas horas desde o início da tempestade, e parecia não ter fim. Distraído pelo livro e por uma goteira ritimada, você havia se esquecido do homem estranho na soleira da porta. Porém, em meio a um dos trovões você ouve algum som que se assemelha à porta sendo forçada.
 
-[[Continuar->Escolher pegar o chapéu]]
-\<!-- som de trovão -->
+<!-- som de trovão -->
 
 
-:: Não ajudou o homem na porta [Porta-de-Entrada-(Olho-Mágico)] {"position":"3150,600","size":"100,100"}
+:: Não ajudou o homem na porta [Porta-de-Entrada-(Olho-Mágico)] {"position":"3150,575","size":"100,100"}
 Você explica que seus pais lhe orientaram a não deixar nenhum estranho entrar na casa e pede desculpas. Ele argumenta, ainda naquele tom estranho, que era amigo do seu pai e já havia estado na casa antes, mas que você era pequeno demais para lembrar.
 
 Você pede desculpas e nega novamente.
 
-[["Continuar"->Sobe para o quarto para ignorar o homem]]
 
-
-:: O Clarão [Quarto-Proprio] {"position":"4500,225","size":"100,100"}
+:: O Clarão [Quarto-Proprio] {"position":"4450,225","size":"100,100"}
 Um clarão toma a casa, seguido de um estrondo que faz as janelas da casa quase se partirem. Um raio caiu perto da casa, atingindo em cheio uma das árvores ao redor da propriedade, que agora arde em chamas.
 O homem vira a cabeça distraído por isso, e o som que sai de sua boca só pode ser descrito como o som de unhas arranhando um quadro negro. Ele grita e corre para longe de você com movimentos caóticos, disparando escadaria abaixo e longe de seu campo de visão.
 
-[[Continuar->Olhando pela Janela]]
 
-
-:: O Homem Volta [Quarto-Proprio] {"position":"4850,775","size":"100,100"}
+:: O Homem Volta [Quarto-Proprio] {"position":"4625,825","size":"100,100"}
 Uma voz tenebrosa ecoa pela casa, mais agitada do que antes. Se antes soava como um rádio fora de sintonia, agora soa como a estática de uma televisão sem sinal, mas suas palavras já não são mais compreensíveis para você
 Você já não está mais sozinho, e o suor frio começa a escorrer pela sua testa. Os passos que ecoam pela casa parecem mais agitados, e o barulho de móveis sendo derrubados indica que a paciência do visitante acabou. Ele não parece que está mais interessado no telefone ou um lugar para passar a noite, e o que quer que ele seja, não deixará você descansar.
 Como você tentará sobreviver a noite?
 
-[[Confrontar com a arma->Pegar a Arma]]
-[[Criar uma distração->Criar uma Distração e Fugir na chuva]]
-[[Correr para a estrada->Alcançar a Estrada (Precisa Ferimento 2)]]
-[[Aguardar->Aguardar o Fim]]
 
-
-:: O Lado de Fora [Lado-de-Fora] {"position":"4775,1075","size":"100,100"}
+:: O Lado de Fora [Lado-de-Fora] {"position":"4625,1025","size":"100,100"}
 A área toda está encharcada, assim como você, que agora está na chuva. Tenta dar alguns passos até a beirada, torcendo que a calha não ceda sob o seu peso, para que você possa se apoiar e descer ali, mas você pisa em falso quando seu pé desliza na área lisa. Você sente suas costas atingirem a calha e depois rolar para o lado, caindo até o chão coberto de lama. Uma série de pontadas de dor cobrem o seu corpo, no peito, nos braços e principalmente nas pernas.
 Você teme que o barulho tenha sido ouvido pelo visitante e ignorando a dor, se levanta e começa a correr.
 
-[[Continuar->Correndo]]
 
-
-:: Olhando pela Janela [Intro] {"position":"4625,475","size":"100,100"}
+:: Olhando pela Janela [Intro] {"position":"4500,550","size":"100,100"}
 Olhando pela janela é possível ver a forma do homem disparando noite adentro, correndo para longe da árvore em chamas.
 Rápidamente a chuva afoga o fogo que cobria a árvore, e a escuridão volta a cobrir os arredores da casa.
 Você desce as escadas com pressa, pensando que o homem possívelmente fugiu pela porta da frente, e tranca a porta escancarada antes que recebe mais uma visita surpresa.
 Pela primeira vez nessa noite toda, você respira com um pouco mais de calma.
 
-[[Continuar->Vagar pela Casa]]
 
-
-:: Olhou pelo olho mágico [Porta-de-Entrada-(Olho-Mágico)] {"position":"1650,600","size":"100,100"}
+:: Olhou pelo olho mágico [Porta-de-Entrada-(Olho-Mágico)] {"position":"1650,575","size":"100,100"}
 Você vê através do olho mágico molhado uma pessoa encharcada, parecendo um homem alto e esguio com o rosto coberto por um chapéu. Não é possível ver mais detalhes devido ao olho mágico estar coberto de gotas de chuva.
 
-[[Abrir a porta para questionar->Morte]]
-[[Não abrir a porta para estranhos->Não abriu a porta]]
+(link: "Você abre a porta para ver quem é")[(go-to: "Morte"))]
+(link: "Você decide seguir o conselho dos seus pais e não abrir a porta para estranhos")
 
 
-:: Pegar a Arma [Lado-de-Fora] {"position":"4925,925","size":"100,100"}
+:: Pegar a Arma [Lado-de-Fora] {"position":"4625,1350","size":"100,100"}
 Você engatilha a arma e espera o homem aparecer. As gotas de chuva dificultam a sua visão conforme agua entra nos seus olhos. Seu corpo doi e tem dificuldade de manter firme a pesada arma em suas mãos.
 As falas do homem se silenciam e o tempo passa lentamente até que você sente frias mãos em sua nuca. A arma é disparada em direção a escuridão.
-
-[[Continuar->A Tempestade Fica Forte]]
 
 
 :: Primeira escolha [Ático] {"position":"650,500","size":"100,100"}
@@ -378,61 +328,49 @@ Você segue em busca do livro no ático. Nele o barulho da chuva é muito mais a
 (link-reveal-goto: "Descer para a sala de estar", "Continuar leitura")[(set: $desceuParaSala to true)]
 
 
-:: Procurar pelo Homem [Corredor-de-Entrada] {"position":"4200,625","size":"100,100"}
+:: Procurar pelo Homem [Corredor-de-Entrada] {"position":"4075,600","size":"100,100"}
 Guiado por pura loucura do medo, você corre pelos comodos da casa com pouca proteção a si mesmo, na esperança de que se você se livrar do homem, tudo ficará bem. Você o encontra o corredor de entrada, próximo da porta onde você o viu pela primeira vez, mas dessa vez ele está do mesmo lado que você. (Variável arma, mas aqui é a opção sem balas garantido).
 
 
-:: Procurou a arma [Quarto-Pais] {"position":"3750,375","size":"100,100"}
+:: Procurou a arma [Quarto-Pais] {"position":"3750,475","size":"100,100"}
 Você corre em direção ao quarto dos seus pais, sem saber se iria dar de cara com o invasor ou não. Na visão periférica, o enxerga descendo as escadas. É claramente o “homem” estranho que havia tentado entrar na casa mais cedo. Antes que ele perceba a sua presença, você entra no quarto dos seus pais e tranca a porta.
 
-[[Continuar->Entrou no quarto dos pais]]
 
-
-:: Quarto dos Pais para Pegar Arma [Quarto-Pais] {"position":"3400,1200","size":"100,100"}
+:: Quarto dos Pais para Pegar Arma [Quarto-Pais] {"position":"3575,1050","size":"100,100"}
 Você procura pela única coisa que está proibido de tocar na casa inteira. Uma espingarda calibre 12mm que pertenceu ao seu avô e agora é de seu pai e possui duas balas que mal sabia colocar.
 
 
-:: Retorno da Tempestade [Corredor-de-Entrada] {"position":"4925,475","size":"100,100"}
+:: Retorno da Tempestade [Corredor-de-Entrada] {"position":"4625,725","size":"100,100"}
 Tão rápidamente quanto ela se foi, a chuva retorna com fortes estrondos. O vento sibila e faz as janelas baterem, mas você teme que não seja apenas o vento fazendo isso. "Talvez seja melhor garantir que a casa está fechada o bastante", você pensa, ao mesmo tempo que escuta o que parece ser o vento forçando uma das janelas.
+[Começa o minigame do bicho tentar invadir]
 
-<!-- Começa o minigame do bicho tentar invadir -->
 
-
-:: Sair do Quarto pra Enfrenta-lo [Corredor-de-Entrada] {"position":"4200,225","size":"100,100"}
+:: Sair do Quarto pra Enfrenta-lo [Corredor-de-Entrada] {"position":"4200,250","size":"100,100"}
 Com pavor e dúvidas do que está fazendo, você encara atentamente o corredor em frente até ver uma figura ali.
 O mesmo homem estranho de antes fica ali, em silêncio lhe encarando. A chuva parece se intensificar, forte a ponto de que a casa parece ranger.
 
-(if: $possuiArma)[[Disparar a arma->Mirar e Disparar a Arma (se tiver ela)]]
-[[Correr para seu quarto->Correr de Volta ao Quarto]]
+
+:: Se Aproximar do Homem [Cozinha] {"position":"3800,750","size":"100,100"}
+O homem não parece reagir a sua aproximação, apenas acompanha seus movimentos com os olhos escuros e um sorriso de antecipação. Quando está perto o bastante, ele por fim diz "Obrigado Johnny." (Jogador Morre)
 
 
-:: Se Aproximar do Homem [Cozinha] {"position":"3850,600","size":"100,100"}
-O homem não parece reagir a sua aproximação, apenas acompanha seus movimentos com os olhos escuros e um sorriso de antecipação. Quando está perto o bastante, ele por fim diz "Obrigado Johnny."
-
-[[Continuar->Morte]]
-
-
-:: Se Trancar no quarto [Quarto-Pais] {"position":"3550,1275","size":"100,100"}
+:: Se Trancar no quarto [Quarto-Pais] {"position":"3675,1150","size":"100,100"}
 Você se senta num canto do quarto e espera, prestando atenção se escuta algum barulho vindo da casa, com a arma em mãos.
 
 
-:: Se trancou no quarto [Quarto-Proprio] {"position":"3750,225","size":"100,100"}
+:: Se trancou no quarto [Quarto-Proprio] {"position":"3750,275","size":"100,100"}
 Você ouve aquilo andar pela casa toda, vasculhando os cômodos e repetindo “onde você está?” (inserir áudio do johnny). Sem saber o que fazer, você permanece escondido debaixo da cama, tentando não fazer barulho. Não consegue desviar o olhar da soleira da porta, que ainda possui um resquício de luz. De repente, uma sombra cobre quase totalmente a parte iluminada, bem na frente da sua porta. O invasor está ali.
 
-[[Continuar->Trancado no quarto, invasor dentro da casa]]
 
-
-:: Sobe para o quarto para ignorar o homem [Quarto-Proprio] {"position":"3300,600","size":"100,100"}
+:: Sobe para o quarto para ignorar o homem [Quarto-Proprio] {"position":"3300,575","size":"100,100"}
 Você sobe para o seu quarto e tenta esquecer a voz perturbadora do seu visitante. Ao observá-lo pela janela, também parecia haver algo de errado com seu rosto, como se fosse uma queimadura, o que deixava a pele esticada em ângulos não-naturais.
 
-(if: $garagemFechada)[[Continuar->Garagem fechada]]
-(else:)[[Continuar->Garagem aberta]]
+(if: $desceuParaSala)[(link: "Continuar", "")]
+(else:)[]
 
 
-:: Sons se repetem [Corredor-de-Entrada] {"position":"2550,600","size":"100,100"}
+:: Sons se repetem [Corredor-de-Entrada] {"position":"2550,575","size":"100,100"}
 Algum tempo se passa, com aqueles mesmos barulhos se repetindo com frequência. Cada vez que trovejava, parecia que alguma das janelas estava sendo aberta. Você acredita ter ouvido passos no lado de fora da casa, mas evita verificar.
-
-[["Continuar"->Deve ser aquele homem estranho]]
 
 
 :: Splash {"position":"475,200","size":"100,100"}
@@ -443,48 +381,40 @@ Algum tempo se passa, com aqueles mesmos barulhos se repetindo com frequência. 
 (set: $desceuParaSala to false)
 
 
-:: Tempestade Forte [Quarto-Pais] {"position":"3700,1100","size":"100,100"}
+:: Tempestade Forte [Quarto-Pais] {"position":"3850,1000","size":"100,100"}
 A tempestade está mais forte do que nunca, e todo tipo de barulho aparece ao mesmo tempo. Porém, há algo errado novamente. A madeira da casa está rangendo, em vários pontos diferentes e você não tem a menor ideia do porquê. Se fosse chutar, diria que algum bicho está escalando a casa, mas não fazia ideia de quê conseguiria fazer isso.
 
 
-:: Tempestade Piora [Quarto-Pais] {"position":"3550,1125","size":"100,100"}
+:: Tempestade Piora [Quarto-Pais] {"position":"3700,1025","size":"100,100"}
 A tempestade só parece piorar. O barulho das gotas de chuva caindo contra o vidro da janela impedia que você ouvisse qualquer outra coisa, então você se move para mais perto da porta. Lá, claramente haviam barulhos dentro da casa. Algo havia entrado e estava caminhando, talvez vasculhando a casa em busca de algo de valor. Porém, em meio aos trovões você ouvia um chamado sibilante, que lhe causa um arrepio na espinha.
 
 Um raio cai nas proximidades da casa, gerando um barulho ensurdecedor e um flash de luz muito forte. Desorientado, você tenta voltar a prestar atenção nos barulhos da casa, mas de repente não se ouve mais nada. Ou a pessoa parou de se movimentar ou saiu da casa.
 
 
-:: Trancado no quarto, invasor dentro da casa [Quarto-Pais] {"position":"4050,300","size":"100,100"}
+:: Trancado no quarto, invasor dentro da casa [Quarto-Pais] {"position":"4050,375","size":"100,100"}
 Não há nada que você possa fazer, trancado no quarto. O invasor caminha pela casa enquanto a tempestade ruge lá fora. Não há para onde fugir.
 
-[[Sair para enfrentá-lo->Sair do Quarto pra Enfrenta-lo]]
-[[Continuar escondido->Aguardar Escondido]]
+(link: "Sair para enfrentá-lo")
+(link: "Continuar escondido")
 
 
-:: Uma parte da Mente [Lado-de-Fora] {"position":"5075,1225","size":"100,100"}
+:: Uma parte da Mente [Lado-de-Fora] {"position":"4775,1625","size":"100,100"}
 Uma parte de sua mente ainda se lembra bem do homem, de seu sorriso, de seu estranho chápeu, e de toda aquela noite estranha coberta pela tempestade. Você espera que tenha sido só um pesadelo, que nada daquilo tenha sido real. Mas e se tiver sido? E se nunca encontraram um corpo porque o homem ainda está vivo?
 E se ele estiver vivo, onde estará?
 São as perguntas que pairam em sua mente em toda noite de tempestade. Principalmente nessas noites, quando você olha pela janela e pode jurar que vê a silhueta de um homem alto e sorridente lhe encarando de longe.
 
 
-:: Vagar pela Casa [Corredor-de-Entrada] {"position":"4775,475","size":"100,100"}
-Você começa a vagar pela casa e percebe que chuva já não cai com tanta intensidade, não havia mais o vento sibilando pelas frestas da madeira da casa. Agora, apenas uma garoa cobre a casa, mas o medo do homem estranho se mantem. Você não tem certeza se ele retornará ou não, mas de toda forma é melhor se preparar. Para garantir a segurança da casa, você começa a vagar pelos cômodos para garantir que está tudo trancado. Enquanto você faz isso, tomando cuidado a cada passo para não ser surpreendido, você começa a ouvir o barulho de água caindo na casa.
-
-[[Continuar->Retorno da Tempestade]]
+:: Vagar pela Casa [Corredor-de-Entrada] {"position":"4625,625","size":"100,100"}
+Você começa a vagar pela casa e percebe que chuva já não cai com tanta intensidade, não havia mais o vento sibilando pelas frestas da madeira da casa. Agora, apenas uma garoa cobre a casa, mas o medo do homem estranho se mantem. Você não tem certeza se ele retornará ou não, mas de toda forma é melhor se preparar. Para garantir a segurança da casa, você começa a vagar pelos cômodos para garantir que está tudo trancado. Enquanto você faz isso, tomando cuidado a cada passo para não ser surpreendido, você começa a ouvir o barulho de agua caindo na casa.
 
 
 :: Vai até a cozinha com a arma (senão ele morre) [Cozinha] {"position":"3700,675","size":"100,100"}
 Você caminha até a cozinha com passos pesados de medo, reconfortádo apenas pela alongada arma de fogo em suas mãos, mas a falta de experiencia com elas pesa em sua mente tanto quanto o medo do invasor. Quem é ele e o que ele quer aqui?
 Enquanto pensa sobre isso, você escuta um barulho vindo da cozinha, uma cadeira caindo, provavelmente. Ao olhar para dentro dela, você vê a silhueta de um homem de pé olhando de volta para você. Clareado apenas por um relâmpago, o sorriso de orelha a orelha dele e seus olhos que parecem pequenos demais para seu porte te travam por um instante. Ele fica parado te observando, sem falar nada.
 
-(if: $possuiArma)[[Atirar com a arma->Atirar Nele]]
-(if: $possuiArma)[[Se aproximar->Se Aproximar do Homem]]
-(else:)[[Continuar->Se Aproximar do Homem]]
 
-
-:: Vai em direção as escadas [Corredor-de-Entrada] {"position":"3700,850","size":"100,100"}
+:: Vai em direção as escadas [Corredor-de-Entrada] {"position":"3675,875","size":"100,100"}
 Enquanto começa a subir as escadas, você escuta o barulho de passos apressados vindo atrás de você. Quando se vira rapidamente, vê o homem próximo demais, e dispara sua arma sem poder mirar direito. Você escuta o que parece ser um grito de dor, mas distorcido e que ecoa pela casa, enquanto corre sem olhar para trás de volta a seu quarto.
-
-[[Continuar->Ligar para a Polícia]]
 
 
 :: Variavel Arma [Variavel] {"position":"1250,100","size":"100,100"}
@@ -527,6 +457,9 @@ Em ambos os casos:
 Opção 2: Voltar para o quarto -> Volta pra cena mais próxima do quarto, meio que a opção anterior mesmo
 
 
+
+
+
 :: Variável Porta [Variavel] {"position":"1450,100","size":"100,100"}
 Para tirar as cenas de "abre a porta e morre" da porta da frente da casa, valia a pena fazer uma variável da porta (e os eventos afetados por isso tão marcados com esse nome tb entre parenteses da opção).
 A variável seria simples, uma parada de checar se o player já abriu a porta antes na gameplay ou não. Se não, toca a cena 1, se sim, toca a cena 2.
@@ -542,9 +475,7 @@ Como alguem que não consegue mais esperar pela antecipação, o homem se aproxi
 Em uma voz estranha e distorcida, as últimas palavras que você escuta são: "Obrigado, Johnny".
 
 
-:: Você Acorda [Lado-de-Fora] {"position":"5075,1075","size":"100,100"}
+:: Você Acorda [Lado-de-Fora] {"position":"4775,1475","size":"100,100"}
 Você acorda numa cama hospitalar no dia seguinte. Febril e fragilizado, demora para que recobre totalmente os sentidos. Os médicos lhe explicam que foi salvo por um caminhoneiro que quase lhe atropelou na estrada e trouxe-o até aqui.
 Suas histórias sobre o visitante estranho foram descartados após algumas investigações, afinal, não havia rastro nenhum ali.
 Seus pais lhe levaram a médicos e psiquiatras, que lhe ajudaram a processar melhor tudo que aconteceu. Você teve algum pesadelo que pareceu real demais enquanto estava sozinho em casa, e por algum tipo de sonambulismo ou pânico, fugiu até a estrada. Foram anos de tratamento e remédios, mas pouco a pouco você começou a concordar.
-
-[[Continuar->Uma parte da Mente]]
